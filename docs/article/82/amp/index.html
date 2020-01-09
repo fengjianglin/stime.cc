@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html amp lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/82/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAWibKyVkxeTxv8yVLE9Ryibt5wzXLoX9nDicibv63ddGZZwuv4ljiaPsAc1RFOhgHPJVyXh47dPw1ev9w/640?wx_fmt=png"},{"@type":"WebPage","@id":"https://stime.cc/article/82/#webpage","url":"https://stime.cc/article/82/","inLanguage":"zh-CN","name":"\u4e59\u7094\u6c22\u6c2f\u5316\u53cd\u5e94\u4e2d\u65e0\u6c5e\u50ac\u5316\u5242\u7684\u7814\u7a76\u8fdb\u5c55 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/82/#primaryimage"},"datePublished":"2020-01-08T08:27:25+00:00","dateModified":"2020-01-08T08:27:25+00:00","author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"}},{"@type":["Person"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#authorlogo","url":"https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=96&d=mm&r=g","caption":"S\u65f6\u4ee3"},"sameAs":[]}]}</script>
+	<title>乙炔氢氯化反应中无汞催化剂的研究进展 - S时代</title>
+		
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c95fb90{box-sizing:border-box;font-size:16px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4d6ebca{margin-top:10px;box-sizing:border-box;line-height:1.75em;margin-bottom:20px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1f8338f{display:inline-block;width:100%;border-width:2px;border-style:dashed;border-color:rgba(99,15,89,.81);padding:10px;background-color:#efefef;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-267b761{box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1528b2e{white-space:normal;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e5c5d62{text-indent:0em;text-align:center;line-height:1.75em;margin-bottom:20px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a9e3560{font-size:14px;font-family:微软雅黑,sans-serif;color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-23b9aa5{font-family:微软雅黑,sans-serif;font-size:16px;text-indent:0em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-844729b{font-family:微软雅黑,sans-serif;font-size:16px;letter-spacing:.544px;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4cd6e95{color:#1d59bf;text-decoration:underline}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-13362ee{color:#1d59bf;text-decoration:underline;font-size:14px;font-family:微软雅黑,sans-serif}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-429e499{text-indent:0em;line-height:1.75em;margin-bottom:20px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdd8ca0{text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-200d30b{text-indent:0em;line-height:1.75em;margin-bottom:20px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-17ffd58{font-family:微软雅黑,sans-serif;font-size:16px}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">乙炔氢氯化反应中无汞催化剂的研究进展</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-08T16:27:25+00:00">
+		1天 ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<section class="amp-wp-c95fb90">
+<section class="amp-wp-4d6ebca">
+<section class="amp-wp-1f8338f">
+<section class="amp-wp-267b761">
+<p class="amp-wp-1528b2e">聚氯乙烯(PVC)作为重要的热塑型塑料, 在建材、家居等众多领域广泛应用。氯乙烯单体(VCM)是合成PVC的主要原料, VCM的成熟合成路线主要有两种: 乙炔法(也称电石法)和乙烯法。在中国, 基于煤炭的乙炔法路线是PVC生产的主流工艺, 核心催化环节几乎全部使用的是活性炭负载的HgCl2催化剂。然而, 汞的流失正带来严重的环境问题。因此, 研究和开发新型无汞催化剂是实现PVC绿色生产的迫切需求。</p>
+<p class="amp-wp-1528b2e"><strong>南开大学化学学院李伟课题组</strong>在<span class="amp-wp-17ffd58">《中国科学：</span><span class="amp-wp-17ffd58">化学》</span>发表评述，讨论了乙炔氢氯化反应中无汞催化剂的研究和开发进展, 包括三个方面的内容: Au、Ru、Pd等金属基催化剂; 杂原子掺杂的碳基无金属催化剂; 其他类型催化剂, 如氮化物, 离子液体和分子筛等。</p>
+</section>
+</section>
+</section>
+</section>
+<p></p>
+<section class="amp-wp-200d30b"><span class="amp-wp-23b9aa5">聚氯乙烯(PVC)是五大通用树脂之一,有着价格低廉、阻燃、高强度、耐候性以及优良的加工性能等优点, 广泛应用于建材、家居、农业和医疗器械等多个领域。</span><span class="amp-wp-23b9aa5">Ceresana关于PVC市场的报告数据显示, 2016年全球PVC消费量超过4200万吨, 占塑料市场总需求量的16%以上。</span><span class="amp-wp-23b9aa5">预计到2026年, 全球PVC需求量将达到5620万吨。</span><span class="amp-wp-23b9aa5">氯乙烯单体(VCM)是重要的化工单体之一, 主要用于生产PVC及其他共聚物。</span><span class="amp-wp-23b9aa5">目前,全球96%以上的VCM被用于生产PVC产品。</span><span class="amp-wp-23b9aa5">VCM的生产主要集中在中国、欧洲、美国及其他亚洲地区。</span><span class="amp-wp-23b9aa5">2016年, 中国的VCM产量达到了1184万吨, 占全球总生产份额的31%以上。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">工业上VCM生产的成熟路线主要是两种,一种是乙烯法。该方法主要通过乙烯的氯化或氧氯化反应得到1, 2-二氯乙烷, 然后通过1, 2-二氯乙烷的热解脱HCl制备VCM。另一种方法是乙炔法。该方法主要通过乙炔和HCl的亲电加成反应, 一步制备VCM。除此之外, 研究人员也在积极尝试开发新的VCM合成工艺。天然气、炼厂气和油田气中含有丰富的乙烷气体, 通过乙烷的氯化或氧氯化反应可直接合成VCM。美国的Lummus、英国的ICI、Monsanto等公司及苏联均积极地进行了乙烷制VCM的研究开发, 在国内也有吉林大学和内蒙古大学等科研单位进行该工艺的研究探索。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">在西方国家, 随着石油工业的高度发展,几乎全部的VCM生产工艺已由乙烯法替代了乙炔法。2016年, 乙烯氧氯化法生产的VCM产量约占全球75%。乙炔法的原料为煤炭, 在富煤、贫油、少气的国家(如中国),乙炔法VCM生产具有技术成熟、耗水量少、生产成本低等竞争优势,以煤炭为基础的乙炔法路线是VCM生产的主流工艺。2017年, 中国PVC总产能达到了2300万吨, 约占全球PVC产能的40%, 其中近80%由乙炔法生产。在面临国际能源紧张, 石油资源逐渐枯竭的形势下, 乙炔法PVC生产将有助于我国降低石油产品对外依赖程度, 同时也为我国氯碱行业的健康可持续发展提供保障。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">目前, 在乙炔法合成VCM的核心催化环节几乎全部使用的是活性炭负载的HgCl2催化剂。PVC行业消耗汞的量约占全国汞消耗量的60%和世界用汞总量的10%以上, 已经成为我国乃至全世界用汞量最大的行业。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">然而, 汞催化剂的使用正面临严峻的挑战。一方面, 汞矿的枯竭及政策性关闭导致汞的价格上涨, 已由2003年的7.3万/吨, 上升到2018年的45万/吨, 使PVC行业面临巨大的成本压力。另一方面, 由于汞的毒性, VCM生产中汞的流失给人类和环境带来严重威胁。2013年1月19日, 联合国环境规划署通过了旨在全球范围内控制和减少汞排放的国际公约:《水俣公约》, 以减少汞的排放对环境和人类健康造成的损害。2016年8月, 我国政府向联合国递交《水俣公约》的批准文书, 并指出针对PVC行业汞的使用问题, 支持无汞催化剂的研发, 并在具有切实可行的无汞催化技术后, 彻底取代汞的使用。因此, 在经济、环境等多重压力下, 开发新型高效的无汞催化剂已成为PVC行业可持续发展的迫切需要。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">南开大学化学学院李伟课题组概述了VCM生产中无汞催化剂的研究和开发历程, 并重点对无汞金属基催化剂, 无金属杂原子掺杂碳基催化剂、氮化物、离子液体等新型催化剂的研究成果进行了总结和评述, 对后续无汞催化剂的发展进行了展望。</span></section>
+<p class="amp-wp-cdd8ca0"><amp-img class="rich_pages js_insertlocalimg amp-wp-enforced-sizes" data-ratio="0.6138107416879796" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAWibKyVkxeTxv8yVLE9Ryibt5wzXLoX9nDicibv63ddGZZwuv4ljiaPsAc1RFOhgHPJVyXh47dPw1ev9w/640?wx_fmt=png" data-type="png" data-w="782" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAWibKyVkxeTxv8yVLE9Ryibt5wzXLoX9nDicibv63ddGZZwuv4ljiaPsAc1RFOhgHPJVyXh47dPw1ev9w/640?wx_fmt=png" width="782" height="480" layout="intrinsic"><noscript><img class="rich_pages js_insertlocalimg" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAWibKyVkxeTxv8yVLE9Ryibt5wzXLoX9nDicibv63ddGZZwuv4ljiaPsAc1RFOhgHPJVyXh47dPw1ev9w/640?wx_fmt=png" width="782" height="480"></noscript></amp-img></p>
+<section class="amp-wp-e5c5d62"><span class="amp-wp-a9e3560">DFT计算显示乙炔吸附的不同位点。(a) 之字形边缘上可能的吸附位点; (b) 扶手边缘和平面内可能的吸附位点; (c) 不同位点上的吸附能; (d) 扶手边缘位点4上优化的乙炔吸附构型; (e) 吸附乙炔后位点4上的电荷分布。蓝色球代表氮原子, 浅粉色球代表硼原子, 灰色球代表碳原子, 白色球代表氢原子。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">随着禁汞期限的日益临近及PVC产业升级的迫切需要, 以无汞催化剂来替代含汞催化剂已成为中国PVC产业的必然选择。对于Au基催化剂而言, 尽管仍存在许多问题需要解决, 例如: (1) Au基催化剂的成本问题; (2) Au基催化剂的失活和再生问题。但是, 目前Au基催化剂仍是替代含汞催化剂的最佳选择。Au基催化剂的理论研究最为透彻, 在催化剂开发方面, 国内外许多科研单位也都进行了大量的工业侧线试验并取得了令人满意的结果, 这都加快了Au基催化剂大规模工业应用的进程。</span><span class="amp-wp-23b9aa5"> </span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58">而对于碳基非金属催化剂而言, 虽然已有大量研究工作, 但是该类材料仍面临很多科学和技术难题, 比如: (1) 对催化剂活性物种(吡啶氮、吡咯氮、石墨氮等)的认识不足, 对催化反应路径的研究缺乏直观有效的证据; (2) 缺乏在分子层面对活性位点进行定向设计和可控构建的方法。然而, 考虑到人类在催化领域所取得的巨大成就与进展, 有理由相信, 在不远的将来, Au基催化剂终将实现大规模工业应用, 无金属催化剂的研究和开发也必将取得重大突破。</span></section>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58"><span class="amp-wp-844729b">点击下方链接或左下角“阅读原文”可查阅全文：</span></span></section>
+<p class="amp-wp-429e499"><a target="_blank" href="http://engine.scichina.com/publisher/scp/journal/SSC/49/11/10.1360/SSC-2019-0098?slug=fulltext" data-linktype="2" rel="noopener noreferrer"><span class="amp-wp-4cd6e95"><strong><span class="amp-wp-13362ee">乔贤亮,  关庆鑫,  李伟. 乙炔氢氯化反应中无汞催化剂的研究进展，中国科学：</span></strong><strong><span class="amp-wp-13362ee">化学. 2019, 49: 1385–1400, doi: 10.1360/SSC-2019-0098</span></strong></span></a></p>
+<p class="amp-wp-429e499"></p>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58"></span></section>
+<p class="amp-wp-cdd8ca0"><amp-img class="rich_pages amp-wp-enforced-sizes" data-ratio="0.7790893760539629" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcDI9HpVvcicPOr3JZIY96Gye4aCn78P24E3OiaiaHSOcdDoPRCax8jKjicjalQXdvVkKscMKmib4d7P9Ew/640?wx_fmt=png" data-type="png" data-w="593" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcDI9HpVvcicPOr3JZIY96Gye4aCn78P24E3OiaiaHSOcdDoPRCax8jKjicjalQXdvVkKscMKmib4d7P9Ew/640?wx_fmt=png" width="593" height="462" layout="intrinsic"><noscript><img class="rich_pages" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcDI9HpVvcicPOr3JZIY96Gye4aCn78P24E3OiaiaHSOcdDoPRCax8jKjicjalQXdvVkKscMKmib4d7P9Ew/640?wx_fmt=png" width="593" height="462"></noscript></amp-img></p>
+<section class="amp-wp-200d30b"><span class="amp-wp-17ffd58"></span></section>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/82/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://stime.cc/sitemap_index.xml
