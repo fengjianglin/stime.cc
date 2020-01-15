@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html amp lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/194/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/194/#webpage","url":"https://stime.cc/article/194/","inLanguage":"zh-CN","name":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/194/#primaryimage"},"datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00"},{"@type":"Article","@id":"https://stime.cc/article/194/#article","isPartOf":{"@id":"https://stime.cc/article/194/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002","datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/194/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/194/#primaryimage"},"articleSection":""}]}</script>
+	<title>敖丙我写了一个新手都写不出的低级bug，被骂惨了。 - S时代</title>
+		<link rel="canonical" href="https://stime.cc/article/194/">
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-255ed27{font-size:16px;line-height:1.8;word-spacing:2px;letter-spacing:2px;font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;background-image:linear-gradient(90deg,rgba(50,0,0,.05) 3%,rgba(0,0,0,0) 3%),linear-gradient(360deg,rgba(50,0,0,.05) 3%,rgba(0,0,0,0) 3%);background-size:20px 20px;background-position:center center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-92716b0{color:inherit;line-height:inherit;margin-top:1.6em;margin-bottom:1.6em;font-weight:bold;font-size:1.4em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5603148{font-size:inherit;line-height:inherit;color:#e96900}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-03070a8{font-size:inherit;color:inherit;line-height:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d1cbdee{font-size:inherit;color:inherit;line-height:inherit;display:inline-block;margin-right:auto;margin-left:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-87e8f6c{font-size:inherit;color:inherit;line-height:inherit;display:block;margin-right:auto;margin-left:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b937cee{font-size:inherit;color:inherit;line-height:inherit;margin-top:1.7em;margin-bottom:1.7em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdd8ca0{text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d99e17d{width:100%;height:auto}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">敖丙我写了一个新手都写不出的低级bug，被骂惨了。</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-15T15:41:15+00:00">
+		24分钟 ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<section data-mpa-powered-by="yiban.io" class="amp-wp-255ed27">
+<h2 class="amp-wp-92716b0"><span class="amp-wp-03070a8">前前言</span></h2>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.964" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif" data-type="gif" data-w="250" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif" width="250" height="241" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif" width="250" height="241" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">为啥今天有个前前言呢？</p>
+<p class="amp-wp-b937cee">因为你们的丙丙啊，昨天有牌面了哟，直接被微信官方推荐，知乎推荐，也就仅仅是还行吧（心里乐开花）。</p>
+<p class="amp-wp-b937cee">也有好几个号主发来问候，直接实名羡慕哈哈，丙丙以后也是被微信推荐过的男人了，你们也是有牌面的读者了。</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="1.4038461538461537" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYFI5IMhliaveu5CNlu9domx7UhWKD81P4pM1TsXc5rxdAiajdqgdgc5XA/640?wx_fmt=jpeg" data-type="jpeg" data-w="416" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYFI5IMhliaveu5CNlu9domx7UhWKD81P4pM1TsXc5rxdAiajdqgdgc5XA/640?wx_fmt=jpeg" width="416" height="584" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYFI5IMhliaveu5CNlu9domx7UhWKD81P4pM1TsXc5rxdAiajdqgdgc5XA/640?wx_fmt=jpeg" width="416" height="584" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<h2 class="amp-wp-92716b0"><span class="amp-wp-03070a8">前言</span></h2>
+<p class="amp-wp-b937cee">你们是不是以为丙丙这么忙了，肯定不会写技术文章给你们看了？</p>
+<p class="amp-wp-b937cee">丙丙暖男来的，不过说实话年前估计是没啥时间写技术文章了，上周末两篇你们也看到了，不是年会就是首脑峰会，实在很忙。</p>
+<p class="amp-wp-b937cee">这周也是一样，我们年底了项目也赶，我今天一列下个Q的计划，我的个乖乖，平均三天一个需求，什么鬼啊。</p>
+<p class="amp-wp-b937cee">而且周四又有技术部的年会，我还是视频的导演（打杂仔哈哈），肯定需要确认很多细节，到时候我应该还可以周末水一篇给你们看（剧透下那一期会有我女神入镜）。</p>
+<p class="amp-wp-b937cee">下周周二我就坐车回家了，打工仔回家过年了，我也叫我妈把我要回家的消息放出去了，估计媒人这会已经在路上了，到时候相亲我又可以水文章了，过年素材也好多呀，开心。</p>
+<p class="amp-wp-b937cee">这一篇主要说一下我之前的一个很愚蠢的bug，本来只打算让他呆我笔记里面的，但是还是忍不住想要分享出来，让大家避免这种低级错误（<strong class="amp-wp-5603148">其实我想水一篇多少有点技术内容的文章，免得写N篇全是水日常的文章，你们估计又要Diss我了</strong>）。</p>
+<h2 class="amp-wp-92716b0"><span class="amp-wp-03070a8">正文</span></h2>
+<p class="amp-wp-b937cee">我先描述一下bug的现象哈：</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.24804992199687986" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYSJ5iajTnMBzxRiacKmmIlbjQL6sRgrwzyUiculuicalztwkibV2NZUdODkQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="1282" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYSJ5iajTnMBzxRiacKmmIlbjQL6sRgrwzyUiculuicalztwkibV2NZUdODkQ/640?wx_fmt=jpeg" width="1080" height="268" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYSJ5iajTnMBzxRiacKmmIlbjQL6sRgrwzyUiculuicalztwkibV2NZUdODkQ/640?wx_fmt=jpeg" width="1080" height="268" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">这两个输入框的值都是我从KV（Redis之类的存储中间件）里面获取到的，也是可以实时修改的，我自作聪明，想着KV里面如果没值，就默认取一个静态变量，这样有个兜底，在类加载的时候加载静态变量，我取的时候也效率高了。</p>
+<p class="amp-wp-b937cee">这就也为我后面的Bug埋下了伏笔，问题是这个Bug烦就烦在他在预发环境是好的，线上却是坏的。</p>
+<p class="amp-wp-b937cee">先看看代码怎么写的：</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.9310344827586207" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYOTTr2VJjXMaXz3CP6XsdqEQZnJSApgcXnjmwhev4mD0GUic05ClE60A/640?wx_fmt=jpeg" data-type="jpeg" data-w="1160" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYOTTr2VJjXMaXz3CP6XsdqEQZnJSApgcXnjmwhev4mD0GUic05ClE60A/640?wx_fmt=jpeg" width="1080" height="1006" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYOTTr2VJjXMaXz3CP6XsdqEQZnJSApgcXnjmwhev4mD0GUic05ClE60A/640?wx_fmt=jpeg" width="1080" height="1006" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">可以看到代码里面，我是在静态代码块去KV取值，如果有值就用KV的做初始值，没取到我也有默认值，我当时还在想自己的构思真巧妙，用KV比DB效率高，用常量去做兜底，不至于没配置的情况没有值，报空指针啥的。</p>
+<p class="amp-wp-b937cee">当时一个劲给自己加油打气，一个劲的<strong class="amp-wp-5603148">妙啊</strong>，不知道自己写了多蠢的代码。</p>
+<p class="amp-wp-b937cee">这样写看似没什么问题，但是我这个值是可以修改的这就有问题了，而且我有几个地方还是取的变量，不是一直取的KV。</p>
+<p class="amp-wp-b937cee">而且常量被我当变量用，也都违背了这玩意的初衷了。</p>
+<p class="amp-wp-b937cee">我上线后，三歪就说：敖丙出大问题了，为啥我刷新一下值就不对了，再刷新值就回来了。</p>
+<p class="amp-wp-b937cee">我惊恐万分，深知我写了BUG，我不着痕迹的擦去我鬓角的汗水，深呼吸了一下。</p>
+<p class="amp-wp-b937cee"><strong class="amp-wp-5603148">回答道：我代码还没写好呢，你怎么乱点，我告诉过你不要乱点的，现在你点坏了吧。</strong></p>
+<p class="amp-wp-b937cee">三歪好像真的以为他错了，委屈巴巴的啥也没说就默默离开了。</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.9779411764705882" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYxpRj4OLxuficVGq0Np50xUOrGFSrvBhBAlt6WhWG2HkRCGGbXoITXkA/640?wx_fmt=jpeg" data-type="jpeg" data-w="272" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYxpRj4OLxuficVGq0Np50xUOrGFSrvBhBAlt6WhWG2HkRCGGbXoITXkA/640?wx_fmt=jpeg" width="272" height="266" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYxpRj4OLxuficVGq0Np50xUOrGFSrvBhBAlt6WhWG2HkRCGGbXoITXkA/640?wx_fmt=jpeg" width="272" height="266" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">这个时候我马上打开电脑，也顾不上歪歪的感受了，思绪转的飞快，开始在闹海中构建整个值传递的链路。</p>
+<p class="amp-wp-b937cee">我改了页面的值，之后我也改了这个静态变量和KV的值，但是我在线上发现我刷新页面一会是修改之后的，一会是修改之前的值.</p>
+<p class="amp-wp-b937cee">这就奇怪了呀，主要是在预发还不能复现，这就很坑爹了，难受呀歪歪。</p>
+<p class="amp-wp-b937cee">Tip：预发指的是，代码跟线上一样，数据库一样，环境配置不一样。</p>
+<p class="amp-wp-b937cee">我把代码看了一遍又一遍，还是没发现问题。</p>
+<p class="amp-wp-b937cee">在当天那个饱暖思淫欲的下午饭之后我，突然灵光一闪发现了问题的核心，预发是好的因为他是一台机器。</p>
+<p class="amp-wp-b937cee">而我们线上的机器是负载均衡的，有两台机器，我修改一次只改了一台机器的值，另外一台没修改到。</p>
+<p class="amp-wp-b937cee">那么问题就简单了，我们看下图：</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.7874015748031497" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYE5BQJLGqiabj6lkmHiaHsW0HF3BfPbOWCZj4lhAhCScU81kFUgdpN7pw/640?wx_fmt=jpeg" data-type="jpeg" data-w="508" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYE5BQJLGqiabj6lkmHiaHsW0HF3BfPbOWCZj4lhAhCScU81kFUgdpN7pw/640?wx_fmt=jpeg" width="508" height="400" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYE5BQJLGqiabj6lkmHiaHsW0HF3BfPbOWCZj4lhAhCScU81kFUgdpN7pw/640?wx_fmt=jpeg" width="508" height="400" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">预发情况，是单机，不管我怎么读怎么修改，每次数据都是准确的（这里我还没意识到其实每次去取变量是不对的）。</p>
+<p class="amp-wp-b937cee">但是线上不一样，服务器启动的时候给每台机器赋值了，这样的情况如果只是读是没问题的（怪不得静态常量都是private的，能修改的话基本上都有这个问题）。</p>
+<p class="amp-wp-b937cee">但是如果修改，你修改的请求只是打到了一台机器上，如果下次负载均衡请求到了这个机器，那么你很幸运，结果是对的，但是往往负载均衡算法就是那么公平，雨露均沾这样的情况 1/2的请求，都会拿到错误的结果。</p>
+<p class="amp-wp-b937cee">而且这个地方的问题还有一个就是，应该是修改KV之后，修改变量，我有的地方取的是变量，因为我想每次反正都改了，取也没事。</p>
+<p class="amp-wp-b937cee">其实正确的做法是我每次去都读KV就好了，只有KV为空的时候才去读静态变量，作为一种兜底方案，不应该去改变常量的值。</p>
+<p class="amp-wp-b937cee">而且大家要知道，我修改KV成功万一修改常量的时候出错了呢？你取常量的值就不对了。</p>
+<p class="amp-wp-b937cee">所以查询，修改应该这样做：</p>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.6085626911314985" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYVYr23oRjtcyXQgwRcXGROyB2DRXFAUeIV3z4vnmrNWVQdjMD44CPYQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="654" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYVYr23oRjtcyXQgwRcXGROyB2DRXFAUeIV3z4vnmrNWVQdjMD44CPYQ/640?wx_fmt=jpeg" width="654" height="398" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaYVYr23oRjtcyXQgwRcXGROyB2DRXFAUeIV3z4vnmrNWVQdjMD44CPYQ/640?wx_fmt=jpeg" width="654" height="398" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<p class="amp-wp-b937cee">主要是想提醒大家，谨慎操作静态常量，能不变就不变，不要写这么骚的操作了，我这算少的很多 40、50台线上机器的服务，这种问题是真的难发现。</p>
+<p class="amp-wp-b937cee">我是万万没想到，我居然写出这种代码，下次再写出来，只能让歪歪不要乱点了，免得又点坏了哈哈。</p>
+</section>
+<p class="amp-wp-cdd8ca0"><amp-img class="rich_pages amp-wp-enforced-sizes amp-wp-d99e17d" data-backh="319" data-backw="574" data-ratio="0.5555555555555556" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" data-type="png" data-w="900" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" width="900" height="500" layout="intrinsic"><noscript><img class="rich_pages amp-wp-d99e17d" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" width="900" height="500"></noscript></amp-img></p>
+<p></p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/194/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
