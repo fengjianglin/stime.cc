@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +9,26 @@
 
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://stime.cc/article/199/">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习linux命令，看这篇2w多字的命令详解就够了 - S时代">
-<meta property="og:description" content="用心分享，共&#x540C...">
+<meta property="og:description" content="用心分享，共同成长 没有什么比每天进步一点点更重要了 序言  本篇文章主要讲解了一些linux常用命令，主要讲解模式是，命令介绍、命令参数格式、命令参数、命令常用参数示例。由于linux命令较多，我还特意选了一些日常使用较为频繁的命令进行讲解，但还是免不了文章很长，建议大家收藏起来，用到的时候不会了再来阅读。当然学习linux命令最好的方法是学会使用linux自带的man手册，所有linux命令规范和使用细则都会在该手册中讲解的很清楚，我在书写的过程中也是参考该手册和日常使用情况。 如果还有哪些是大家希望再补充的命令，可以留言给我，我会持续更新该文章，同时也作为我学习和工作的手册。 Linux初级指令 ls ——List ls 介绍  这是我学Linux的第一个命令，相信也是很多人学习Linux的第一个命令。ls全称list. List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor –sort is specified. 列出有关文件的信息(默认为当前目录)。如果没有指定-cftuvSUX或——Sort，则按字母顺序排序。  官方的说的很清楚，默认列出当前目录，所以可以列出其他目录或者路径下的文件信息或者目录信息。 eg： $ls /etc/hosts/etc/hosts  ls还可以列出指定目录下的文件列表。 image-20191221161638964 ls 参数格式 ls [OPTION]... [FILE]... ls命令参数 -a  列出指定目录下的所有文件，包括隐藏文件 -c 使用最后一次更改文件状态以进行排序(-t)或长时间打印(-l)的时间 -h 与-l选项一起使用时，请使用单位后缀:Byte、Kilobyte、mete、gb、tb和Petabyte，以便使用以2为基数的大小将数字减少到3或更少 -l 长格式列表。(见下文)。如果输出到终端，则所有文件大小的总和将输出到长清单前面的一行中 -n 以数字形式显示用户和组id，而不是在长(-l)输出中转换为用户或组名。这个选项默认打开-l选项 -o...">
 <meta property="og:url" content="https://stime.cc/article/199/">
 <meta property="og:site_name" content="S时代">
 <meta property="article:section" content="未分类">
 <meta property="article:published_time" content="2020-01-15T07:42:54+00:00">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="用心分享，共&#x540C...">
+<meta name="twitter:description" content="用心分享，共同成长 没有什么比每天进步一点点更重要了 序言  本篇文章主要讲解了一些linux常用命令，主要讲解模式是，命令介绍、命令参数格式、命令参数、命令常用参数示例。由于linux命令较多，我还特意选了一些日常使用较为频繁的命令进行讲解，但还是免不了文章很长，建议大家收藏起来，用到的时候不会了再来阅读。当然学习linux命令最好的方法是学会使用linux自带的man手册，所有linux命令规范和使用细则都会在该手册中讲解的很清楚，我在书写的过程中也是参考该手册和日常使用情况。 如果还有哪些是大家希望再补充的命令，可以留言给我，我会持续更新该文章，同时也作为我学习和工作的手册。 Linux初级指令 ls ——List ls 介绍  这是我学Linux的第一个命令，相信也是很多人学习Linux的第一个命令。ls全称list. List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor –sort is specified. 列出有关文件的信息(默认为当前目录)。如果没有指定-cftuvSUX或——Sort，则按字母顺序排序。  官方的说的很清楚，默认列出当前目录，所以可以列出其他目录或者路径下的文件信息或者目录信息。 eg： $ls /etc/hosts/etc/hosts  ls还可以列出指定目录下的文件列表。 image-20191221161638964 ls 参数格式 ls [OPTION]... [FILE]... ls命令参数 -a  列出指定目录下的所有文件，包括隐藏文件 -c 使用最后一次更改文件状态以进行排序(-t)或长时间打印(-l)的时间 -h 与-l选项一起使用时，请使用单位后缀:Byte、Kilobyte、mete、gb、tb和Petabyte，以便使用以2为基数的大小将数字减少到3或更少 -l 长格式列表。(见下文)。如果输出到终端，则所有文件大小的总和将输出到长清单前面的一行中 -n 以数字形式显示用户和组id，而不是在长(-l)输出中转换为用户或组名。这个选项默认打开-l选项 -o...">
 <meta name="twitter:title" content="学习linux命令，看这篇2w多字的命令详解就够了 - S时代">
 <meta name="twitter:image" content="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpxvGvrfCSONCJqDXU1RgDHViaQbibZkMnNHZ4DGNYnph8ImRuTGspMv4HI9dthPHMV0m96T66bulf5w/640?wx_fmt=gif">
-<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/199/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpxvGvrfCSONCJqDXU1RgDHViaQbibZkMnNHZ4DGNYnph8ImRuTGspMv4HI9dthPHMV0m96T66bulf5w/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/199/#webpage","url":"https://stime.cc/article/199/","inLanguage":"zh-CN","name":"\u5b66\u4e60linux\u547d\u4ee4\uff0c\u770b\u8fd9\u7bc72w\u591a\u5b57\u7684\u547d\u4ee4\u8be6\u89e3\u5c31\u591f\u4e86 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/199/#primaryimage"},"datePublished":"2020-01-15T07:42:54+00:00","dateModified":"2020-01-15T07:42:54+00:00"},{"@type":"Article","@id":"https://stime.cc/article/199/#article","isPartOf":{"@id":"https://stime.cc/article/199/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u5b66\u4e60linux\u547d\u4ee4\uff0c\u770b\u8fd9\u7bc72w\u591a\u5b57\u7684\u547d\u4ee4\u8be6\u89e3\u5c31\u591f\u4e86","datePublished":"2020-01-15T07:42:54+00:00","dateModified":"2020-01-15T07:42:54+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/199/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/199/#primaryimage"},"articleSection":""}]}</script>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/199/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpxvGvrfCSONCJqDXU1RgDHViaQbibZkMnNHZ4DGNYnph8ImRuTGspMv4HI9dthPHMV0m96T66bulf5w/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/199/#webpage","url":"https://stime.cc/article/199/","inLanguage":"en-US","name":"\u5b66\u4e60linux\u547d\u4ee4\uff0c\u770b\u8fd9\u7bc72w\u591a\u5b57\u7684\u547d\u4ee4\u8be6\u89e3\u5c31\u591f\u4e86 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/199/#primaryimage"},"datePublished":"2020-01-15T07:42:54+00:00","dateModified":"2020-01-15T07:42:54+00:00"},{"@type":"Article","@id":"https://stime.cc/article/199/#article","isPartOf":{"@id":"https://stime.cc/article/199/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u5b66\u4e60linux\u547d\u4ee4\uff0c\u770b\u8fd9\u7bc72w\u591a\u5b57\u7684\u547d\u4ee4\u8be6\u89e3\u5c31\u591f\u4e86","datePublished":"2020-01-15T07:42:54+00:00","dateModified":"2020-01-15T07:42:54+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/199/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/199/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
 
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
 <link rel="alternate" type="application/rss+xml" title="S时代 » Feed" href="https://stime.cc/feed/">
-<link rel="alternate" type="application/rss+xml" title="S时代 » 评论Feed" href="https://stime.cc/comments/feed/">
-<link rel="alternate" type="application/rss+xml" title="S时代 » 学习linux命令，看这篇2w多字的命令详解就够了评论Feed" href="https://stime.cc/article/199/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Comments Feed" href="https://stime.cc/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » 学习linux命令，看这篇2w多字的命令详解就够了 Comments Feed" href="https://stime.cc/article/199/feed/">
 <link rel="stylesheet" id="wp-block-library-css" href="https://stime.cc/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="https://stime.cc/wp-content/themes/bloggist/css/font-awesome.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="bloggist-style-css" href="https://stime.cc/wp-content/themes/bloggist/style.css" type="text/css" media="all">
@@ -169,7 +169,7 @@
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="https://stime.cc/article/199/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-15T15:42:54+08:00">2020年1月15日</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
+						<span class="posted-on">Posted on <a href="https://stime.cc/article/199/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-15T15:42:54+08:00">2020/1/15</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
 				</div>
 			</div>
 		</div>
@@ -1215,11 +1215,11 @@ mv [-f | -i | -n] [-v] source ... directory</code></p>
 <div id="comments" class="fbox comments-area">
 
 		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/199/#respond" style="display:none;">取消回复</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
-<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
-<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
-<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">在此浏览器中保存我的名字、电邮和网站。</label></p>
-<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> <input type="hidden" name="comment_post_ID" value="199" id="comment_post_ID">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/199/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="199" id="comment_post_ID">
 <input type="hidden" name="comment_parent" id="comment_parent" value="0">
 </p></form>	</div>
 	
@@ -1232,55 +1232,55 @@ mv [-f | -i | -n] [-v] source ... directory</code></p>
 <aside id="secondary" class="featured-sidebar widget-area">
 	<section id="search-7" class="fbox swidgets-wrap widget widget_search"><form role="search" target="_blank" method="get" class="search-form" action="https://google.com/search">
 				<label>
-					<span class="screen-reader-text">搜索：</span>
-					<input type="search" class="search-field" placeholder="搜索…" value="" name="q">
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="q">
 					<input type="hidden" name="sitesearch" value="stime.cc" style="display: block;">
 				</label>
-				<input type="submit" class="search-submit" value="搜索">
-			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">近期文章</h4></div>		<ul>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Recent Posts</h4></div>		<ul>
+											<li>
+					<a href="https://stime.cc/article/250/">看世界系列 | 发现肯尼亚</a>
+											<span class="post-date">2020/1/16</span>
+									</li>
 											<li>
 					<a href="https://stime.cc/article/249/">伊朗基地遭F35突袭！以色列突然不宣而战！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/248/">学者：美国对伊朗的威慑战略将深刻影响朝鲜</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/247/">因为看球赛而失去生命的伊朗女孩！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/246/">突发！美军无人机再出击 塔利班分离司令遭击毙！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/245/">红色高棉，波尔布特之死的那一刻</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/244/">崩溃了！程序员大战陈安之！！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/243/">快乐罗杰和爵士让水（下）博弈的黑暗森林</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/242/">哥白尼致教皇保罗三世的信</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/241/">几个兄弟值得我舍命？</a>
-											<span class="post-date">2020年1月15日</span>
-									</li>
-											<li>
-					<a href="https://stime.cc/article/240/">言论自由和名誉防护（九）法律的骨骼</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 					</ul>
-		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">文章归档</h4></div>		<ul>
-				<li><a href="https://stime.cc/article/date/2020/01/">2020年一月</a> (104)</li>
+		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Archives</h4></div>		<ul>
+				<li><a href="https://stime.cc/article/date/2020/01/">January 2020</a> (105)</li>
 		</ul>
 			</section></aside>
 </div>

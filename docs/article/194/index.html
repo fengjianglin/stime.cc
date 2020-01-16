@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +9,26 @@
 
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://stime.cc/article/194/">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="敖丙我写了一个新手都写不出的低级bug，被骂惨了。 - S时代">
-<meta property="og:description" content="前前言 为啥今&#x592...">
+<meta property="og:description" content="前前言 为啥今天有个前前言呢？ 因为你们的丙丙啊，昨天有牌面了哟，直接被微信官方推荐，知乎推荐，也就仅仅是还行吧（心里乐开花）。 也有好几个号主发来问候，直接实名羡慕哈哈，丙丙以后也是被微信推荐过的男人了，你们也是有牌面的读者了。 前言 你们是不是以为丙丙这么忙了，肯定不会写技术文章给你们看了？ 丙丙暖男来的，不过说实话年前估计是没啥时间写技术文章了，上周末两篇你们也看到了，不是年会就是首脑峰会，实在很忙。 这周也是一样，我们年底了项目也赶，我今天一列下个Q的计划，我的个乖乖，平均三天一个需求，什么鬼啊。 而且周四又有技术部的年会，我还是视频的导演（打杂仔哈哈），肯定需要确认很多细节，到时候我应该还可以周末水一篇给你们看（剧透下那一期会有我女神入镜）。 下周周二我就坐车回家了，打工仔回家过年了，我也叫我妈把我要回家的消息放出去了，估计媒人这会已经在路上了，到时候相亲我又可以水文章了，过年素材也好多呀，开心。 这一篇主要说一下我之前的一个很愚蠢的bug，本来只打算让他呆我笔记里面的，但是还是忍不住想要分享出来，让大家避免这种低级错误（其实我想水一篇多少有点技术内容的文章，免得写N篇全是水日常的文章，你们估计又要Diss我了）。 正文 我先描述一下bug的现象哈： 这两个输入框的值都是我从KV（Redis之类的存储中间件）里面获取到的，也是可以实时修改的，我自作聪明，想着KV里面如果没值，就默认取一个静态变量，这样有个兜底，在类加载的时候加载静态变量，我取的时候也效率高了。 这就也为我后面的Bug埋下了伏笔，问题是这个Bug烦就烦在他在预发环境是好的，线上却是坏的。 先看看代码怎么写的： 可以看到代码里面，我是在静态代码块去KV取值，如果有值就用KV的做初始值，没取到我也有默认值，我当时还在想自己的构思真巧妙，用KV比DB效率高，用常量去做兜底，不至于没配置的情况没有值，报空指针啥的。 当时一个劲给自己加油打气，一个劲的妙啊，不知道自己写了多蠢的代码。 这样写看似没什么问题，但是我这个值是可以修改的这就有问题了，而且我有几个地方还是取的变量，不是一直取的KV。 而且常量被我当变量用，也都违背了这玩意的初衷了。 我上线后，三歪就说：敖丙出大问题了，为啥我刷新一下值就不对了，再刷新值就回来了。 我惊恐万分，深知我写了BUG，我不着痕迹的擦去我鬓角的汗水，深呼吸了一下。 回答道：我代码还没写好呢，你怎么乱点，我告诉过你不要乱点的，现在你点坏了吧。 三歪好像真的以为他错了，委屈巴巴的啥也没说就默默离开了。 这个时候我马上打开电脑，也顾不上歪歪的感受了，思绪转的飞快，开始在闹海中构建整个值传递的链路。 我改了页面的值，之后我也改了这个静态变量和KV的值，但是我在线上发现我刷新页面一会是修改之后的，一会是修改之前的值. 这就奇怪了呀，主要是在预发还不能复现，这就很坑爹了，难受呀歪歪。 Tip：预发指的是，代码跟线上一样，数据库一样，环境配置不一样。 我把代码看了一遍又一遍，还是没发现问题。 在当天那个饱暖思淫欲的下午饭之后我，突然灵光一闪发现了问题的核心，预发是好的因为他是一台机器。 而我们线上的机器是负载均衡的，有两台机器，我修改一次只改了一台机器的值，另外一台没修改到。 那么问题就简单了，我们看下图： 预发情况，是单机，不管我怎么读怎么修改，每次数据都是准确的（这里我还没意识到其实每次去取变量是不对的）。 但是线上不一样，服务器启动的时候给每台机器赋值了，这样的情况如果只是读是没问题的（怪不得静态常量都是private的，能修改的话基本上都有这个问题）。 但是如果修改，你修改的请求只是打到了一台机器上，如果下次负载均衡请求到了这个机器，那么你很幸运，结果是对的，但是往往负载均衡算法就是那么公平，雨露均沾这样的情况 1/2的请求，都会拿到错误的结果。 而且这个地方的问题还有一个就是，应该是修改KV之后，修改变量，我有的地方取的是变量，因为我想每次反正都改了，取也没事。 其实正确的做法是我每次去都读KV就好了，只有KV为空的时候才去读静态变量，作为一种兜底方案，不应该去改变常量的值。 而且大家要知道，我修改KV成功万一修改常量的时候出错了呢？你取常量的值就不对了。 所以查询，修改应该这样做： 主要是想提醒大家，谨慎操作静态常量，能不变就不变，不要写这么骚的操作了，我这算少的很多 40、50台线上机器的服务，这种问题是真的难发现。 我是万万没想到，我居然写出这种代码，下次再写出来，只能让歪歪不要乱点了，免得又点坏了哈哈。">
 <meta property="og:url" content="https://stime.cc/article/194/">
 <meta property="og:site_name" content="S时代">
 <meta property="article:section" content="未分类">
 <meta property="article:published_time" content="2020-01-15T07:41:15+00:00">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="前前言 为啥今&#x592...">
+<meta name="twitter:description" content="前前言 为啥今天有个前前言呢？ 因为你们的丙丙啊，昨天有牌面了哟，直接被微信官方推荐，知乎推荐，也就仅仅是还行吧（心里乐开花）。 也有好几个号主发来问候，直接实名羡慕哈哈，丙丙以后也是被微信推荐过的男人了，你们也是有牌面的读者了。 前言 你们是不是以为丙丙这么忙了，肯定不会写技术文章给你们看了？ 丙丙暖男来的，不过说实话年前估计是没啥时间写技术文章了，上周末两篇你们也看到了，不是年会就是首脑峰会，实在很忙。 这周也是一样，我们年底了项目也赶，我今天一列下个Q的计划，我的个乖乖，平均三天一个需求，什么鬼啊。 而且周四又有技术部的年会，我还是视频的导演（打杂仔哈哈），肯定需要确认很多细节，到时候我应该还可以周末水一篇给你们看（剧透下那一期会有我女神入镜）。 下周周二我就坐车回家了，打工仔回家过年了，我也叫我妈把我要回家的消息放出去了，估计媒人这会已经在路上了，到时候相亲我又可以水文章了，过年素材也好多呀，开心。 这一篇主要说一下我之前的一个很愚蠢的bug，本来只打算让他呆我笔记里面的，但是还是忍不住想要分享出来，让大家避免这种低级错误（其实我想水一篇多少有点技术内容的文章，免得写N篇全是水日常的文章，你们估计又要Diss我了）。 正文 我先描述一下bug的现象哈： 这两个输入框的值都是我从KV（Redis之类的存储中间件）里面获取到的，也是可以实时修改的，我自作聪明，想着KV里面如果没值，就默认取一个静态变量，这样有个兜底，在类加载的时候加载静态变量，我取的时候也效率高了。 这就也为我后面的Bug埋下了伏笔，问题是这个Bug烦就烦在他在预发环境是好的，线上却是坏的。 先看看代码怎么写的： 可以看到代码里面，我是在静态代码块去KV取值，如果有值就用KV的做初始值，没取到我也有默认值，我当时还在想自己的构思真巧妙，用KV比DB效率高，用常量去做兜底，不至于没配置的情况没有值，报空指针啥的。 当时一个劲给自己加油打气，一个劲的妙啊，不知道自己写了多蠢的代码。 这样写看似没什么问题，但是我这个值是可以修改的这就有问题了，而且我有几个地方还是取的变量，不是一直取的KV。 而且常量被我当变量用，也都违背了这玩意的初衷了。 我上线后，三歪就说：敖丙出大问题了，为啥我刷新一下值就不对了，再刷新值就回来了。 我惊恐万分，深知我写了BUG，我不着痕迹的擦去我鬓角的汗水，深呼吸了一下。 回答道：我代码还没写好呢，你怎么乱点，我告诉过你不要乱点的，现在你点坏了吧。 三歪好像真的以为他错了，委屈巴巴的啥也没说就默默离开了。 这个时候我马上打开电脑，也顾不上歪歪的感受了，思绪转的飞快，开始在闹海中构建整个值传递的链路。 我改了页面的值，之后我也改了这个静态变量和KV的值，但是我在线上发现我刷新页面一会是修改之后的，一会是修改之前的值. 这就奇怪了呀，主要是在预发还不能复现，这就很坑爹了，难受呀歪歪。 Tip：预发指的是，代码跟线上一样，数据库一样，环境配置不一样。 我把代码看了一遍又一遍，还是没发现问题。 在当天那个饱暖思淫欲的下午饭之后我，突然灵光一闪发现了问题的核心，预发是好的因为他是一台机器。 而我们线上的机器是负载均衡的，有两台机器，我修改一次只改了一台机器的值，另外一台没修改到。 那么问题就简单了，我们看下图： 预发情况，是单机，不管我怎么读怎么修改，每次数据都是准确的（这里我还没意识到其实每次去取变量是不对的）。 但是线上不一样，服务器启动的时候给每台机器赋值了，这样的情况如果只是读是没问题的（怪不得静态常量都是private的，能修改的话基本上都有这个问题）。 但是如果修改，你修改的请求只是打到了一台机器上，如果下次负载均衡请求到了这个机器，那么你很幸运，结果是对的，但是往往负载均衡算法就是那么公平，雨露均沾这样的情况 1/2的请求，都会拿到错误的结果。 而且这个地方的问题还有一个就是，应该是修改KV之后，修改变量，我有的地方取的是变量，因为我想每次反正都改了，取也没事。 其实正确的做法是我每次去都读KV就好了，只有KV为空的时候才去读静态变量，作为一种兜底方案，不应该去改变常量的值。 而且大家要知道，我修改KV成功万一修改常量的时候出错了呢？你取常量的值就不对了。 所以查询，修改应该这样做： 主要是想提醒大家，谨慎操作静态常量，能不变就不变，不要写这么骚的操作了，我这算少的很多 40、50台线上机器的服务，这种问题是真的难发现。 我是万万没想到，我居然写出这种代码，下次再写出来，只能让歪歪不要乱点了，免得又点坏了哈哈。">
 <meta name="twitter:title" content="敖丙我写了一个新手都写不出的低级bug，被骂惨了。 - S时代">
 <meta name="twitter:image" content="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif">
-<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/194/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/194/#webpage","url":"https://stime.cc/article/194/","inLanguage":"zh-CN","name":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/194/#primaryimage"},"datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00"},{"@type":"Article","@id":"https://stime.cc/article/194/#article","isPartOf":{"@id":"https://stime.cc/article/194/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002","datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/194/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/194/#primaryimage"},"articleSection":""}]}</script>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/194/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/uChmeeX1FpzFvzyYg1CHLkGbSjMvdEiaY21DTt9BPmmpI7bt9e3QeWtN61YvfAW0YiaTQ1kaqqmsvhuk8VgibDt1g/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/194/#webpage","url":"https://stime.cc/article/194/","inLanguage":"en-US","name":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/194/#primaryimage"},"datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00"},{"@type":"Article","@id":"https://stime.cc/article/194/#article","isPartOf":{"@id":"https://stime.cc/article/194/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u6556\u4e19\u6211\u5199\u4e86\u4e00\u4e2a\u65b0\u624b\u90fd\u5199\u4e0d\u51fa\u7684\u4f4e\u7ea7bug\uff0c\u88ab\u9a82\u60e8\u4e86\u3002","datePublished":"2020-01-15T07:41:15+00:00","dateModified":"2020-01-15T07:41:15+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/194/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/194/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
 
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
 <link rel="alternate" type="application/rss+xml" title="S时代 » Feed" href="https://stime.cc/feed/">
-<link rel="alternate" type="application/rss+xml" title="S时代 » 评论Feed" href="https://stime.cc/comments/feed/">
-<link rel="alternate" type="application/rss+xml" title="S时代 » 敖丙我写了一个新手都写不出的低级bug，被骂惨了。评论Feed" href="https://stime.cc/article/194/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Comments Feed" href="https://stime.cc/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » 敖丙我写了一个新手都写不出的低级bug，被骂惨了。 Comments Feed" href="https://stime.cc/article/194/feed/">
 <link rel="stylesheet" id="wp-block-library-css" href="https://stime.cc/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="https://stime.cc/wp-content/themes/bloggist/css/font-awesome.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="bloggist-style-css" href="https://stime.cc/wp-content/themes/bloggist/style.css" type="text/css" media="all">
@@ -169,7 +169,7 @@
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="https://stime.cc/article/194/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-15T15:41:15+08:00">2020年1月15日</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
+						<span class="posted-on">Posted on <a href="https://stime.cc/article/194/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-15T15:41:15+08:00">2020/1/15</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
 				</div>
 			</div>
 		</div>
@@ -235,11 +235,11 @@
 <div id="comments" class="fbox comments-area">
 
 		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/194/#respond" style="display:none;">取消回复</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
-<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
-<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
-<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">在此浏览器中保存我的名字、电邮和网站。</label></p>
-<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> <input type="hidden" name="comment_post_ID" value="194" id="comment_post_ID">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/194/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="194" id="comment_post_ID">
 <input type="hidden" name="comment_parent" id="comment_parent" value="0">
 </p></form>	</div>
 	
@@ -252,55 +252,55 @@
 <aside id="secondary" class="featured-sidebar widget-area">
 	<section id="search-7" class="fbox swidgets-wrap widget widget_search"><form role="search" target="_blank" method="get" class="search-form" action="https://google.com/search">
 				<label>
-					<span class="screen-reader-text">搜索：</span>
-					<input type="search" class="search-field" placeholder="搜索…" value="" name="q">
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="q">
 					<input type="hidden" name="sitesearch" value="stime.cc" style="display: block;">
 				</label>
-				<input type="submit" class="search-submit" value="搜索">
-			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">近期文章</h4></div>		<ul>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Recent Posts</h4></div>		<ul>
+											<li>
+					<a href="https://stime.cc/article/250/">看世界系列 | 发现肯尼亚</a>
+											<span class="post-date">2020/1/16</span>
+									</li>
 											<li>
 					<a href="https://stime.cc/article/249/">伊朗基地遭F35突袭！以色列突然不宣而战！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/248/">学者：美国对伊朗的威慑战略将深刻影响朝鲜</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/247/">因为看球赛而失去生命的伊朗女孩！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/246/">突发！美军无人机再出击 塔利班分离司令遭击毙！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/245/">红色高棉，波尔布特之死的那一刻</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/244/">崩溃了！程序员大战陈安之！！</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/243/">快乐罗杰和爵士让水（下）博弈的黑暗森林</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/242/">哥白尼致教皇保罗三世的信</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 											<li>
 					<a href="https://stime.cc/article/241/">几个兄弟值得我舍命？</a>
-											<span class="post-date">2020年1月15日</span>
-									</li>
-											<li>
-					<a href="https://stime.cc/article/240/">言论自由和名誉防护（九）法律的骨骼</a>
-											<span class="post-date">2020年1月15日</span>
+											<span class="post-date">2020/1/15</span>
 									</li>
 					</ul>
-		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">文章归档</h4></div>		<ul>
-				<li><a href="https://stime.cc/article/date/2020/01/">2020年一月</a> (104)</li>
+		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Archives</h4></div>		<ul>
+				<li><a href="https://stime.cc/article/date/2020/01/">January 2020</a> (105)</li>
 		</ul>
 			</section></aside>
 </div>
