@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>梅森素数：千年不休的探寻之旅 - S时代</title>
+
+
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://stime.cc/article/271/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="梅森素数：千年不休的探寻之旅 - S时代">
+<meta property="og:description" content='算法数学俱乐部 日期：2020年01月17日 正文共：7265字2图 预计阅读时间：19分钟 来源:算数学院 还记得年少时的梦吗？ 还记得你小学时背诵的素数表吗？那时候它还叫做质数表“2、3、5、7……”如今你是否已经真正理解了老师说过的话：这些只能被1和本身整除的数，具有着无穷的魅力。 还记得你中学时计算的2的整数幂吗？计算机时代，作为二进制的体现，它们正大行其道。“2、4、8、16、32、64、128、256……”十多年来，个人计算机内存的容量正是经历了这些熟悉的数字，直到现在的2048M（2G）以及更多。 现在，让我们从这些2的整数幂中挑出以素数为指数的，再把它减1，试试看会发现什么？2^2－1＝3、2^3－1＝7、2^5－1＝31、2^7－1＝127…… 嗯，你的心是不是激动起来了？一个伟大的发现似乎就在眼前…… 别急别急，你的发现很妙，只是有些儿惋惜……你已经迟到了二千年。 在2300多年前，古希腊的数学家，那位写出不朽的《几何原本》的欧几里得在证明了素数有无穷多个之后，就顺便指出：有许多素数可以写成2P－1的形式，其中指数P也是素数。很容易想到，刚才你所发现的2^2－1、2^3－1、2^5－1、2^7－1正是其中排列最前的4个！ 当P＝11、13、17、19、23……的时候，2P－1还是素数吗？到底有多少这种2P－1型的素数呢？在计算能力低下的公元前，这个关于素数的探寻之旅就已经吸引了无数的人。 人们唯独对素数如此着迷不是没有理由的，它有着许多简单而又美丽的猜想，有的已经成为定理，而有的则至今还没有答案。例如著名的哥德巴赫猜想，让人们苦苦追索：是否任何一个大于或等于6的偶数，都可以表示为两个奇素数的和？再比如孪生素数问题所提出的：象5和7、41和43这样相差2的素数，到底有多少对呢？ 在数学史上起个大早的古希腊人还有许多关于素数的发现，完美数就是其中之一。毕达哥拉斯学派指出，如果一个数的所有因数（包括1但不包括它本身）的和正好等于它本身，则这个数就叫做完美数。很容易找到，6＝1＋2＋3是第一个完美数，28＝1＋2＋4＋7＋14则是第二个完美数。他们认为，上帝用6天创造了世界，因此6是最理想和完美的数字，而和6具有相同性质的数都堪称完美数。 欧几里得在《几何原本》中证明了如果2^P－1是一个素数，那么2^P－1（2^P－1）一定是一个完美数（你会发现，当P分别等于2、3时，它就对应着前两个完美数6、28）。 再后来，欧拉进一步证明，每一个偶完美数也必定是欧几里得所给出的形式。（不要问我奇完美数呢？就连它是否存在，本身也是无数个关于素数的难题中至今未解的一个。） 很容易看到，找到了2^P－1形式的素数，也就发现了新的完美数。 形如2^P－1的素数还长期占据了人们寻找到的最大素数的光荣榜（仅在1989年后被39158×2^216193－1夺走三年），因为判断这样一个数是素数的方法比判断一个差不多大小的其他类型数是素数的方法要简单得多。 对2^P－1型素数的搜寻之旅就这样出发了，先后投入这个漫漫长途的就有数学大师费马、笛卡尔、莱布尼兹、哥德巴赫、欧拉、高斯、哈代、图灵……这一个个闪光的名字正如暗夜前行的火炬手，照亮了人类通往未知的道路。 历史的天空闪烁几颗星 让我们将坐上时间机器，回到过去，重新浏览这来路风光吧。 1456年，又一个没有留下姓名的人发现了第5个2^P－1型的素数：2^13－1。若是你就降生在那个年代，或许这次发现的光荣将归属于你。只是，你更有可能犯下和当时的人们一样的错误，以为对于所有的素数P，2^P－1都是素数。要知道，这个错误是近百年之后，直到1536年，才由雷吉乌斯(Hudalricus Regius)打破的。他指出，2^11-1＝2047＝23×89，不是素数。 不过你的莽撞完全可以得到谅解，在黑暗中寻找的数学家正如年轻人一样，犯下的错误连上帝都会原谅。第一个对这种类型的素数进行整理的皮特罗•卡塔尔迪(Pietro Cataldi)在他在1603年宣布的结果中就言之凿凿地说：对于p=17，19，23，29，31和37，2P－1是素数。只可惜，37年后，他的六个结果就被推翻了两个，费尔马使用著名的小费尔马（不是那个更著名的大费尔马定理）证明了卡塔尔迪关于P＝23和37的结论是错误的。 不知道下面的事实会不会让你联想到“屋漏偏逢连夜雨”呢？大约一百年后，1738年，欧拉证明了卡塔尔迪的结果中P＝29也是错误的。幸好，欧拉又证明了P＝31的结论是对的。 虽然，卡塔尔迪的六个结果“阵亡”了一半，但考虑到他是用手工计算取得结论的，而费尔马和欧拉则是使用了在他们那时最先进的数学知识，避免了许多复杂的计算和因此可能造成的错误，因此我们仍然要对卡塔尔迪致敬。他也由此光荣地占据了第六个和第七个的发现者之位，在他之前的，都是无名氏。 卡塔尔迪的成功，说明了整理和预测是正确道路。继他之后，集研究成果大成的，是17世纪法国著名的数学家和修道士马林•梅森（Marin Mersenne,1588-1648）。 梅森热心于宗教，但更喜爱数学；他是一个交往广泛、热情诚挚的人，更是一座“科学信息交换站”。为什么呢？那时候，学术刊物、国际会议甚至科研机构都还没有诞生。“及时雨”般的梅森是欧洲众多科学家之间联系的桥梁，大家把研究成果寄给他，然后再由他转告给更多的人。费马、笛卡尔等数学家每周在他家聚会，讨论问题，就这样慢慢形成的"梅森学院"，后来有了一个更响亮的名字——法兰西科学院。 1644年，梅森在欧几里得、费马等人的有关研究的基础上对2^P－1作了大量的计算、验证工作，并于1644年在他的《物理数学随感》一书中断言：对于P＝2、3、5、7、13、17、19、31、67、127、257时，2^P－1是素数；而对于P等于其他所有小于257的数时，2^P－1是合数。这里前7个数（即2，3，5，7，13，17和19）是在前人的工作已经证实的部分。而后面的4个数（即31，67，127和257）属于被猜测的部分。不过，人们对他的断言深信不疑，连大数学家莱布尼兹和哥德巴赫都认为它是对的。 梅森的工作极大地激发了人们研究2^P－1型素数的热情，成为素数研究的一个转折点和里程碑。为了纪念他，数学界就把这种数称为“梅森数”，并以Mp记之（其中M为梅森姓名的首字母），即Mp=2^P－1。如果梅森数为素数，则称之为“梅森素数”（即2^P－1型素数）。 对梅森素数的验证，需要进行艰巨的计算，即使是"猜测"部分中最小的M31=2^31－1=2147483647，也是一个10位数。而梅森自己则承认：“一个人，使用一般的验证方法，要检验一个15位或20位的数字是否为素数，即使终生的时间也是不够的。”年迈力衰的他四年之后就去世了，最终并没有任何一个梅森素数的发现权归属于他，但考虑到他已经享有了“冠名权”，就把荣誉分给那些在漫漫长途上跋涉的发现者们吧！ 那些手扛肩挑的年代 手算笔录的时代，每前进一步，都显得格外艰难。1772年，在卡塔尔迪提出近200年之后，瑞士数学家欧拉证明了M31确实是一个素数，这是人们找到的第8个梅森素数，它共有10位数，堪称当时世界上已知的最大素数，欧拉也因此成为第二个在发现者名单上留名的人。让人惊叹的是，这是在他双目失明的情况下，靠心算完成的。这种超人般的毅力与技巧让欧拉获得了“数学英雄”的美誉。法国大数学家拉普拉斯（P.Laplace）说的话，或许可以代表我们的心声：“读读欧拉，他是我们每一个人的老师。” 100年后，法国数学家鲁卡斯提出了一个用来判别Mp是否是素数的重要定理——鲁卡斯定理，这为梅森素数的研究提供了有力的工具。1883年，数学家波佛辛（Pervushin）利用鲁卡斯定理证明了M61也是素数–这是梅森漏掉了的。梅森还漏掉另外两个素数：M89和M107，它们分别在1911年与1914年被数学家鲍尔斯（Powers）发现。 还记得梅森预测的四个素数吗？其中M31已经为欧拉证明，M127则在鲁卡斯提出定理时顺带证明，虽然中间漏掉了3个，但至少还有另外两个：M67和M257是不是素数呢…… M67的证明又是一个精彩的故事。 1903年，数学家柯尔在美国数学学会的大会上作了一个报告。他先是专注地在黑板上算出2^67－1，接着又算出193707721×761838257287，两个算式结果完全相同！换句话说，他成功地把2^67－1分解为两个素数相乘的形式，从而证明了M67是个合数。 报告中，他一言未发，却赢得了现场听众的起立鼓掌，更成了数学史上的佳话。阅读这段历史，我们懂得了什么叫做“事实胜于雄辩”。记者好奇地问他是怎样得到这么精彩的发现的，柯尔回答“三年里的全部星期天”。他后来当选为美国数学协会的会长，去世后，该协会专门设立了“柯尔奖”，用于奖励作出杰出贡献的数学家。 1922年，数学家克莱契克验证了M257并不是素数，而是合数（但他没有给出这一合数的因子，直到20世纪80年代人们才知道它有3个素因子）。 于是乎，梅森的四个猜测获得了两正确、三遗漏和两错误的成绩，但这无损于他的光荣。在千年的探寻之旅中，伟大如欧拉也会犯错误，他在1750年宣布说找到了梅森的“遗漏”：M41和M47也是素数，但最终上M41和M47都不是素数。 直到1947年，对于p≤257的梅森素数Mp的正确结果才被确定，也就是当p=2，3，5，7，13，17，19，31，61，89，107和127时，Mp是素数。现在这个表已经被反复验证，一定不会有错误了。 我们看到，在手工计算的时代，人们一共找到了12个梅森素数。 计算机！计算机！ 1930年，美国数学家雷默改进了鲁卡斯的工作，给出了一个新的测试方法，即鲁卡斯－雷默方法。很快地，计算机时代到来了，这一方法发挥了重要的作用。1952年，数学家鲁滨逊（Robinson）等人将鲁卡斯－雷默方法编译成计算机程序，使用SWAC型计算机在短短几小时之内，就发现了第13个、第14个，并在当年总共找到了5个梅森素数：M521、M607、M1279、M2203和M2281。 其后，M3217在1957年被黎塞尔（Riesel）证明是素数；M4253和M4423在1961年被赫维兹（Hurwitz）证明是素数。 1963年，美国数学家吉里斯（Gillies）证明M9689和M9941是素数，这已经是第21和22个梅森素数。1963年9月6日晚上8点，当吉里斯通过大型计算机找到第23个梅森素数M11213时，美国广播公司（ABC）中断了正常的节目播放，第一时间发布了这一重要消息，发现这一素数的美国伊利诺伊大学数学系全体师生更是激动地把所有从系里发出的信件都敲上了“2^11213－1是个素数”的邮戳。 1971年3月4日晚，美国哥伦比亚广播公司（CBS）中断了正常节目播放，发布了布萊恩特•塔克曼（Bryant Tuckerman）使用IBM360-91型计算机找到新的梅森素数M19937的消息。而到1978年10月，世界几乎所有的大新闻机构（包括我国的新华社）都报道了以下消息：两名年仅18岁的美国高中生诺尔（Noll）和尼科尔（ Nickel）使用CYBER174型计算机找到了第25个梅森素数：M21701。 超级计算机的引入加快了梅森素数的寻找脚步，但随着素数P值的增大，每一个梅森素数的产生都更加艰难，各国科学家及业余研究者们之间的竞争变得越来越激烈。在1979年2月23日，当美国克雷研究公司的计算机专家史洛温斯基和纳尔逊正兴致冲冲地宣布他们找到第26个梅森数M23209时，有人浇来一盆冷水：两星期前美国加州的高中生诺尔就已经给出了同样结果。心有不甘的他们又花了一个半月的时间“卧薪尝胆”，使用Cray－1型计算机找到了第27个梅森素数M44497，这件事成了当时不少报纸的头版新闻。 为了与美国人较量，英国的哈威尔实验室也专门成立了一个研究小组来寻找更大的梅森素数。他们用了两年时间，花了12万英镑的经费，于1992年3月25日找到了新的梅森素数M756839。但到了1994年1月14日，史洛温斯基等人为美国再次夺回发现“已知最大素数”的桂冠——这一梅森素数是M859433。史洛温斯基本人一共发现了7个梅森素数，他因此被人们称为“素数大王”。 数学研究的深入更重于计算能力的提升，在搜寻梅森素数的同时，对梅森素数的分布规律的研究也在进行着，英、法、印、美、德等国的数学家都曾分别给出过关于梅森素数分布规律的猜测，但这些猜测都以近似表达式给出，而与实际情况的接近程度均难如人意。中国数学家和语言学家周海中则是这方面研究的领先者，他运用联系观察法和不完全归纳法，于1992年首先给出了梅森素数分布的精确表达式。著名的《科学美国人》杂志有一篇文章指出：这一成果为人们探究梅森素数提供了方便，是素数研究的一项重大突破。后来这项重要成果被国际上命名为“周氏猜测”。...'>
+<meta property="og:url" content="https://stime.cc/article/271/">
+<meta property="og:site_name" content="S时代">
+<meta property="article:section" content="未分类">
+<meta property="article:published_time" content="2020-01-19T02:47:46+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content='算法数学俱乐部 日期：2020年01月17日 正文共：7265字2图 预计阅读时间：19分钟 来源:算数学院 还记得年少时的梦吗？ 还记得你小学时背诵的素数表吗？那时候它还叫做质数表“2、3、5、7……”如今你是否已经真正理解了老师说过的话：这些只能被1和本身整除的数，具有着无穷的魅力。 还记得你中学时计算的2的整数幂吗？计算机时代，作为二进制的体现，它们正大行其道。“2、4、8、16、32、64、128、256……”十多年来，个人计算机内存的容量正是经历了这些熟悉的数字，直到现在的2048M（2G）以及更多。 现在，让我们从这些2的整数幂中挑出以素数为指数的，再把它减1，试试看会发现什么？2^2－1＝3、2^3－1＝7、2^5－1＝31、2^7－1＝127…… 嗯，你的心是不是激动起来了？一个伟大的发现似乎就在眼前…… 别急别急，你的发现很妙，只是有些儿惋惜……你已经迟到了二千年。 在2300多年前，古希腊的数学家，那位写出不朽的《几何原本》的欧几里得在证明了素数有无穷多个之后，就顺便指出：有许多素数可以写成2P－1的形式，其中指数P也是素数。很容易想到，刚才你所发现的2^2－1、2^3－1、2^5－1、2^7－1正是其中排列最前的4个！ 当P＝11、13、17、19、23……的时候，2P－1还是素数吗？到底有多少这种2P－1型的素数呢？在计算能力低下的公元前，这个关于素数的探寻之旅就已经吸引了无数的人。 人们唯独对素数如此着迷不是没有理由的，它有着许多简单而又美丽的猜想，有的已经成为定理，而有的则至今还没有答案。例如著名的哥德巴赫猜想，让人们苦苦追索：是否任何一个大于或等于6的偶数，都可以表示为两个奇素数的和？再比如孪生素数问题所提出的：象5和7、41和43这样相差2的素数，到底有多少对呢？ 在数学史上起个大早的古希腊人还有许多关于素数的发现，完美数就是其中之一。毕达哥拉斯学派指出，如果一个数的所有因数（包括1但不包括它本身）的和正好等于它本身，则这个数就叫做完美数。很容易找到，6＝1＋2＋3是第一个完美数，28＝1＋2＋4＋7＋14则是第二个完美数。他们认为，上帝用6天创造了世界，因此6是最理想和完美的数字，而和6具有相同性质的数都堪称完美数。 欧几里得在《几何原本》中证明了如果2^P－1是一个素数，那么2^P－1（2^P－1）一定是一个完美数（你会发现，当P分别等于2、3时，它就对应着前两个完美数6、28）。 再后来，欧拉进一步证明，每一个偶完美数也必定是欧几里得所给出的形式。（不要问我奇完美数呢？就连它是否存在，本身也是无数个关于素数的难题中至今未解的一个。） 很容易看到，找到了2^P－1形式的素数，也就发现了新的完美数。 形如2^P－1的素数还长期占据了人们寻找到的最大素数的光荣榜（仅在1989年后被39158×2^216193－1夺走三年），因为判断这样一个数是素数的方法比判断一个差不多大小的其他类型数是素数的方法要简单得多。 对2^P－1型素数的搜寻之旅就这样出发了，先后投入这个漫漫长途的就有数学大师费马、笛卡尔、莱布尼兹、哥德巴赫、欧拉、高斯、哈代、图灵……这一个个闪光的名字正如暗夜前行的火炬手，照亮了人类通往未知的道路。 历史的天空闪烁几颗星 让我们将坐上时间机器，回到过去，重新浏览这来路风光吧。 1456年，又一个没有留下姓名的人发现了第5个2^P－1型的素数：2^13－1。若是你就降生在那个年代，或许这次发现的光荣将归属于你。只是，你更有可能犯下和当时的人们一样的错误，以为对于所有的素数P，2^P－1都是素数。要知道，这个错误是近百年之后，直到1536年，才由雷吉乌斯(Hudalricus Regius)打破的。他指出，2^11-1＝2047＝23×89，不是素数。 不过你的莽撞完全可以得到谅解，在黑暗中寻找的数学家正如年轻人一样，犯下的错误连上帝都会原谅。第一个对这种类型的素数进行整理的皮特罗•卡塔尔迪(Pietro Cataldi)在他在1603年宣布的结果中就言之凿凿地说：对于p=17，19，23，29，31和37，2P－1是素数。只可惜，37年后，他的六个结果就被推翻了两个，费尔马使用著名的小费尔马（不是那个更著名的大费尔马定理）证明了卡塔尔迪关于P＝23和37的结论是错误的。 不知道下面的事实会不会让你联想到“屋漏偏逢连夜雨”呢？大约一百年后，1738年，欧拉证明了卡塔尔迪的结果中P＝29也是错误的。幸好，欧拉又证明了P＝31的结论是对的。 虽然，卡塔尔迪的六个结果“阵亡”了一半，但考虑到他是用手工计算取得结论的，而费尔马和欧拉则是使用了在他们那时最先进的数学知识，避免了许多复杂的计算和因此可能造成的错误，因此我们仍然要对卡塔尔迪致敬。他也由此光荣地占据了第六个和第七个的发现者之位，在他之前的，都是无名氏。 卡塔尔迪的成功，说明了整理和预测是正确道路。继他之后，集研究成果大成的，是17世纪法国著名的数学家和修道士马林•梅森（Marin Mersenne,1588-1648）。 梅森热心于宗教，但更喜爱数学；他是一个交往广泛、热情诚挚的人，更是一座“科学信息交换站”。为什么呢？那时候，学术刊物、国际会议甚至科研机构都还没有诞生。“及时雨”般的梅森是欧洲众多科学家之间联系的桥梁，大家把研究成果寄给他，然后再由他转告给更多的人。费马、笛卡尔等数学家每周在他家聚会，讨论问题，就这样慢慢形成的"梅森学院"，后来有了一个更响亮的名字——法兰西科学院。 1644年，梅森在欧几里得、费马等人的有关研究的基础上对2^P－1作了大量的计算、验证工作，并于1644年在他的《物理数学随感》一书中断言：对于P＝2、3、5、7、13、17、19、31、67、127、257时，2^P－1是素数；而对于P等于其他所有小于257的数时，2^P－1是合数。这里前7个数（即2，3，5，7，13，17和19）是在前人的工作已经证实的部分。而后面的4个数（即31，67，127和257）属于被猜测的部分。不过，人们对他的断言深信不疑，连大数学家莱布尼兹和哥德巴赫都认为它是对的。 梅森的工作极大地激发了人们研究2^P－1型素数的热情，成为素数研究的一个转折点和里程碑。为了纪念他，数学界就把这种数称为“梅森数”，并以Mp记之（其中M为梅森姓名的首字母），即Mp=2^P－1。如果梅森数为素数，则称之为“梅森素数”（即2^P－1型素数）。 对梅森素数的验证，需要进行艰巨的计算，即使是"猜测"部分中最小的M31=2^31－1=2147483647，也是一个10位数。而梅森自己则承认：“一个人，使用一般的验证方法，要检验一个15位或20位的数字是否为素数，即使终生的时间也是不够的。”年迈力衰的他四年之后就去世了，最终并没有任何一个梅森素数的发现权归属于他，但考虑到他已经享有了“冠名权”，就把荣誉分给那些在漫漫长途上跋涉的发现者们吧！ 那些手扛肩挑的年代 手算笔录的时代，每前进一步，都显得格外艰难。1772年，在卡塔尔迪提出近200年之后，瑞士数学家欧拉证明了M31确实是一个素数，这是人们找到的第8个梅森素数，它共有10位数，堪称当时世界上已知的最大素数，欧拉也因此成为第二个在发现者名单上留名的人。让人惊叹的是，这是在他双目失明的情况下，靠心算完成的。这种超人般的毅力与技巧让欧拉获得了“数学英雄”的美誉。法国大数学家拉普拉斯（P.Laplace）说的话，或许可以代表我们的心声：“读读欧拉，他是我们每一个人的老师。” 100年后，法国数学家鲁卡斯提出了一个用来判别Mp是否是素数的重要定理——鲁卡斯定理，这为梅森素数的研究提供了有力的工具。1883年，数学家波佛辛（Pervushin）利用鲁卡斯定理证明了M61也是素数–这是梅森漏掉了的。梅森还漏掉另外两个素数：M89和M107，它们分别在1911年与1914年被数学家鲍尔斯（Powers）发现。 还记得梅森预测的四个素数吗？其中M31已经为欧拉证明，M127则在鲁卡斯提出定理时顺带证明，虽然中间漏掉了3个，但至少还有另外两个：M67和M257是不是素数呢…… M67的证明又是一个精彩的故事。 1903年，数学家柯尔在美国数学学会的大会上作了一个报告。他先是专注地在黑板上算出2^67－1，接着又算出193707721×761838257287，两个算式结果完全相同！换句话说，他成功地把2^67－1分解为两个素数相乘的形式，从而证明了M67是个合数。 报告中，他一言未发，却赢得了现场听众的起立鼓掌，更成了数学史上的佳话。阅读这段历史，我们懂得了什么叫做“事实胜于雄辩”。记者好奇地问他是怎样得到这么精彩的发现的，柯尔回答“三年里的全部星期天”。他后来当选为美国数学协会的会长，去世后，该协会专门设立了“柯尔奖”，用于奖励作出杰出贡献的数学家。 1922年，数学家克莱契克验证了M257并不是素数，而是合数（但他没有给出这一合数的因子，直到20世纪80年代人们才知道它有3个素因子）。 于是乎，梅森的四个猜测获得了两正确、三遗漏和两错误的成绩，但这无损于他的光荣。在千年的探寻之旅中，伟大如欧拉也会犯错误，他在1750年宣布说找到了梅森的“遗漏”：M41和M47也是素数，但最终上M41和M47都不是素数。 直到1947年，对于p≤257的梅森素数Mp的正确结果才被确定，也就是当p=2，3，5，7，13，17，19，31，61，89，107和127时，Mp是素数。现在这个表已经被反复验证，一定不会有错误了。 我们看到，在手工计算的时代，人们一共找到了12个梅森素数。 计算机！计算机！ 1930年，美国数学家雷默改进了鲁卡斯的工作，给出了一个新的测试方法，即鲁卡斯－雷默方法。很快地，计算机时代到来了，这一方法发挥了重要的作用。1952年，数学家鲁滨逊（Robinson）等人将鲁卡斯－雷默方法编译成计算机程序，使用SWAC型计算机在短短几小时之内，就发现了第13个、第14个，并在当年总共找到了5个梅森素数：M521、M607、M1279、M2203和M2281。 其后，M3217在1957年被黎塞尔（Riesel）证明是素数；M4253和M4423在1961年被赫维兹（Hurwitz）证明是素数。 1963年，美国数学家吉里斯（Gillies）证明M9689和M9941是素数，这已经是第21和22个梅森素数。1963年9月6日晚上8点，当吉里斯通过大型计算机找到第23个梅森素数M11213时，美国广播公司（ABC）中断了正常的节目播放，第一时间发布了这一重要消息，发现这一素数的美国伊利诺伊大学数学系全体师生更是激动地把所有从系里发出的信件都敲上了“2^11213－1是个素数”的邮戳。 1971年3月4日晚，美国哥伦比亚广播公司（CBS）中断了正常节目播放，发布了布萊恩特•塔克曼（Bryant Tuckerman）使用IBM360-91型计算机找到新的梅森素数M19937的消息。而到1978年10月，世界几乎所有的大新闻机构（包括我国的新华社）都报道了以下消息：两名年仅18岁的美国高中生诺尔（Noll）和尼科尔（ Nickel）使用CYBER174型计算机找到了第25个梅森素数：M21701。 超级计算机的引入加快了梅森素数的寻找脚步，但随着素数P值的增大，每一个梅森素数的产生都更加艰难，各国科学家及业余研究者们之间的竞争变得越来越激烈。在1979年2月23日，当美国克雷研究公司的计算机专家史洛温斯基和纳尔逊正兴致冲冲地宣布他们找到第26个梅森数M23209时，有人浇来一盆冷水：两星期前美国加州的高中生诺尔就已经给出了同样结果。心有不甘的他们又花了一个半月的时间“卧薪尝胆”，使用Cray－1型计算机找到了第27个梅森素数M44497，这件事成了当时不少报纸的头版新闻。 为了与美国人较量，英国的哈威尔实验室也专门成立了一个研究小组来寻找更大的梅森素数。他们用了两年时间，花了12万英镑的经费，于1992年3月25日找到了新的梅森素数M756839。但到了1994年1月14日，史洛温斯基等人为美国再次夺回发现“已知最大素数”的桂冠——这一梅森素数是M859433。史洛温斯基本人一共发现了7个梅森素数，他因此被人们称为“素数大王”。 数学研究的深入更重于计算能力的提升，在搜寻梅森素数的同时，对梅森素数的分布规律的研究也在进行着，英、法、印、美、德等国的数学家都曾分别给出过关于梅森素数分布规律的猜测，但这些猜测都以近似表达式给出，而与实际情况的接近程度均难如人意。中国数学家和语言学家周海中则是这方面研究的领先者，他运用联系观察法和不完全归纳法，于1992年首先给出了梅森素数分布的精确表达式。著名的《科学美国人》杂志有一篇文章指出：这一成果为人们探究梅森素数提供了方便，是素数研究的一项重大突破。后来这项重要成果被国际上命名为“周氏猜测”。...'>
+<meta name="twitter:title" content="梅森素数：千年不休的探寻之旅 - S时代">
+<meta name="twitter:image" content="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6flTbqp66QJYwQJ8FmbHibe7A0SpAo2mTC4aKiaaPYJS7jFNBFKlIzdFA/640?wx_fmt=jpeg">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/271/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6flTbqp66QJYwQJ8FmbHibe7A0SpAo2mTC4aKiaaPYJS7jFNBFKlIzdFA/640?wx_fmt=jpeg"},{"@type":"WebPage","@id":"https://stime.cc/article/271/#webpage","url":"https://stime.cc/article/271/","inLanguage":"en-US","name":"\u6885\u68ee\u7d20\u6570\uff1a\u5343\u5e74\u4e0d\u4f11\u7684\u63a2\u5bfb\u4e4b\u65c5 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/271/#primaryimage"},"datePublished":"2020-01-19T02:47:46+00:00","dateModified":"2020-01-19T02:47:46+00:00"},{"@type":"Article","@id":"https://stime.cc/article/271/#article","isPartOf":{"@id":"https://stime.cc/article/271/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u6885\u68ee\u7d20\u6570\uff1a\u5343\u5e74\u4e0d\u4f11\u7684\u63a2\u5bfb\u4e4b\u65c5","datePublished":"2020-01-19T02:47:46+00:00","dateModified":"2020-01-19T02:47:46+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/271/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/271/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Feed" href="https://stime.cc/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Comments Feed" href="https://stime.cc/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » 梅森素数：千年不休的探寻之旅 Comments Feed" href="https://stime.cc/article/271/feed/">
+<link rel="stylesheet" id="wp-block-library-css" href="https://stime.cc/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://stime.cc/wp-content/themes/bloggist/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bloggist-style-css" href="https://stime.cc/wp-content/themes/bloggist/style.css" type="text/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="bloggist-google-fonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=5.3.2" type="text/css" media="all">
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stime.cc/xmlrpc.php">
+<link rel="pingback" href="https://stime.cc/xmlrpc.php">
+		<style type="text/css">
+		body, .site, .swidgets-wrap h3, .post-data-text { background: ; }
+		.site-title a, .site-description { color: ; }
+		.sheader { background-color:  !important; }
+		.main-navigation ul li a, .main-navigation ul li .sub-arrow, .super-menu .toggle-mobile-menu,.toggle-mobile-menu:before, .mobile-menu-active .smenu-hide { color: ; }
+		#smobile-menu.show .main-navigation ul ul.children.active, #smobile-menu.show .main-navigation ul ul.sub-menu.active, #smobile-menu.show .main-navigation ul li, .smenu-hide.toggle-mobile-menu.menu-toggle, #smobile-menu.show .main-navigation ul li, .primary-menu ul li ul.children li, .primary-menu ul li ul.sub-menu li, .primary-menu .pmenu, .super-menu { border-color: ; border-bottom-color: ; }
+		#secondary .widget h3, #secondary .widget h3 a, #secondary .widget h4, #secondary .widget h1, #secondary .widget h2, #secondary .widget h5, #secondary .widget h6, #secondary .widget h4 a { color: ; }
+		#secondary .widget a, #secondary a, #secondary .widget li a , #secondary span.sub-arrow{ color: ; }
+		#secondary, #secondary .widget, #secondary .widget p, #secondary .widget li, .widget time.rpwe-time.published { color: ; }
+		#secondary .swidgets-wrap, #secondary .widget ul li, .featured-sidebar .search-field { border-color: ; }
+		.site-info, .footer-column-three input.search-submit, .footer-column-three p, .footer-column-three li, .footer-column-three td, .footer-column-three th, .footer-column-three caption { color: ; }
+		.footer-column-three h3, .footer-column-three h4, .footer-column-three h5, .footer-column-three h6, .footer-column-three h1, .footer-column-three h2, .footer-column-three h4, .footer-column-three h3 a { color: ; }
+		.footer-column-three a, .footer-column-three li a, .footer-column-three .widget a, .footer-column-three .sub-arrow { color: ; }
+		.footer-column-three h3:after { background: ; }
+		.site-info, .widget ul li, .footer-column-three input.search-field, .footer-column-three input.search-submit { border-color: ; }
+		.site-footer { background-color: ; }
+		.content-wrapper h2.entry-title a, .content-wrapper h2.entry-title a:hover, .content-wrapper h2.entry-title a:active, .content-wrapper h2.entry-title a:focus, .archive .page-header h1, .blogposts-list h2 a, .blogposts-list h2 a:hover, .blogposts-list h2 a:active, .search-results h1.page-title { color: ; }
+		.blogposts-list .post-data-text, .blogposts-list .post-data-text a, .content-wrapper .post-data-text *{ color: ; }
+		.blogposts-list p { color: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button { background: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button, span.page-numbers.dots, .page-numbers.current, .page-numbers li a:hover { color: ; }
+		.archive .page-header h1, .search-results h1.page-title, .blogposts-list.fbox, span.page-numbers.dots, .page-numbers li a, .page-numbers.current { border-color: ; }
+		.blogposts-list .post-data-divider { background: ; }
+		.page .comments-area .comment-author, .page .comments-area .comment-author a, .page .comments-area .comments-title, .page .content-area h1, .page .content-area h2, .page .content-area h3, .page .content-area h4, .page .content-area h5, .page .content-area h6, .page .content-area th, .single  .comments-area .comment-author, .single .comments-area .comment-author a, .single .comments-area .comments-title, .single .content-area h1, .single .content-area h2, .single .content-area h3, .single .content-area h4, .single .content-area h5, .single .content-area h6, .single .content-area th, .search-no-results h1, .error404 h1 { color: ; }
+		.single .post-data-text, .page .post-data-text, .page .post-data-text a, .single .post-data-text a, .comments-area .comment-meta .comment-metadata a, .single .post-data-text * { color: ; }
+		.page .content-area p, .page article, .page .content-area table, .page .content-area dd, .page .content-area dt, .page .content-area address, .page .content-area .entry-content, .page .content-area li, .page .content-area ol, .single .content-area p, .single article, .single .content-area table, .single .content-area dd, .single .content-area dt, .single .content-area address, .single .entry-content, .single .content-area li, .single .content-area ol, .search-no-results .page-content p { color: ; }
+		.single .entry-content a, .page .entry-content a, .comment-content a, .comments-area .reply a, .logged-in-as a, .comments-area .comment-respond a { color: ; }
+		.comments-area p.form-submit input { background: ; }
+		.error404 .page-content p, .error404 input.search-submit, .search-no-results input.search-submit { color: ; }
+		.page .comments-area, .page article.fbox, .page article tr, .page .comments-area ol.comment-list ol.children li, .page .comments-area ol.comment-list .comment, .single .comments-area, .single article.fbox, .single article tr, .comments-area ol.comment-list ol.children li, .comments-area ol.comment-list .comment, .error404 main#main, .error404 .search-form label, .search-no-results .search-form label, .error404 input.search-submit, .search-no-results input.search-submit, .error404 main#main, .search-no-results section.fbox.no-results.not-found{ border-color: ; }
+		.single .post-data-divider, .page .post-data-divider { background: ; }
+		.single .comments-area p.form-submit input, .page .comments-area p.form-submit input { color: ; }
+		.bottom-header-wrapper { padding-top: px; }
+		.bottom-header-wrapper { padding-bottom: px; }
+		.bottom-header-wrapper { background: ; }
+		.bottom-header-wrapper *{ color: ; }
+		.header-widget a, .header-widget li a, .header-widget i.fa { color: ; }
+		.header-widget, .header-widget p, .header-widget li, .header-widget .textwidget { color: ; }
+		.header-widget .widget-title, .header-widget h1, .header-widget h3, .header-widget h2, .header-widget h4, .header-widget h5, .header-widget h6{ color: ; }
+		.header-widget.swidgets-wrap, .header-widget ul li, .header-widget .search-field { border-color: ; }
+		.bottom-header-title, .bottom-header-paragraph{ color: ; }
+
+		#secondary .widget-title-lines:after, #secondary .widget-title-lines:before { background: ; }
+
+
+		.header-widgets-wrapper .swidgets-wrap{ background: ; }
+		.top-nav-wrapper, .primary-menu .pmenu, .super-menu, #smobile-menu, .primary-menu ul li ul.children, .primary-menu ul li ul.sub-menu { background-color: ; }
+		#secondary .widget li, #secondary input.search-field, #secondary div#calendar_wrap, #secondary .tagcloud, #secondary .textwidget{ background: ; }
+		#secondary .swidget { border-color: ; }
+		.archive article.fbox, .search-results article.fbox, .blog article.fbox { background: ; }
+
+
+		.comments-area, .single article.fbox, .page article.fbox { background: ; }
+		</style>
+		<link rel="amphtml" href="https://stime.cc/article/271/amp/"><link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="32x32">
+<link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+<meta name="msapplication-TileImage" content="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?871eb580cf6efb97266170c43d350eff";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</head>
+
+<body class="post-template-default single single-post postid-271 single-format-standard masthead-fixed">
+	<div id="page" class="site">
+
+		<header id="masthead" class="sheader site-header clearfix">
+			<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+
+				<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+				<div class="top-nav-wrapper">
+					<div class="content-wrap">
+						<div class="logo-container"> 
+
+													<a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+									</div>
+				<div class="center-main-menu">
+					<div class="menu-caidan-container"><ul id="primary-menu" class="pmenu"><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/">首页</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="super-menu clearfix">
+			<div class="super-menu-inner">
+				<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
+
+									</a><a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+					
+	</div>
+</div>
+<div id="mobile-menu-overlay"></div>
+</header>
+
+
+	
+	
+
+<div class="content-wrap">
+
+
+	
+	<div class="header-widgets-wrapper">
+		
+	
+</div>
+
+
+
+</div>
+
+<div id="content" class="site-content clearfix">
+	<div class="content-wrap">
+
+	<div id="primary" class="featured-content content-area">
+		<main id="main" class="site-main">
+
+				<article id="post-271" class="posts-entry fbox post-271 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">梅森素数：千年不休的探寻之旅</h1>		<div class="entry-meta">
+			<div class="blog-data-wrapper">
+				<div class="post-data-divider"></div>
+				<div class="post-data-positioning">
+					<div class="post-data-text">
+						<span class="posted-on">Posted on <a href="https://stime.cc/article/271/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-19T10:47:46+08:00">2020/1/19</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
+				</div>
+			</div>
+		</div>
+			</header>
+
+	<div class="entry-content">
+		<section style="display: none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+<section style="display: none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+<section>
+<section data-tools="135编辑器" data-id="89091">
+<section>
+<section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2891516">
+<section style="margin-left: 8px;margin-right: 8px;">
+<section style="display: none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2865871">
+<section style="margin-left: 8px;margin-right: 8px;">
+<section style="display: none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section style="margin-left: 8px;margin-right: 8px;">
+<section style="display: none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2549807">
+<section style="white-space: normal;">
+<section>
+<section>
+<section>
+<section>
+<section>
+<section>
+<section>
+<section donone="shifuMouseDown('shifu_t_003')" label="Copyright © 2015 playhudong All Rights Reserved." style="font-size: 16px;text-align: center;caret-color: rgb(51, 51, 51);max-width: 100%;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);font-family: 微软雅黑;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section donone="shifuMouseDown('shifu_t_003')" label="Copyright © 2015 playhudong All Rights Reserved." style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section powered-by="xiumi.us" style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="padding: 10px;max-width: 100%;box-sizing: border-box;overflow-wrap: break-word;line-height: 25.6px;letter-spacing: 0.544px;font-family: Arial;min-height: 0px;background-image: none;background-clip: border-box;background-position: 0% 0%;background-repeat: repeat;background-size: auto;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);bottom: auto;display: flex;float: none;height: auto;left: auto;max-height: none;min-width: 0px;text-align: justify;top: auto;z-index: auto;visibility: visible;clear: none;">
+<section powered-by="xiumi.us" style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;text-align: center;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="padding: 10px;max-width: 100%;box-sizing: border-box;overflow-wrap: break-word;line-height: 25.6px;letter-spacing: 0.544px;min-height: 0px;background-image: none;background-clip: border-box;background-position: 0% 0%;background-repeat: repeat;background-size: auto;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);bottom: auto;display: flex;float: none;height: auto;left: auto;max-height: none;min-width: 0px;text-align: justify;top: auto;z-index: auto;visibility: visible;clear: none;">
+<section data-width="120px" style="color: rgb(62, 62, 62);max-width: 100%;width: 120px;text-align: center;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section data-brushtype="text" style="margin-bottom: 10px;padding-right: 10px;padding-left: 10px;max-width: 100%;box-sizing: border-box;height: 30px;background-color: rgb(80, 81, 80);line-height: 30px;border-radius: 10px;display: inline-block;color: rgb(255, 255, 255);overflow-wrap: break-word !important;"><span style="font-size: 13px;letter-spacing: 0.544px;">算法数学俱乐部</span></section>
+<section style="max-width: 100%;width: 120px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section data-role="circle" data-width="100%" style='margin-right: auto;margin-left: auto;padding-bottom: 120px;max-width: 100%;box-sizing: border-box;border-radius: 100%;overflow: hidden;width: 120px;height: 0px;background-image: url("https://mmbiz.qpic.cn/mmbiz_jpg/pSqFmkOFya0U8BgAuI1JybObB7Q9Q4PgboZOQlzpxxUGGxExfgCnfXibCzic5T6JSknDib5TEnq38ibjeF9BudsLibw/640?wx_fmt=jpeg");background-position: 50% 50%;background-size: cover;overflow-wrap: break-word !important;'></section>
+</section>
+</section>
+<section style="margin-left: 10px;padding-left: 10px;max-width: 100%;box-sizing: border-box;border-left: 1px solid rgb(80, 81, 80);overflow-wrap: break-word !important;">
+<p dir="ltr" style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(247, 150, 70);font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">日期</span><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">：</span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">2020年01月17日</span></p>
+<p dir="ltr" style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(247, 150, 70);">正文共</span>：</span><span style="color: rgb(136, 136, 136);"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">7265</span><span style="max-width: 100%;font-size: 14px;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">字2</span></span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">图</span></p>
+<p style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(247, 150, 70);">预计阅读时间</span>：<span style="color: rgb(136, 136, 136);letter-spacing: 0.544px;">19</span></span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">分钟</span></p>
+<p style><span style="font-size: 14px;letter-spacing: 0.544px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="color: rgb(247, 150, 70);">来源</span><span style="color:#3e3e3e;">:</span><span style="color:#888888;">算数学院</span></span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<p style></p>
+<section data-tools="新媒体排版" style='font-family: "PingFang SC", "Source Sans Pro", "Hiragino Sans GB", "Helvetica Neue", Helvetica, "Microsoft Yahei", arial, sans-serif;font-size: 14px;text-align: start;white-space: normal;background-color: rgb(255, 255, 255);'>
+<section donone="shifuMouseDownCard('shifu_c_010')" style="padding-top: 0.5em;padding-bottom: 0.5em;margin: 2em 0em;max-width: 100%;font-family: inherit;font-size: 1em;font-weight: inherit;text-decoration: inherit;border-right: none rgb(51, 51, 51);border-left: none rgb(51, 51, 51);border-top: 1px solid rgb(51, 51, 51);border-bottom: 1px solid rgb(51, 51, 51);color: rgb(166, 166, 166);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="padding: 16px;max-width: 100%;color: rgb(32, 32, 32);font-size: 1em;line-height: 1.4;font-family: inherit;text-align: center;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-family: 微软雅黑;font-size: 16px;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);line-height: 1.75em;text-align: left;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(102, 102, 102);letter-spacing: 1px;font-size: 15px;box-sizing: border-box !important;overflow-wrap: break-word !important;">还记得年少时的梦吗？</span></p>
+<section style="max-width: 100%;color: rgb(62, 62, 62);font-family: 微软雅黑;font-size: 16px;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;text-align: left;box-sizing: border-box !important;overflow-wrap: break-word !important;"><br style="max-width: 100%;box-sizing: border-box;overflow-wrap: break-word !important;"></section>
+<p style="max-width: 100%;min-height: 1em;text-align: left;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(102, 102, 102);letter-spacing: 1px;line-height: 1.6;font-size: 15px;box-sizing: border-box !important;overflow-wrap: break-word !important;">还记得你小学时背诵的素数表吗？那时候它还叫做质数表“2、3、5、7……”如今你是否已经真正理解了老师说过的话：这些只能被1和本身整除的数，具有着无穷的魅力。</span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;font-family: 微软雅黑;text-align: justify;background-color: rgb(255, 255, 255);line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"></p>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">还记得你中学时计算的2的整数幂吗？计算机时代，作为二进制的体现，它们正大行其道。“2、4、8、16、32、64、128、256……”十多年来，个人计算机内存的容量正是经历了这些熟悉的数字，直到现在的2048M（2G）以及更多。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">现在，让我们从这些2的整数幂中挑出以素数为指数的，再把它减1，试试看会发现什么？2^2－1＝3、2^3－1＝7、2^5－1＝31、2^7－1＝127……<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">嗯，你的心是不是激动起来了？一个伟大的发现似乎就在眼前……<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">别急别急，你的发现很妙，只是有些儿惋惜……你已经迟到了二千年。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">在2300多年前，古希腊的数学家，那位写出不朽的《几何原本》的欧几里得在证明了素数有无穷多个之后，就顺便指出：有许多素数可以写成2P－1的形式，其中指数P也是素数。很容易想到，刚才你所发现的2^2－1、2^3－1、2^5－1、2^7－1正是其中排列最前的4个！<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">当P＝11、13、17、19、23……的时候，2P－1还是素数吗？到底有多少这种2P－1型的素数呢？在计算能力低下的公元前，这个关于素数的探寻之旅就已经吸引了无数的人。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">人们唯独对素数如此着迷不是没有理由的，它有着许多简单而又美丽的猜想，有的已经成为定理，而有的则至今还没有答案。例如著名的哥德巴赫猜想，让人们苦苦追索：是否任何一个大于或等于6的偶数，都可以表示为两个奇素数的和？再比如孪生素数问题所提出的：象5和7、41和43这样相差2的素数，到底有多少对呢？<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">在数学史上起个大早的古希腊人还有许多关于素数的发现，完美数就是其中之一。毕达哥拉斯学派指出，如果一个数的所有因数（包括1但不包括它本身）的和正好等于它本身，则这个数就叫做完美数。很容易找到，6＝1＋2＋3是第一个完美数，28＝1＋2＋4＋7＋14则是第二个完美数。他们认为，上帝用6天创造了世界，因此6是最理想和完美的数字，而和6具有相同性质的数都堪称完美数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">欧几里得在《几何原本》中证明了如果2^P－1是一个素数，那么2^P－1（2^P－1）一定是一个完美数（你会发现，当P分别等于2、3时，它就对应着前两个完美数6、28）。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">再后来，欧拉进一步证明，每一个偶完美数也必定是欧几里得所给出的形式。（不要问我奇完美数呢？就连它是否存在，本身也是无数个关于素数的难题中至今未解的一个。）<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">很容易看到，找到了2^P－1形式的素数，也就发现了新的完美数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">形如2^P－1的素数还长期占据了人们寻找到的最大素数的光荣榜（仅在1989年后被39158×2^216193－1夺走三年），因为判断这样一个数是素数的方法比判断一个差不多大小的其他类型数是素数的方法要简单得多。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">对2^P－1型素数的搜寻之旅就这样出发了，先后投入这个漫漫长途的就有数学大师费马、笛卡尔、莱布尼兹、哥德巴赫、欧拉、高斯、哈代、图灵……这一个个闪光的名字正如暗夜前行的火炬手，照亮了人类通往未知的道路。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">历史的天空闪烁几颗星</span></section>
+</section>
+<section style="white-space: normal;">
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">让我们将坐上时间机器，回到过去，重新浏览这来路风光吧。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1456年，又一个没有留下姓名的人发现了第5个2^P－1型的素数：2^13－1。若是你就降生在那个年代，或许这次发现的光荣将归属于你。只是，你更有可能犯下和当时的人们一样的错误，以为对于所有的素数P，2^P－1都是素数。要知道，这个错误是近百年之后，直到1536年，才由雷吉乌斯(Hudalricus Regius)打破的。他指出，2^11-1＝2047＝23×89，不是素数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">不过你的莽撞完全可以得到谅解，在黑暗中寻找的数学家正如年轻人一样，犯下的错误连上帝都会原谅。第一个对这种类型的素数进行整理的皮特罗•卡塔尔迪(Pietro Cataldi)在他在1603年宣布的结果中就言之凿凿地说：对于p=17，19，23，29，31和37，2P－1是素数。只可惜，37年后，他的六个结果就被推翻了两个，费尔马使用著名的小费尔马（不是那个更著名的大费尔马定理）证明了卡塔尔迪关于P＝23和37的结论是错误的。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">不知道下面的事实会不会让你联想到“屋漏偏逢连夜雨”呢？大约一百年后，1738年，欧拉证明了卡塔尔迪的结果中P＝29也是错误的。幸好，欧拉又证明了P＝31的结论是对的。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">虽然，卡塔尔迪的六个结果“阵亡”了一半，但考虑到他是用手工计算取得结论的，而费尔马和欧拉则是使用了在他们那时最先进的数学知识，避免了许多复杂的计算和因此可能造成的错误，因此我们仍然要对卡塔尔迪致敬。他也由此光荣地占据了第六个和第七个的发现者之位，在他之前的，都是无名氏。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">卡塔尔迪的成功，说明了整理和预测是正确道路。继他之后，集研究成果大成的，是17世纪法国著名的数学家和修道士马林•梅森（Marin Mersenne,1588-1648）。</span></section>
+</section>
+<section style="white-space: normal;line-height: 1.75em;text-align: center;margin-left: 8px;margin-right: 8px;"><img data-ratio="1.201086956521739" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6flTbqp66QJYwQJ8FmbHibe7A0SpAo2mTC4aKiaaPYJS7jFNBFKlIzdFA/640?wx_fmt=jpeg" data-type="jpeg" data-w="184" style="box-sizing: border-box;word-wrap: break-word !important;visibility: visible !important;width: 670px !important;" width="100%" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6flTbqp66QJYwQJ8FmbHibe7A0SpAo2mTC4aKiaaPYJS7jFNBFKlIzdFA/640?wx_fmt=jpeg"></section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">梅森热心于宗教，但更喜爱数学；他是一个交往广泛、热情诚挚的人，更是一座“科学信息交换站”。为什么呢？那时候，学术刊物、国际会议甚至科研机构都还没有诞生。“及时雨”般的梅森是欧洲众多科学家之间联系的桥梁，大家把研究成果寄给他，然后再由他转告给更多的人。费马、笛卡尔等数学家每周在他家聚会，讨论问题，就这样慢慢形成的"梅森学院"，后来有了一个更响亮的名字——法兰西科学院。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1644年，梅森在欧几里得、费马等人的有关研究的基础上对2^P－1作了大量的计算、验证工作，并于1644年在他的《物理数学随感》一书中断言：对于P＝2、3、5、7、13、17、19、31、67、127、257时，2^P－1是素数；而对于P等于其他所有小于257的数时，2^P－1是合数。这里前7个数（即2，3，5，7，13，17和19）是在前人的工作已经证实的部分。而后面的4个数（即31，67，127和257）属于被猜测的部分。不过，人们对他的断言深信不疑，连大数学家莱布尼兹和哥德巴赫都认为它是对的。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">梅森的工作极大地激发了人们研究2^P－1型素数的热情，成为素数研究的一个转折点和里程碑。为了纪念他，数学界就把这种数称为“梅森数”，并以Mp记之（其中M为梅森姓名的首字母），即Mp=2^P－1。如果梅森数为素数，则称之为“梅森素数”（即2^P－1型素数）。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">对梅森素数的验证，需要进行艰巨的计算，即使是"猜测"部分中最小的M31=2^31－1=2147483647，也是一个10位数。而梅森自己则承认：“一个人，使用一般的验证方法，要检验一个15位或20位的数字是否为素数，即使终生的时间也是不够的。”年迈力衰的他四年之后就去世了，最终并没有任何一个梅森素数的发现权归属于他，但考虑到他已经享有了“冠名权”，就把荣誉分给那些在漫漫长途上跋涉的发现者们吧！</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">那些手扛肩挑的年代</span></section>
+</section>
+<section style="white-space: normal;">
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">手算笔录的时代，每前进一步，都显得格外艰难。1772年，在卡塔尔迪提出近200年之后，瑞士数学家欧拉证明了M31确实是一个素数，这是人们找到的第8个梅森素数，它共有10位数，堪称当时世界上已知的最大素数，欧拉也因此成为第二个在发现者名单上留名的人。让人惊叹的是，这是在他双目失明的情况下，靠心算完成的。这种超人般的毅力与技巧让欧拉获得了“数学英雄”的美誉。法国大数学家拉普拉斯（P.Laplace）说的话，或许可以代表我们的心声：“读读欧拉，他是我们每一个人的老师。”<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">100年后，法国数学家鲁卡斯提出了一个用来判别Mp是否是素数的重要定理——鲁卡斯定理，这为梅森素数的研究提供了有力的工具。1883年，数学家波佛辛（Pervushin）利用鲁卡斯定理证明了M61也是素数–这是梅森漏掉了的。梅森还漏掉另外两个素数：M89和M107，它们分别在1911年与1914年被数学家鲍尔斯（Powers）发现。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">还记得梅森预测的四个素数吗？其中M31已经为欧拉证明，M127则在鲁卡斯提出定理时顺带证明，虽然中间漏掉了3个，但至少还有另外两个：M67和M257是不是素数呢……<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">M67的证明又是一个精彩的故事。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1903年，数学家柯尔在美国数学学会的大会上作了一个报告。他先是专注地在黑板上算出2^67－1，接着又算出193707721×761838257287，两个算式结果完全相同！换句话说，他成功地把2^67－1分解为两个素数相乘的形式，从而证明了M67是个合数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">报告中，他一言未发，却赢得了现场听众的起立鼓掌，更成了数学史上的佳话。阅读这段历史，我们懂得了什么叫做“事实胜于雄辩”。记者好奇地问他是怎样得到这么精彩的发现的，柯尔回答“三年里的全部星期天”。他后来当选为美国数学协会的会长，去世后，该协会专门设立了“柯尔奖”，用于奖励作出杰出贡献的数学家。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1922年，数学家克莱契克验证了M257并不是素数，而是合数（但他没有给出这一合数的因子，直到20世纪80年代人们才知道它有3个素因子）。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">于是乎，梅森的四个猜测获得了两正确、三遗漏和两错误的成绩，但这无损于他的光荣。在千年的探寻之旅中，伟大如欧拉也会犯错误，他在1750年宣布说找到了梅森的“遗漏”：M41和M47也是素数，但最终上M41和M47都不是素数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">直到1947年，对于p≤257的梅森素数Mp的正确结果才被确定，也就是当p=2，3，5，7，13，17，19，31，61，89，107和127时，Mp是素数。现在这个表已经被反复验证，一定不会有错误了。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">我们看到，在手工计算的时代，人们一共找到了12个梅森素数。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">计算机！计算机！</span></section>
+</section>
+<section style="white-space: normal;">
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1930年，美国数学家雷默改进了鲁卡斯的工作，给出了一个新的测试方法，即鲁卡斯－雷默方法。很快地，计算机时代到来了，这一方法发挥了重要的作用。1952年，数学家鲁滨逊（Robinson）等人将鲁卡斯－雷默方法编译成计算机程序，使用SWAC型计算机在短短几小时之内，就发现了第13个、第14个，并在当年总共找到了5个梅森素数：M521、M607、M1279、M2203和M2281。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">其后，M3217在1957年被黎塞尔（Riesel）证明是素数；M4253和M4423在1961年被赫维兹（Hurwitz）证明是素数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1963年，美国数学家吉里斯（Gillies）证明M9689和M9941是素数，这已经是第21和22个梅森素数。1963年9月6日晚上8点，当吉里斯通过大型计算机找到第23个梅森素数M11213时，美国广播公司（ABC）中断了正常的节目播放，第一时间发布了这一重要消息，发现这一素数的美国伊利诺伊大学数学系全体师生更是激动地把所有从系里发出的信件都敲上了“2^11213－1是个素数”的邮戳。</span></section>
+</section>
+<section style="white-space: normal;line-height: 1.75em;text-align: center;margin-left: 8px;margin-right: 8px;"><img data-ratio="0.3003412969283277" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6iasvZsYNSycSIPPicUKmvMV60sSMoicjRHVjwaZtbYmJVmfsdhG6iaUZ8Q/640?wx_fmt=jpeg" data-type="jpeg" data-w="293" style="box-sizing: border-box;word-wrap: break-word !important;visibility: visible !important;width: 670px !important;" width="100%" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz/th3icxFKP57rce0XgesV51LqDZ2ibhhibX6iasvZsYNSycSIPPicUKmvMV60sSMoicjRHVjwaZtbYmJVmfsdhG6iaUZ8Q/640?wx_fmt=jpeg"></section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1971年3月4日晚，美国哥伦比亚广播公司（CBS）中断了正常节目播放，发布了布萊恩特•塔克曼（Bryant Tuckerman）使用IBM360-91型计算机找到新的梅森素数M19937的消息。而到1978年10月，世界几乎所有的大新闻机构（包括我国的新华社）都报道了以下消息：两名年仅18岁的美国高中生诺尔（Noll）和尼科尔（ Nickel）使用CYBER174型计算机找到了第25个梅森素数：M21701。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">超级计算机的引入加快了梅森素数的寻找脚步，但随着素数P值的增大，每一个梅森素数的产生都更加艰难，各国科学家及业余研究者们之间的竞争变得越来越激烈。在1979年2月23日，当美国克雷研究公司的计算机专家史洛温斯基和纳尔逊正兴致冲冲地宣布他们找到第26个梅森数M23209时，有人浇来一盆冷水：两星期前美国加州的高中生诺尔就已经给出了同样结果。心有不甘的他们又花了一个半月的时间“卧薪尝胆”，使用Cray－1型计算机找到了第27个梅森素数M44497，这件事成了当时不少报纸的头版新闻。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">为了与美国人较量，英国的哈威尔实验室也专门成立了一个研究小组来寻找更大的梅森素数。他们用了两年时间，花了12万英镑的经费，于1992年3月25日找到了新的梅森素数M756839。但到了1994年1月14日，史洛温斯基等人为美国再次夺回发现“已知最大素数”的桂冠——这一梅森素数是M859433。史洛温斯基本人一共发现了7个梅森素数，他因此被人们称为“素数大王”。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">数学研究的深入更重于计算能力的提升，在搜寻梅森素数的同时，对梅森素数的分布规律的研究也在进行着，英、法、印、美、德等国的数学家都曾分别给出过关于梅森素数分布规律的猜测，但这些猜测都以近似表达式给出，而与实际情况的接近程度均难如人意。中国数学家和语言学家周海中则是这方面研究的领先者，他运用联系观察法和不完全归纳法，于1992年首先给出了梅森素数分布的精确表达式。著名的《科学美国人》杂志有一篇文章指出：这一成果为人们探究梅森素数提供了方便，是素数研究的一项重大突破。后来这项重要成果被国际上命名为“周氏猜测”。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">伴随数学理论的改善，为了寻找梅森素数而使用的计算机也越来越强大，包括了著名的IBM360型计算机，和超级计算机Cray系列。1996年发现的M1257787是迄今为止最后一个由超级计算机发现的梅森素数，数学家使用了Cray T94，这也是人类发现的第34个梅森素数。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">梅森素数的探寻之旅似乎正变得离普通人越来越远，直到GIMPS时代的到来……</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">草根英雄，人人参与</span></section>
+</section>
+<section style="white-space: normal;">
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">网格(Grid)这一崭新技术的出现使梅森素数的搜寻如虎添翼，也使它重新走到了“人人参与”的大众时代。1996年初，美国数学家和程序设计师沃特曼(G.Woltman)编制了一个梅森素数的计算程序，并把它放在网页上供数学家和数学爱好者免费使用，这就是闻名世界的“因特网梅森素数大搜寻”（GIMPS）项目，是全世界第一个基于互联网的分布式计算项目。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">该项目利用大量普通计算机的闲置时间来获得相当于超级计算机的运算能力，只要你去GIMPS的主页下载为一个名为Prime95的免费程序，就可以立即参加GIMPS项目，一起踏上持续了千年的梅森素数探寻之旅。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">12年来，人们通过GIMPS项目找到了12个梅森素数，其发现者来自美国、英国、法国、德国和加拿大。目前，世界上有160多个国家和地区近16万人参加了这一项目，并动用了30多万台计算机联网来进行网格计算。该项目的计算能力已超过当今世界上任何一台最先进的超级矢量计算机的计算能力，运算速度超过每秒350万亿次！<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">为了激励人们寻找梅森素数，1999年3月，设在美国的电子新领域基金会（EFF）向全世界宣布了为通过GIMPS项目来探寻梅森素数而设立的奖金。它规定向第一个找到超过一百万位的素数的个人或机构颁发五万美元的奖金。后面的奖金依次为：超过一千万位，十万美元；超过一亿位，十五万美元；超过十亿位，二十五万美元。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">1999年6月1日，住在美国密歇根州普利茅茨的那扬•哈吉拉特瓦拉（Nayan Hajratwala）先生找到了第38个梅森素数：2^6972593－1，这也是我们知道的第一个位数超过一百万位的素数。如果把它写下来的话，共有两百零九万八千九百六十位数字。因此，哈吉拉特瓦拉先生获得了五万美元的奖励。而他所做的，就是从互联网上下载了一个程序，这个程序在他不使用他的奔腾II350型计算机时悄悄地运行。在经过111天的计算后，这个素数被发现了。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">听起来非常诱人，但你也要知道，通过参加GIMPS计划来获得奖金的希望是相当小的。哈吉拉特瓦拉使用的计算机是当时21000台计算机中的一台。每一个参与者都在验证分配给他的不同梅森数，当然其中绝大多数都不是素数——只有大约三万分之一的可能性碰到一个素数。所以，绝大多数研究者参与该项目并不是为了金钱，而是出于乐趣、荣誉感和探索精神。<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">成功者就在眼前，2008年年8月23日，美国加州大学洛杉矶分校数学系计算中心的雇员史密斯，通过GIMPS项目发现了第46个梅森素数2^43112609－1，这个发现被著名的美国《时代》周刊评为“2008年度50项最佳发明”之一。该素数是目前已知的最大素数，它有12978189位数，如果用普通字号将这个巨数连续写下来，其长度可超过50公里！由于史密斯发现的梅森素数已超过1000万位，他将有资格获得EFF颁发的10万美元大奖。虽然说史密斯是私自利用中心内的75台计算机参加GIMPS的，但由于为学校争了光，他受到了校方的表彰。（目前共发现48个梅森素数，最大有17425170位，由美国中央密苏里大学数学教授柯蒂斯·库珀领导的研究小组于2013年发现。）</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">但在你心动之前，不妨也听听另一个人的故事。美国一家电话公司发现计算机经常出错，本来只需要5秒钟就可以接通的电话号码，需要5分钟才能接通。最终查出原来是雇员福雷斯特偷偷地使用公司内的2585台计算机参加GIMPS，福雷斯特承认了自己“被GIMPS项目引诱”，他最后被公司解雇，并被罚款一万美元，这只能说是工作与私事没有分开，令人叹息。</span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+</section>
+<section style="white-space: normal;">
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="font-size: 16px;"><strong><span style="letter-spacing: 1px;">最后的话</span></strong></span></section>
+</section>
+<section style="white-space: normal;">
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">素数的研究曾经在人类很长的历史时期没有实际用处，直到二次世界大战之后，才在密码学中得到了重要的应用。对于梅森素数的寻找之旅已经历经千年，人们一共才找到46（48）个梅森素数，在数学家的眼里，它们的价值远胜于钻石，而对它的研究，促进了计算技术、程序设计技术、密码技术、分布式计算技术的发展。让我们谨记梅森素数最早的研究者欧几里得的教诲：当一个人问他"几何学有什么用"的时候，他对侍者说：“给他拿三个硬币吧，他想从几何学中得到好处。”<br style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"></span></section>
+<section style="margin-left: 8px;margin-right: 8px;"></section>
+<section style="line-height: 1.75em;text-align: justify;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">不是三枚硬币，也不是百万美元，激励着人类不断地向前探寻的，是好奇心、求知欲和荣誉感。</span></section>
+</section>
+<p style="max-width: 100%;min-height: 1em;font-family: monospace;white-space: pre;text-align: center;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"></p>
+<p style="max-width: 100%;min-height: 1em;font-family: monospace;white-space: pre;text-align: center;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(121, 123, 170);font-size: 15px;box-sizing: border-box !important;overflow-wrap: break-word !important;"></span></p>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2887278">
+<section data-style-type="5" data-tools="新媒体排版" data-id="2590675">
+<p style="white-space: normal;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);font-family: 微软雅黑;text-align: center;widows: 1;font-size: 16px;line-height: 25.6px;color: rgb(105, 105, 105);box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong style="max-width: 100%;letter-spacing: 1px;box-sizing: border-box !important;word-wrap: break-word !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 12px;box-sizing: border-box !important;word-wrap: break-word !important;overflow-wrap: break-word !important;"><strong style="max-width: 100%;color: rgb(136, 136, 136);font-size: 14px;box-sizing: border-box !important;word-wrap: break-word !important;overflow-wrap: break-word !important;">— THE END —</strong></span></strong></p>
+</section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2625487">
+<section style="margin: 0px auto;text-align: center;width: 210px;"></section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2697295">
+<section style="margin: 0px auto;text-align: center;width: 210px;"><img data-ratio="0.1871508379888268" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" data-type="png" data-w="358" style="margin: 0px auto;visibility: visible !important;width: 358px !important;height: auto !important;" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png"></section>
+<section data-style-type="5" data-tools="新媒体排版" data-id="2625492">
+<section data-style-type="5" data-tools="新媒体排版" data-id="2617381">
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485383&idx=1&sn=9359851b9dbc93830f06629e1ad0ae6d&chksm=ebe9cd7adc9e446c5327f9da4f34e3ccfdee1338147f2acfb4bd6437963b9ae3dcf45ab86b14&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">计算机起源的数学思想</a></span><br></section>
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485374&idx=2&sn=a8d78ff5317fb24869d6077c50e48b8b&chksm=ebe9cd03dc9e44157a1121c91a5eb74e4bf9070133da6997fa132282335cef85b229cc47bee2&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">本硕皆数学专业，博士转行生物后，他发表了学校首篇Nature</a></span></section>
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485368&idx=1&sn=2a39e143918f35410ef57684d634dcfb&chksm=ebe9cd05dc9e4413ada13a4ce6c37514a4f8ccb92a7fa0a51e46f25cf550b8973b2ea2c34051&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">杨振宁讲（经典）数学笑话兼论数学和物理的关系</a></span></section>
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485372&idx=1&sn=4cd1620075aa4b361d569cd0b92518ab&chksm=ebe9cd01dc9e4417942eae33cc815b5d5bc948b43b0f9d35bd062e1a0287d5c8c9aba4e347b0&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">82岁江泽民在2008年发表论文指出：发展智能化，机器学习将有所作为……</a></span></section>
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485383&idx=2&sn=cd03662eb850d59e280f5a122e3ead41&chksm=ebe9cd7adc9e446cf1f5dbaed097c593b1b69c5a9a138bf256047048a46864144e27eac6facb&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">一种节点组重要性排序方法</a></span></section>
+<section style="max-width: 100%;letter-spacing: 0.544px;white-space: normal;min-height: 1em;font-size: 16px;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485379&idx=1&sn=f249b2b949fdc6cc4d0a70b09067a1a5&chksm=ebe9cd7edc9e4468925c713e69503cb9db12c08b37f8872228b7aed21927ab2c1bade5691b1f&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener noreferrer">图论的各种基本算法</a></span></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+			</div>
+</article>
+
+<div id="comments" class="fbox comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/271/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="271" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+
+		</main>
+	</div>
+
+
+<aside id="secondary" class="featured-sidebar widget-area">
+	<section id="search-7" class="fbox swidgets-wrap widget widget_search"><form role="search" target="_blank" method="get" class="search-form" action="https://google.com/search">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="q">
+					<input type="hidden" name="sitesearch" value="stime.cc" style="display: block;">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Recent Posts</h4></div>		<ul>
+											<li>
+					<a href="https://stime.cc/article/289/">16个让你烧脑让你晕的悖论</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/288/">如何用数学方法估算一个女生前男友的数量？</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/287/">世界级北大数学天才远走美国大学，走之前他说了3句话，发人深省</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/286/">懂相对论之从弯曲空间的几何开始</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/285/">“苦瓜”数学家柯西的故事及柯西中值定理</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/284/">机器学习萌新必学的Top10算法</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/283/">蒙格斯智库：孙涤教授“实锤”！莱布尼茨二进制确实受《易经》启发？中华文明的又一大贡献</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/282/">时间之箭：从熵到大爆炸再到万物理论</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/281/">密码学家王小云：十年破解MD5和SHA-1两大国际密码</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/280/">杨振宁讲（经典）数学笑话兼论数学和物理的关系</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+					</ul>
+		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Archives</h4></div>		<ul>
+				<li><a href="https://stime.cc/article/date/2020/01/">January 2020</a> (136)</li>
+		</ul>
+			</section></aside>
+</div>
+</div>
+
+<footer id="colophon" class="site-footer clearfix">
+
+	<div class="content-wrap">
+		
+			
+			
+		</div>
+
+		<div class="site-info">
+			Copyright ©2020 | S时代		</div>
+	</footer></div>
+
+
+
+
+
+
+<div id="smobile-menu" class="mobile-only"></div>
+<div id="mobile-menu-overlay"></div>
+
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/navigation.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/script.js"></script>
+</body>
+</html>

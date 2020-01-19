@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>懂相对论之从弯曲空间的几何开始 - S时代</title>
+
+
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://stime.cc/article/286/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="懂相对论之从弯曲空间的几何开始 - S时代">
+<meta property="og:description" content="算法数学俱乐部 日期：2019年12月28日 正文共：6053字7图 预计阅读时间：16分钟 来源:科学网博主文/张天蓉  1 古老的几何学 几何是一门古老的学科，在公元前由几何大师欧几里德创立，至今两千多年威力不减。 欧几里德几何是一个漂亮的公理系统，它只需要设定几条简单的、符合直觉、大家公认、不证自明的命题（称为公理或公设），然后从这几条命题出发，推导证明其它命题，继而推导证明更多命题，如此继续下去，一套数学理论便建立起来了。这就像是建造高楼大厦，“公理”就是水平放在地基第一层的大“砖块”，有了牢靠坚实的基础，其它砖块便能够一层一层叠上去，万丈高楼也就能够平地而起。基底砖块破缺了，或者置放得不平稳，楼房就可能会倒塌。 欧几里德平面几何的公理有五条。他就从这简单的五条公理出发，推演出了所有的平面几何定理，建造出欧氏几何的宏伟大厦。 数学逻辑推理创造的奇迹令人吃惊。不过，当人们反复思考这几条公理时，觉得前面4条显然都是不言自明的，唯有第五条公理比较复杂，听起来不像一个简单而容易被人接受的直觉概念。于是，人们就自然提出疑问：这第五条是公理吗？它是否可以由其它4条公理推导出来？大家的意思就是说，欧氏平面几何的大厦用前面4块“大砖头”可能也就足以支撑了。这第五块砖头，恐怕本来就是放置在另外四块砖头之上的。 欧氏平面几何的第五条公理也称为“平行公理”，可表述为：“过直线外的一点，有且仅有一条平行线。” 一位名叫尼古拉·罗巴切夫斯基（Nikolai Lobachevsky，1792 – 1856）的年轻俄罗斯数学家突发奇想：如果将这条公理稍稍改变一下，也就是说，将大厦下面的某块基石稍微移动一下，会产生什么样的后果呢？比如说改成：“过直线外的一点，至少有两条平行线。” 这一改非同小可，几字之差，生出了与欧氏几何完全不同的另一种几何，人们称之为“非欧几何”或“罗氏几何”。非欧几何的大厦同样拔地而起、稳固牢靠，逻辑上完整而严密，但看起来却有些古怪。 罗氏几何体系得到古怪而不合常理的命题是必然的，因为被罗巴切夫斯基改变之后的第五公设，本身就与人们的日常生活经验不相符合。过平面上直线外的一点，怎么可能作出多条不同的直线与已知直线不相交呢？由此而建造出来的数学逻辑大厦，当然会是个怪物。比如说，罗氏几何导出了如下古怪的命题：同一直线的垂线和斜线不一定相交；不存在矩形，因为四边形不可能四个角都是直角；不存在相似三角形；过不在同一直线上的三点，不一定能作一个圆；一个三角形的三个内角之和小于180度……这种奇怪的“几何大厦”，能有什么用处呢？有人嗤之以鼻，心想，不过是疯子数学家玩的游戏而已！ 那些嘲笑罗巴切夫斯基的人没有料到，几十年之后，非欧几何在爱因斯坦的广义相对论中找到了用武之地，它正是爱因斯坦广义相对论描述的一种弯曲空间所遵循的几何！ 2 几何上的无穷小 不过，真正与广义相对论弯曲空间有关的是“黎曼几何”，它比上面所说的非欧几何更进了一步，属于微分几何。 欧几里德之后，笛卡尔发明了解析几何，牛顿和莱布尼茨发明了微积分。两者之结合使得那个时代的数学和物理如虎添翼，面目一新。像罗巴切夫斯基那样使用传统的公理方法来研究几何，显然要输人一筹。欧拉、克莱洛、蒙日以及高斯等人认识到了这一点，创立并发展了微分几何。 微分几何的先行者、法国数学家亚历克西斯·克莱洛（Alexis Clairaut，1713 – 1763）对空间曲线进行了深入研究，第一次研究了空间曲线的曲率和挠率（当时被他称之为双重曲率）。 什么是曲线的曲率和挠率？我们从图1a所示的三条平面曲线来认识曲率。图中的三条曲线，就像是三条形状不同的平地上的高速公路。 图1：曲线的曲率和挠率 我们首先需要引进曲线的切线，或称之为“切矢量”的概念。切矢量即为，当曲线上两点无限接近时，它们的连线的极限位置所决定的矢量。图1a所示的公路上标示的箭头，便是在曲线上各个点切矢量的直观图像。而曲率是什么呢？曲率表征曲线的弯曲程度。比如，图1a中最上面一条公路是直线，直线不会拐弯，我们说，它的弯曲程度为0，即曲率等于0。切矢量旋转得越快，曲线的弯曲程度也越大。所以，数学上就把曲率定义为曲线的切矢量对于弧长的旋转速度。 平地上弯弯曲曲的公路可以看作是平面曲线，用“曲率”就可以描述它们。如果公路是修建在山区中，它们一边转弯一边还要盘旋向上或者向下。这时候，汽车驶过的路径便不再是平面曲线，而是空间曲线了。对于山间的公路，如图1b所示，我们除了可以看到其弯曲的程度之外，还能观察到公路往上（或者向下）绕行的快慢。我们将这个描述绕行快慢的几何量叫做“挠率”。 一条空间曲线的曲率和挠率在空间的变化规律完全决定了这条曲线。 从上面对空间曲线的研究，可以看出微分几何的方法比欧氏几何公理式的方法要强有力多了。与曲线类似，微分几何也能用以研究曲面，曲率和挠率的概念，也能推广到曲面上，去定义复杂得多的曲率张量。 图2：各种曲面 曲面的形状变幻无穷，按照我们感兴趣的性质，可以将其分为两大类：可展曲面和不可展曲面。初看图2a和图2b所画出的曲面，也许你看不出这两类图形有何区别。它们都是从三维空间看到的形状。不管可展还是不可展，看起来不都是“弯曲的”、“不平的”吗？然而，如果你再仔细观察，就会发现，可展曲面的“弯曲”与不可展曲面的“弯曲”有着本质的区别。简单地说，可展曲面在本质上是“平的”，它们可以被展开成一个平面。比如，将图2b所示的锥面，用剪刀剪一条线直到顶点，就可以没有任何皱褶地将它平摊到桌子上。柱面也可以沿着与中心线平行的任何直线剪开，成为一个平面。 但是，图2a所列举的不可展曲面，就不能展开成平面了。那是真正的、本质上的“不平”。一顶做成了近似半个球面的帽子，你无论怎样剪裁它，都无法将其没有皱褶地摊成一个平面。另一方面，你用一张平平的纸，很容易卷成一个圆筒（柱面），或者是做成一顶锥形的帽子，但你无法做出一个球面来。你顶多只能将这张纸剪成许多小纸片，粘成一个近似的球面！ 谈到这儿，你大概已经基本明白了“可展”和“不可展”的区别到底是什么。尽管两类曲面在嵌入3维空间之后看起来都是弯曲的，但是，可展曲面的内在本质是“平的”，不可展曲面的内在本质是“不平”。区分这两类曲面“内在本质”的概念叫做“内蕴性”，研究这种性质的几何叫做内蕴几何。 曲面弯曲的内蕴性最早被“数学王子”高斯注意到，后为黎曼所发展，并推广到大于3的n维流形。因而，黎曼几何是一种内蕴几何。换言之，内蕴性指的是曲面（或曲线）不依赖于它在三维空间中嵌入方式的某些性质。也就是说，它是曲面某些内在的、本质的几何属性。高斯用高斯曲率——两个主曲率的乘积，来表征曲面的这种属性（图3a）。如果一个曲面的高斯曲率为0，说明它本质上是平的，是可展曲面，如图3b所示。如果一个曲面的高斯曲率不为0，说明它本质上是不平的，是不可展曲面，如图3c所示。 高斯曲率不为0的情形又有两种。正的高斯曲率对应于球面几何（图3c的下图），负的高斯曲率对应于马鞍面（图3c的上图）。马鞍面上的几何就是前面所介绍的罗巴切夫斯基几何，又被称为双曲几何。 图3：曲面的两个主曲率及高斯曲率 3 爬虫的几何 可是，又该如何判定我们所面对的是哪一种几何呢？最简单的办法是测量曲面上一个三角形三个内角之和E=A+B+C。平面几何的E=180o，球面几何E>180o，双曲几何E<180o。 一个观察者在自己生活的物理空间中所能够观察和测量到的几何性质，就是这个空间的内蕴性质。比如说，球面的内蕴性质，就是生活在球面上的2维爬虫感受到的几何性质。我们人类当然是3维的生物，不是什么2维爬虫。但是，因为我们的地球很大，我们的3维尺寸比起地球来说是很小的。因此，我们可以将自己设想为某种2维生物。比如，我们在地球上测量一个大三角形，就如图3b下中的球面三角形ABC，测地员将会发现，这个三角形的三个内角都是90度，因此，内角和E=270o，大于180度。 图3b下所显示的是一个规则球面，它的空间弯曲程度到处都是一样的，但一般来说，空间的弯曲程度不一定处处相同，数学家们用“平 行移动”的概念来研究空间的弯曲程度。 什么是平行移动？简单地说，就是将一个矢量平行于自身的方向沿着空间里的一条曲线移动。像汽车上的陀螺仪那样，汽车沿公路运动时，陀螺仪总是平行于自己原来的指向。 在物理上，让大家更感兴趣的问题是：一个矢量平行移动一圈后再回到原来出发点的时候是否会有所改变？比如说，跟着汽车转了一圈的陀螺仪，指的方向是否还和原来出发时的方向一样？也许你不加思索就会给出答案：当然没有什么改变。但这是因为你习惯了用欧氏空间的直角坐标系来思考问题，从而轻易得出这个结论。如果我们假设地面是一个欧几里德平面，陀螺仪平行移动回到原处时，方向的确不会改变。但是，每个人都知道，地球是一个球体，所以我们实际上是生活在一个球面上。那么，如果从球面（或者别的曲面）的角度来研究这个问题，又会得出什么样的结论呢？ 所谓“平行移动”的意思是说，在移动矢量的时候，尽可能保持矢量方向相对于自身没有旋转。好比一个女孩平行地前进、后退、左右移动，只要她的身体没有扭动，就叫平行移动。这样，当她移动一周回到出发点的时候，她认为她应该和原来出发时面对着同样的方向。如果她是在平面上移动的话，她的这个想法是正确的。但是，假如她是在球面上移动的话，她将发现自己面朝的方向可能不一样了！出发时她的脸朝左，回来时却是脸朝前，如图4b。 假如将女孩面对的方向用一个箭头（矢量）来表示。图4a所示的是一个矢量在莫比乌斯带上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到10，也就是回到原来的出发位置时，得到的矢量和原来的反向。图4b中所示是球面上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到7，也就是回到原来的出发位置时，得到的矢量和原来的矢量垂直。 图4：（a）莫比乌斯带上的平行移动（b）球面上的平行移动 上面的两个例子说明，矢量在曲面上平行移动一周之后，不一定还能保持原来的方向，可能与出发时有所差别。这个差别正好与曲面的高斯曲率有关系，反映了曲面内在的弯曲程度。 4 阿扁的世界 下面，我们研究锥面上的平行移动，看看锥面与“真正的平面”有何不同。让我们想象有一个极小极扁的平面生物“阿扁”，生活在一张平坦的纸上，如图5a。阿扁使用直角坐标系对他的平坦世界进行观察和测量。他感受到的几何，是标准的欧几里德几何：三角形的三个内角之和等于180度；过不在同一直线上的三点，可以作一个圆；直角三角形的两条直角边的长度的平方和等于斜边长的平方……...">
+<meta property="og:url" content="https://stime.cc/article/286/">
+<meta property="og:site_name" content="S时代">
+<meta property="article:section" content="未分类">
+<meta property="article:published_time" content="2020-01-19T02:52:08+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="算法数学俱乐部 日期：2019年12月28日 正文共：6053字7图 预计阅读时间：16分钟 来源:科学网博主文/张天蓉  1 古老的几何学 几何是一门古老的学科，在公元前由几何大师欧几里德创立，至今两千多年威力不减。 欧几里德几何是一个漂亮的公理系统，它只需要设定几条简单的、符合直觉、大家公认、不证自明的命题（称为公理或公设），然后从这几条命题出发，推导证明其它命题，继而推导证明更多命题，如此继续下去，一套数学理论便建立起来了。这就像是建造高楼大厦，“公理”就是水平放在地基第一层的大“砖块”，有了牢靠坚实的基础，其它砖块便能够一层一层叠上去，万丈高楼也就能够平地而起。基底砖块破缺了，或者置放得不平稳，楼房就可能会倒塌。 欧几里德平面几何的公理有五条。他就从这简单的五条公理出发，推演出了所有的平面几何定理，建造出欧氏几何的宏伟大厦。 数学逻辑推理创造的奇迹令人吃惊。不过，当人们反复思考这几条公理时，觉得前面4条显然都是不言自明的，唯有第五条公理比较复杂，听起来不像一个简单而容易被人接受的直觉概念。于是，人们就自然提出疑问：这第五条是公理吗？它是否可以由其它4条公理推导出来？大家的意思就是说，欧氏平面几何的大厦用前面4块“大砖头”可能也就足以支撑了。这第五块砖头，恐怕本来就是放置在另外四块砖头之上的。 欧氏平面几何的第五条公理也称为“平行公理”，可表述为：“过直线外的一点，有且仅有一条平行线。” 一位名叫尼古拉·罗巴切夫斯基（Nikolai Lobachevsky，1792 – 1856）的年轻俄罗斯数学家突发奇想：如果将这条公理稍稍改变一下，也就是说，将大厦下面的某块基石稍微移动一下，会产生什么样的后果呢？比如说改成：“过直线外的一点，至少有两条平行线。” 这一改非同小可，几字之差，生出了与欧氏几何完全不同的另一种几何，人们称之为“非欧几何”或“罗氏几何”。非欧几何的大厦同样拔地而起、稳固牢靠，逻辑上完整而严密，但看起来却有些古怪。 罗氏几何体系得到古怪而不合常理的命题是必然的，因为被罗巴切夫斯基改变之后的第五公设，本身就与人们的日常生活经验不相符合。过平面上直线外的一点，怎么可能作出多条不同的直线与已知直线不相交呢？由此而建造出来的数学逻辑大厦，当然会是个怪物。比如说，罗氏几何导出了如下古怪的命题：同一直线的垂线和斜线不一定相交；不存在矩形，因为四边形不可能四个角都是直角；不存在相似三角形；过不在同一直线上的三点，不一定能作一个圆；一个三角形的三个内角之和小于180度……这种奇怪的“几何大厦”，能有什么用处呢？有人嗤之以鼻，心想，不过是疯子数学家玩的游戏而已！ 那些嘲笑罗巴切夫斯基的人没有料到，几十年之后，非欧几何在爱因斯坦的广义相对论中找到了用武之地，它正是爱因斯坦广义相对论描述的一种弯曲空间所遵循的几何！ 2 几何上的无穷小 不过，真正与广义相对论弯曲空间有关的是“黎曼几何”，它比上面所说的非欧几何更进了一步，属于微分几何。 欧几里德之后，笛卡尔发明了解析几何，牛顿和莱布尼茨发明了微积分。两者之结合使得那个时代的数学和物理如虎添翼，面目一新。像罗巴切夫斯基那样使用传统的公理方法来研究几何，显然要输人一筹。欧拉、克莱洛、蒙日以及高斯等人认识到了这一点，创立并发展了微分几何。 微分几何的先行者、法国数学家亚历克西斯·克莱洛（Alexis Clairaut，1713 – 1763）对空间曲线进行了深入研究，第一次研究了空间曲线的曲率和挠率（当时被他称之为双重曲率）。 什么是曲线的曲率和挠率？我们从图1a所示的三条平面曲线来认识曲率。图中的三条曲线，就像是三条形状不同的平地上的高速公路。 图1：曲线的曲率和挠率 我们首先需要引进曲线的切线，或称之为“切矢量”的概念。切矢量即为，当曲线上两点无限接近时，它们的连线的极限位置所决定的矢量。图1a所示的公路上标示的箭头，便是在曲线上各个点切矢量的直观图像。而曲率是什么呢？曲率表征曲线的弯曲程度。比如，图1a中最上面一条公路是直线，直线不会拐弯，我们说，它的弯曲程度为0，即曲率等于0。切矢量旋转得越快，曲线的弯曲程度也越大。所以，数学上就把曲率定义为曲线的切矢量对于弧长的旋转速度。 平地上弯弯曲曲的公路可以看作是平面曲线，用“曲率”就可以描述它们。如果公路是修建在山区中，它们一边转弯一边还要盘旋向上或者向下。这时候，汽车驶过的路径便不再是平面曲线，而是空间曲线了。对于山间的公路，如图1b所示，我们除了可以看到其弯曲的程度之外，还能观察到公路往上（或者向下）绕行的快慢。我们将这个描述绕行快慢的几何量叫做“挠率”。 一条空间曲线的曲率和挠率在空间的变化规律完全决定了这条曲线。 从上面对空间曲线的研究，可以看出微分几何的方法比欧氏几何公理式的方法要强有力多了。与曲线类似，微分几何也能用以研究曲面，曲率和挠率的概念，也能推广到曲面上，去定义复杂得多的曲率张量。 图2：各种曲面 曲面的形状变幻无穷，按照我们感兴趣的性质，可以将其分为两大类：可展曲面和不可展曲面。初看图2a和图2b所画出的曲面，也许你看不出这两类图形有何区别。它们都是从三维空间看到的形状。不管可展还是不可展，看起来不都是“弯曲的”、“不平的”吗？然而，如果你再仔细观察，就会发现，可展曲面的“弯曲”与不可展曲面的“弯曲”有着本质的区别。简单地说，可展曲面在本质上是“平的”，它们可以被展开成一个平面。比如，将图2b所示的锥面，用剪刀剪一条线直到顶点，就可以没有任何皱褶地将它平摊到桌子上。柱面也可以沿着与中心线平行的任何直线剪开，成为一个平面。 但是，图2a所列举的不可展曲面，就不能展开成平面了。那是真正的、本质上的“不平”。一顶做成了近似半个球面的帽子，你无论怎样剪裁它，都无法将其没有皱褶地摊成一个平面。另一方面，你用一张平平的纸，很容易卷成一个圆筒（柱面），或者是做成一顶锥形的帽子，但你无法做出一个球面来。你顶多只能将这张纸剪成许多小纸片，粘成一个近似的球面！ 谈到这儿，你大概已经基本明白了“可展”和“不可展”的区别到底是什么。尽管两类曲面在嵌入3维空间之后看起来都是弯曲的，但是，可展曲面的内在本质是“平的”，不可展曲面的内在本质是“不平”。区分这两类曲面“内在本质”的概念叫做“内蕴性”，研究这种性质的几何叫做内蕴几何。 曲面弯曲的内蕴性最早被“数学王子”高斯注意到，后为黎曼所发展，并推广到大于3的n维流形。因而，黎曼几何是一种内蕴几何。换言之，内蕴性指的是曲面（或曲线）不依赖于它在三维空间中嵌入方式的某些性质。也就是说，它是曲面某些内在的、本质的几何属性。高斯用高斯曲率——两个主曲率的乘积，来表征曲面的这种属性（图3a）。如果一个曲面的高斯曲率为0，说明它本质上是平的，是可展曲面，如图3b所示。如果一个曲面的高斯曲率不为0，说明它本质上是不平的，是不可展曲面，如图3c所示。 高斯曲率不为0的情形又有两种。正的高斯曲率对应于球面几何（图3c的下图），负的高斯曲率对应于马鞍面（图3c的上图）。马鞍面上的几何就是前面所介绍的罗巴切夫斯基几何，又被称为双曲几何。 图3：曲面的两个主曲率及高斯曲率 3 爬虫的几何 可是，又该如何判定我们所面对的是哪一种几何呢？最简单的办法是测量曲面上一个三角形三个内角之和E=A+B+C。平面几何的E=180o，球面几何E>180o，双曲几何E<180o。 一个观察者在自己生活的物理空间中所能够观察和测量到的几何性质，就是这个空间的内蕴性质。比如说，球面的内蕴性质，就是生活在球面上的2维爬虫感受到的几何性质。我们人类当然是3维的生物，不是什么2维爬虫。但是，因为我们的地球很大，我们的3维尺寸比起地球来说是很小的。因此，我们可以将自己设想为某种2维生物。比如，我们在地球上测量一个大三角形，就如图3b下中的球面三角形ABC，测地员将会发现，这个三角形的三个内角都是90度，因此，内角和E=270o，大于180度。 图3b下所显示的是一个规则球面，它的空间弯曲程度到处都是一样的，但一般来说，空间的弯曲程度不一定处处相同，数学家们用“平 行移动”的概念来研究空间的弯曲程度。 什么是平行移动？简单地说，就是将一个矢量平行于自身的方向沿着空间里的一条曲线移动。像汽车上的陀螺仪那样，汽车沿公路运动时，陀螺仪总是平行于自己原来的指向。 在物理上，让大家更感兴趣的问题是：一个矢量平行移动一圈后再回到原来出发点的时候是否会有所改变？比如说，跟着汽车转了一圈的陀螺仪，指的方向是否还和原来出发时的方向一样？也许你不加思索就会给出答案：当然没有什么改变。但这是因为你习惯了用欧氏空间的直角坐标系来思考问题，从而轻易得出这个结论。如果我们假设地面是一个欧几里德平面，陀螺仪平行移动回到原处时，方向的确不会改变。但是，每个人都知道，地球是一个球体，所以我们实际上是生活在一个球面上。那么，如果从球面（或者别的曲面）的角度来研究这个问题，又会得出什么样的结论呢？ 所谓“平行移动”的意思是说，在移动矢量的时候，尽可能保持矢量方向相对于自身没有旋转。好比一个女孩平行地前进、后退、左右移动，只要她的身体没有扭动，就叫平行移动。这样，当她移动一周回到出发点的时候，她认为她应该和原来出发时面对着同样的方向。如果她是在平面上移动的话，她的这个想法是正确的。但是，假如她是在球面上移动的话，她将发现自己面朝的方向可能不一样了！出发时她的脸朝左，回来时却是脸朝前，如图4b。 假如将女孩面对的方向用一个箭头（矢量）来表示。图4a所示的是一个矢量在莫比乌斯带上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到10，也就是回到原来的出发位置时，得到的矢量和原来的反向。图4b中所示是球面上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到7，也就是回到原来的出发位置时，得到的矢量和原来的矢量垂直。 图4：（a）莫比乌斯带上的平行移动（b）球面上的平行移动 上面的两个例子说明，矢量在曲面上平行移动一周之后，不一定还能保持原来的方向，可能与出发时有所差别。这个差别正好与曲面的高斯曲率有关系，反映了曲面内在的弯曲程度。 4 阿扁的世界 下面，我们研究锥面上的平行移动，看看锥面与“真正的平面”有何不同。让我们想象有一个极小极扁的平面生物“阿扁”，生活在一张平坦的纸上，如图5a。阿扁使用直角坐标系对他的平坦世界进行观察和测量。他感受到的几何，是标准的欧几里德几何：三角形的三个内角之和等于180度；过不在同一直线上的三点，可以作一个圆；直角三角形的两条直角边的长度的平方和等于斜边长的平方……...">
+<meta name="twitter:title" content="懂相对论之从弯曲空间的几何开始 - S时代">
+<meta name="twitter:image" content="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/286/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png"},{"@type":"WebPage","@id":"https://stime.cc/article/286/#webpage","url":"https://stime.cc/article/286/","inLanguage":"en-US","name":"\u61c2\u76f8\u5bf9\u8bba\u4e4b\u4ece\u5f2f\u66f2\u7a7a\u95f4\u7684\u51e0\u4f55\u5f00\u59cb - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/286/#primaryimage"},"datePublished":"2020-01-19T02:52:08+00:00","dateModified":"2020-01-19T02:52:08+00:00"},{"@type":"Article","@id":"https://stime.cc/article/286/#article","isPartOf":{"@id":"https://stime.cc/article/286/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u61c2\u76f8\u5bf9\u8bba\u4e4b\u4ece\u5f2f\u66f2\u7a7a\u95f4\u7684\u51e0\u4f55\u5f00\u59cb","datePublished":"2020-01-19T02:52:08+00:00","dateModified":"2020-01-19T02:52:08+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/286/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/286/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Feed" href="https://stime.cc/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Comments Feed" href="https://stime.cc/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » 懂相对论之从弯曲空间的几何开始 Comments Feed" href="https://stime.cc/article/286/feed/">
+<link rel="stylesheet" id="wp-block-library-css" href="https://stime.cc/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://stime.cc/wp-content/themes/bloggist/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bloggist-style-css" href="https://stime.cc/wp-content/themes/bloggist/style.css" type="text/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="bloggist-google-fonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=5.3.2" type="text/css" media="all">
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stime.cc/xmlrpc.php">
+<link rel="pingback" href="https://stime.cc/xmlrpc.php">
+		<style type="text/css">
+		body, .site, .swidgets-wrap h3, .post-data-text { background: ; }
+		.site-title a, .site-description { color: ; }
+		.sheader { background-color:  !important; }
+		.main-navigation ul li a, .main-navigation ul li .sub-arrow, .super-menu .toggle-mobile-menu,.toggle-mobile-menu:before, .mobile-menu-active .smenu-hide { color: ; }
+		#smobile-menu.show .main-navigation ul ul.children.active, #smobile-menu.show .main-navigation ul ul.sub-menu.active, #smobile-menu.show .main-navigation ul li, .smenu-hide.toggle-mobile-menu.menu-toggle, #smobile-menu.show .main-navigation ul li, .primary-menu ul li ul.children li, .primary-menu ul li ul.sub-menu li, .primary-menu .pmenu, .super-menu { border-color: ; border-bottom-color: ; }
+		#secondary .widget h3, #secondary .widget h3 a, #secondary .widget h4, #secondary .widget h1, #secondary .widget h2, #secondary .widget h5, #secondary .widget h6, #secondary .widget h4 a { color: ; }
+		#secondary .widget a, #secondary a, #secondary .widget li a , #secondary span.sub-arrow{ color: ; }
+		#secondary, #secondary .widget, #secondary .widget p, #secondary .widget li, .widget time.rpwe-time.published { color: ; }
+		#secondary .swidgets-wrap, #secondary .widget ul li, .featured-sidebar .search-field { border-color: ; }
+		.site-info, .footer-column-three input.search-submit, .footer-column-three p, .footer-column-three li, .footer-column-three td, .footer-column-three th, .footer-column-three caption { color: ; }
+		.footer-column-three h3, .footer-column-three h4, .footer-column-three h5, .footer-column-three h6, .footer-column-three h1, .footer-column-three h2, .footer-column-three h4, .footer-column-three h3 a { color: ; }
+		.footer-column-three a, .footer-column-three li a, .footer-column-three .widget a, .footer-column-three .sub-arrow { color: ; }
+		.footer-column-three h3:after { background: ; }
+		.site-info, .widget ul li, .footer-column-three input.search-field, .footer-column-three input.search-submit { border-color: ; }
+		.site-footer { background-color: ; }
+		.content-wrapper h2.entry-title a, .content-wrapper h2.entry-title a:hover, .content-wrapper h2.entry-title a:active, .content-wrapper h2.entry-title a:focus, .archive .page-header h1, .blogposts-list h2 a, .blogposts-list h2 a:hover, .blogposts-list h2 a:active, .search-results h1.page-title { color: ; }
+		.blogposts-list .post-data-text, .blogposts-list .post-data-text a, .content-wrapper .post-data-text *{ color: ; }
+		.blogposts-list p { color: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button { background: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button, span.page-numbers.dots, .page-numbers.current, .page-numbers li a:hover { color: ; }
+		.archive .page-header h1, .search-results h1.page-title, .blogposts-list.fbox, span.page-numbers.dots, .page-numbers li a, .page-numbers.current { border-color: ; }
+		.blogposts-list .post-data-divider { background: ; }
+		.page .comments-area .comment-author, .page .comments-area .comment-author a, .page .comments-area .comments-title, .page .content-area h1, .page .content-area h2, .page .content-area h3, .page .content-area h4, .page .content-area h5, .page .content-area h6, .page .content-area th, .single  .comments-area .comment-author, .single .comments-area .comment-author a, .single .comments-area .comments-title, .single .content-area h1, .single .content-area h2, .single .content-area h3, .single .content-area h4, .single .content-area h5, .single .content-area h6, .single .content-area th, .search-no-results h1, .error404 h1 { color: ; }
+		.single .post-data-text, .page .post-data-text, .page .post-data-text a, .single .post-data-text a, .comments-area .comment-meta .comment-metadata a, .single .post-data-text * { color: ; }
+		.page .content-area p, .page article, .page .content-area table, .page .content-area dd, .page .content-area dt, .page .content-area address, .page .content-area .entry-content, .page .content-area li, .page .content-area ol, .single .content-area p, .single article, .single .content-area table, .single .content-area dd, .single .content-area dt, .single .content-area address, .single .entry-content, .single .content-area li, .single .content-area ol, .search-no-results .page-content p { color: ; }
+		.single .entry-content a, .page .entry-content a, .comment-content a, .comments-area .reply a, .logged-in-as a, .comments-area .comment-respond a { color: ; }
+		.comments-area p.form-submit input { background: ; }
+		.error404 .page-content p, .error404 input.search-submit, .search-no-results input.search-submit { color: ; }
+		.page .comments-area, .page article.fbox, .page article tr, .page .comments-area ol.comment-list ol.children li, .page .comments-area ol.comment-list .comment, .single .comments-area, .single article.fbox, .single article tr, .comments-area ol.comment-list ol.children li, .comments-area ol.comment-list .comment, .error404 main#main, .error404 .search-form label, .search-no-results .search-form label, .error404 input.search-submit, .search-no-results input.search-submit, .error404 main#main, .search-no-results section.fbox.no-results.not-found{ border-color: ; }
+		.single .post-data-divider, .page .post-data-divider { background: ; }
+		.single .comments-area p.form-submit input, .page .comments-area p.form-submit input { color: ; }
+		.bottom-header-wrapper { padding-top: px; }
+		.bottom-header-wrapper { padding-bottom: px; }
+		.bottom-header-wrapper { background: ; }
+		.bottom-header-wrapper *{ color: ; }
+		.header-widget a, .header-widget li a, .header-widget i.fa { color: ; }
+		.header-widget, .header-widget p, .header-widget li, .header-widget .textwidget { color: ; }
+		.header-widget .widget-title, .header-widget h1, .header-widget h3, .header-widget h2, .header-widget h4, .header-widget h5, .header-widget h6{ color: ; }
+		.header-widget.swidgets-wrap, .header-widget ul li, .header-widget .search-field { border-color: ; }
+		.bottom-header-title, .bottom-header-paragraph{ color: ; }
+
+		#secondary .widget-title-lines:after, #secondary .widget-title-lines:before { background: ; }
+
+
+		.header-widgets-wrapper .swidgets-wrap{ background: ; }
+		.top-nav-wrapper, .primary-menu .pmenu, .super-menu, #smobile-menu, .primary-menu ul li ul.children, .primary-menu ul li ul.sub-menu { background-color: ; }
+		#secondary .widget li, #secondary input.search-field, #secondary div#calendar_wrap, #secondary .tagcloud, #secondary .textwidget{ background: ; }
+		#secondary .swidget { border-color: ; }
+		.archive article.fbox, .search-results article.fbox, .blog article.fbox { background: ; }
+
+
+		.comments-area, .single article.fbox, .page article.fbox { background: ; }
+		</style>
+		<link rel="amphtml" href="https://stime.cc/article/286/amp/"><link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="32x32">
+<link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+<meta name="msapplication-TileImage" content="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?871eb580cf6efb97266170c43d350eff";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</head>
+
+<body class="post-template-default single single-post postid-286 single-format-standard masthead-fixed">
+	<div id="page" class="site">
+
+		<header id="masthead" class="sheader site-header clearfix">
+			<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+
+				<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+				<div class="top-nav-wrapper">
+					<div class="content-wrap">
+						<div class="logo-container"> 
+
+													<a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+									</div>
+				<div class="center-main-menu">
+					<div class="menu-caidan-container"><ul id="primary-menu" class="pmenu"><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/">首页</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="super-menu clearfix">
+			<div class="super-menu-inner">
+				<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
+
+									</a><a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+					
+	</div>
+</div>
+<div id="mobile-menu-overlay"></div>
+</header>
+
+
+	
+	
+
+<div class="content-wrap">
+
+
+	
+	<div class="header-widgets-wrapper">
+		
+	
+</div>
+
+
+
+</div>
+
+<div id="content" class="site-content clearfix">
+	<div class="content-wrap">
+
+	<div id="primary" class="featured-content content-area">
+		<main id="main" class="site-main">
+
+				<article id="post-286" class="posts-entry fbox post-286 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">懂相对论之从弯曲空间的几何开始</h1>		<div class="entry-meta">
+			<div class="blog-data-wrapper">
+				<div class="post-data-divider"></div>
+				<div class="post-data-positioning">
+					<div class="post-data-text">
+						<span class="posted-on">Posted on <a href="https://stime.cc/article/286/" rel="bookmark"><time class="entry-date published updated" datetime="2020-01-19T10:52:08+08:00">2020/1/19</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
+				</div>
+			</div>
+		</div>
+			</header>
+
+	<div class="entry-content">
+		<section style="margin-left: 8px;margin-right: 8px;">
+<section class="xmteditor" style="display:none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2820150">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2796723">
+<section style="margin-left: 8px;margin-right: 8px;" class>
+<section class style="display:none;" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2549807">
+<section class style="white-space: normal;">
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section donone="shifuMouseDown('shifu_t_003')" label="Copyright © 2015 playhudong All Rights Reserved." style="font-size: 16px;text-align: center;caret-color: rgb(51, 51, 51);max-width: 100%;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);font-family: 微软雅黑;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section donone="shifuMouseDown('shifu_t_003')" label="Copyright © 2015 playhudong All Rights Reserved." style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section class powered-by="xiumi.us" style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section class style="max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="padding: 10px;max-width: 100%;box-sizing: border-box;overflow-wrap: break-word;line-height: 25.6px;letter-spacing: 0.544px;font-family: Arial;min-height: 0px;background-image: none;background-clip: border-box;background-position: 0% 0%;background-repeat: repeat;background-size: auto;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);bottom: auto;display: flex;float: none;height: auto;left: auto;max-height: none;min-width: 0px;text-align: justify;top: auto;z-index: auto;visibility: visible;clear: none;" class>
+<section class powered-by="xiumi.us" style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section class style="max-width: 100%;text-align: center;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section style="padding: 10px;max-width: 100%;box-sizing: border-box;overflow-wrap: break-word;line-height: 25.6px;letter-spacing: 0.544px;min-height: 0px;background-image: none;background-clip: border-box;background-position: 0% 0%;background-repeat: repeat;background-size: auto;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);bottom: auto;display: flex;float: none;height: auto;left: auto;max-height: none;min-width: 0px;text-align: justify;top: auto;z-index: auto;visibility: visible;clear: none;">
+<section data-width="120px" style="color: rgb(62, 62, 62);max-width: 100%;width: 120px;text-align: center;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section class data-brushtype="text" style="margin-bottom: 10px;padding-right: 10px;padding-left: 10px;max-width: 100%;box-sizing: border-box;height: 30px;background-color: rgb(80, 81, 80);line-height: 30px;border-radius: 10px;display: inline-block;color: rgb(255, 255, 255);overflow-wrap: break-word !important;"><span style="font-size: 13px;letter-spacing: 0.544px;">算法数学俱乐部</span></section>
+<section style="max-width: 100%;width: 120px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+<section data-role="circle" data-width="100%" style='margin-right: auto;margin-left: auto;padding-bottom: 120px;max-width: 100%;box-sizing: border-box;border-radius: 100%;overflow: hidden;width: 120px;height: 0px;background-image: url("https://mmbiz.qpic.cn/mmbiz_jpg/pSqFmkOFya0U8BgAuI1JybObB7Q9Q4PgboZOQlzpxxUGGxExfgCnfXibCzic5T6JSknDib5TEnq38ibjeF9BudsLibw/640?wx_fmt=jpeg");background-position: 50% 50%;background-size: cover;overflow-wrap: break-word !important;'></section>
+</section>
+</section>
+<section class style="margin-left: 10px;padding-left: 10px;max-width: 100%;box-sizing: border-box;border-left: 1px solid rgb(80, 81, 80);overflow-wrap: break-word !important;">
+<p dir="ltr" style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;" class><span style="max-width: 100%;color: rgb(247, 150, 70);font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">日期</span><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">：</span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">2019年12月28日</span></p>
+<p dir="ltr" style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(247, 150, 70);">正文共</span>：</span><span style="color: rgb(136, 136, 136);"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">6053</span><span style="max-width: 100%;font-size: 14px;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">字7</span></span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">图</span></p>
+<p style="color: rgb(62, 62, 62);margin-bottom: 10px;max-width: 100%;min-height: 1em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(247, 150, 70);">预计阅读时间</span>：<span style="color: rgb(136, 136, 136);letter-spacing: 0.544px;">16</span></span><span style="color: rgb(136, 136, 136);font-size: 14px;letter-spacing: 0.544px;">分钟</span></p>
+<p><span style="font-size: 14px;letter-spacing: 0.544px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="color: rgb(247, 150, 70);">来源</span><span style="color:#3e3e3e;">:</span></span><span style="font-size: 14px;color: rgb(136, 136, 136);">科学网博主文/张天蓉 </span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section></section>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.5549295774647888" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png" data-type="png" data-w="710" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png"></section>
+<p style="margin-top: 8px;max-width: 100%;min-height: 1em;white-space: normal;font-size: 17px;height: 32px;text-align: justify;color: rgb(0, 187, 236);line-height: 18px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="line-height: 28px;float: left;display: block;padding: 4px 10px;max-width: 100%;color: rgb(255, 255, 255);background-color: rgb(0, 187, 236);margin-left: 8px;margin-right: 8px;">1</section>
+<section style="padding-right: 2px;padding-bottom: 3px;padding-left: 2px;max-width: 100%;line-height: 28px;float: left;display: block;font-size: 15px;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 18px;"><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">古老的几何学</strong><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></strong></span></section>
+<p></p>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">几何是一门古老的学科，在公元前由几何大师欧几里德创立，至今两千多年威力不减。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">欧几里德几何是一个漂亮的公理系统，它只需要设定几条简单的、符合直觉、大家公认、不证自明的命题（称为公理或公设），然后从这几条命题出发，推导证明其它命题，继而推导证明更多命题，如此继续下去，一套数学理论便建立起来了。这就像是建造高楼大厦，“公理”就是水平放在地基第一层的大“砖块”，有了牢靠坚实的基础，其它砖块便能够一层一层叠上去，万丈高楼也就能够平地而起。基底砖块破缺了，或者置放得不平稳，楼房就可能会倒塌。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">欧几里德平面几何的公理有五条。他就从这简单的五条公理出发，推演出了所有的平面几何定理，建造出欧氏几何的宏伟大厦。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">数学逻辑推理创造的奇迹令人吃惊。不过，当人们反复思考这几条公理时，觉得前面4条显然都是不言自明的，唯有第五条公理比较复杂，听起来不像一个简单而容易被人接受的直觉概念。于是，人们就自然提出疑问：这第五条是公理吗？它是否可以由其它4条公理推导出来？大家的意思就是说，欧氏平面几何的大厦用前面4块“大砖头”可能也就足以支撑了。这第五块砖头，恐怕本来就是放置在另外四块砖头之上的。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">欧氏平面几何的第五条公理也称为“平行公理”，可表述为：“过直线外的一点，有且仅有一条平行线。”</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">一位名叫尼古拉·罗巴切夫斯基（Nikolai Lobachevsky，1792 – 1856）的年轻俄罗斯数学家突发奇想：如果将这条公理稍稍改变一下，也就是说，将大厦下面的某块基石稍微移动一下，会产生什么样的后果呢？比如说改成：“过直线外的一点，至少有两条平行线。”</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">这一改非同小可，几字之差，生出了与欧氏几何完全不同的另一种几何，人们称之为“非欧几何”或“罗氏几何”。非欧几何的大厦同样拔地而起、稳固牢靠，逻辑上完整而严密，但看起来却有些古怪。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">罗氏几何体系得到古怪而不合常理的命题是必然的，因为被罗巴切夫斯基改变之后的第五公设，本身就与人们的日常生活经验不相符合。过平面上直线外的一点，怎么可能作出多条不同的直线与已知直线不相交呢？由此而建造出来的数学逻辑大厦，当然会是个怪物。比如说，罗氏几何导出了如下古怪的命题：同一直线的垂线和斜线不一定相交；不存在矩形，因为四边形不可能四个角都是直角；不存在相似三角形；过不在同一直线上的三点，不一定能作一个圆；一个三角形的三个内角之和小于180度……这种奇怪的“几何大厦”，能有什么用处呢？有人嗤之以鼻，心想，不过是疯子数学家玩的游戏而已！</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">那些嘲笑罗巴切夫斯基的人没有料到，几十年之后，非欧几何在爱因斯坦的广义相对论中找到了用武之地，它正是爱因斯坦广义相对论描述的一种弯曲空间所遵循的几何！</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"></p>
+<p style="margin-top: 8px;max-width: 100%;min-height: 1em;white-space: normal;font-size: 17px;height: 32px;text-align: justify;color: rgb(0, 187, 236);line-height: 18px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="line-height: 28px;float: left;display: block;padding: 4px 10px;max-width: 100%;color: rgb(255, 255, 255);background-color: rgb(0, 187, 236);margin-left: 8px;margin-right: 8px;">2</section>
+<section style="padding-right: 2px;padding-bottom: 3px;padding-left: 2px;max-width: 100%;line-height: 28px;float: left;display: block;font-size: 15px;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 18px;"><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">几何上的无穷小</strong><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></strong></span></section>
+<p></p>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;max-width: 100%;line-height: 1.75em;font-size: 15px;box-sizing: border-box !important;overflow-wrap: break-word !important;">不过，真正与广义相对论弯曲空间有关的是“黎曼几何”，它比上面所说的非欧几何更进了一步，属于微分几何。<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">欧几里德之后，笛卡尔发明了解析几何，牛顿和莱布尼茨发明了微积分。两者之结合使得那个时代的数学和物理如虎添翼，面目一新。像罗巴切夫斯基那样使用传统的公理方法来研究几何，显然要输人一筹。欧拉、克莱洛、蒙日以及高斯等人认识到了这一点，创立并发展了微分几何。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">微分几何的先行者、法国数学家亚历克西斯·克莱洛（Alexis Clairaut，1713 – 1763）对空间曲线进行了深入研究，第一次研究了空间曲线的曲率和挠率（当时被他称之为双重曲率）。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">什么是曲线的曲率和挠率？我们从图1a所示的三条平面曲线来认识曲率。图中的三条曲线，就像是三条形状不同的平地上的高速公路。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.32125984251968503" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXHd9fbeIKYX8ydNL6vo4ZceRrYVwqc8Q7gkIia7Emw1gJBKOCnZQ4Tiag/640?wx_fmt=png" data-type="png" data-w="635" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXHd9fbeIKYX8ydNL6vo4ZceRrYVwqc8Q7gkIia7Emw1gJBKOCnZQ4Tiag/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图1：曲线的曲率和挠率</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">我们首先需要引进曲线的切线，或称之为“切矢量”的概念。切矢量即为，当曲线上两点无限接近时，它们的连线的极限位置所决定的矢量。图1a所示的公路上标示的箭头，便是在曲线上各个点切矢量的直观图像。而曲率是什么呢？曲率表征曲线的弯曲程度。比如，图1a中最上面一条公路是直线，直线不会拐弯，我们说，它的弯曲程度为0，即曲率等于0。切矢量旋转得越快，曲线的弯曲程度也越大。所以，数学上就把曲率定义为曲线的切矢量对于弧长的旋转速度。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">平地上弯弯曲曲的公路可以看作是平面曲线，用“曲率”就可以描述它们。如果公路是修建在山区中，它们一边转弯一边还要盘旋向上或者向下。这时候，汽车驶过的路径便不再是平面曲线，而是空间曲线了。对于山间的公路，如图1b所示，我们除了可以看到其弯曲的程度之外，还能观察到公路往上（或者向下）绕行的快慢。我们将这个描述绕行快慢的几何量叫做“挠率”。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">一条空间曲线的曲率和挠率在空间的变化规律完全决定了这条曲线。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">从上面对空间曲线的研究，可以看出微分几何的方法比欧氏几何公理式的方法要强有力多了。与曲线类似，微分几何也能用以研究曲面，曲率和挠率的概念，也能推广到曲面上，去定义复杂得多的曲率张量。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.5602503912363067" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXnlGwKzlRl5jV2lwLjKniakd6VIsRn90Qozvc7a8h3gSsZrlgbPpCic9w/640?wx_fmt=png" data-type="png" data-w="639" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXnlGwKzlRl5jV2lwLjKniakd6VIsRn90Qozvc7a8h3gSsZrlgbPpCic9w/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图2：各种曲面</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">曲面的形状变幻无穷，按照我们感兴趣的性质，可以将其分为两大类：可展曲面和不可展曲面。初看图2a和图2b所画出的曲面，也许你看不出这两类图形有何区别。它们都是从三维空间看到的形状。不管可展还是不可展，看起来不都是“弯曲的”、“不平的”吗？然而，如果你再仔细观察，就会发现，可展曲面的“弯曲”与不可展曲面的“弯曲”有着本质的区别。简单地说，可展曲面在本质上是“平的”，它们可以被展开成一个平面。比如，将图2b所示的锥面，用剪刀剪一条线直到顶点，就可以没有任何皱褶地将它平摊到桌子上。柱面也可以沿着与中心线平行的任何直线剪开，成为一个平面。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">但是，图2a所列举的不可展曲面，就不能展开成平面了。那是真正的、本质上的“不平”。一顶做成了近似半个球面的帽子，你无论怎样剪裁它，都无法将其没有皱褶地摊成一个平面。另一方面，你用一张平平的纸，很容易卷成一个圆筒（柱面），或者是做成一顶锥形的帽子，但你无法做出一个球面来。你顶多只能将这张纸剪成许多小纸片，粘成一个近似的球面！</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">谈到这儿，你大概已经基本明白了“可展”和“不可展”的区别到底是什么。尽管两类曲面在嵌入3维空间之后看起来都是弯曲的，但是，可展曲面的内在本质是“平的”，不可展曲面的内在本质是“不平”。区分这两类曲面“内在本质”的概念叫做“内蕴性”，研究这种性质的几何叫做内蕴几何。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">曲面弯曲的内蕴性最早被“数学王子”高斯注意到，后为黎曼所发展，并推广到大于3的n维流形。因而，黎曼几何是一种内蕴几何。换言之，内蕴性指的是曲面（或曲线）不依赖于它在三维空间中嵌入方式的某些性质。也就是说，它是曲面某些内在的、本质的几何属性。高斯用高斯曲率——两个主曲率的乘积，来表征曲面的这种属性（图3a）。如果一个曲面的高斯曲率为0，说明它本质上是平的，是可展曲面，如图3b所示。如果一个曲面的高斯曲率不为0，说明它本质上是不平的，是不可展曲面，如图3c所示。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">高斯曲率不为0的情形又有两种。正的高斯曲率对应于球面几何（图3c的下图），负的高斯曲率对应于马鞍面（图3c的上图）。马鞍面上的几何就是前面所介绍的罗巴切夫斯基几何，又被称为双曲几何。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.4546875" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYX0Kvxdna5z86slicj2xU3tHjvszlvNibic4KXcTlnzd9XLVkicjZARpJPiaA/640?wx_fmt=png" data-type="png" data-w="640" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYX0Kvxdna5z86slicj2xU3tHjvszlvNibic4KXcTlnzd9XLVkicjZARpJPiaA/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图3：曲面的两个主曲率及高斯曲率</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<p style="margin-top: 8px;max-width: 100%;min-height: 1em;white-space: normal;font-size: 17px;height: 32px;text-align: justify;color: rgb(0, 187, 236);line-height: 18px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="line-height: 28px;float: left;display: block;padding: 4px 10px;max-width: 100%;color: rgb(255, 255, 255);background-color: rgb(0, 187, 236);margin-left: 8px;margin-right: 8px;">3</section>
+<section style="padding-right: 2px;padding-bottom: 3px;padding-left: 2px;max-width: 100%;line-height: 28px;float: left;display: block;font-size: 15px;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 18px;"><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">爬虫的几何</strong><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></strong></span></section>
+<p></p>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">可是，又该如何判定我们所面对的是哪一种几何呢？最简单的办法是测量曲面上一个三角形三个内角之和E=A+B+C。平面几何的E=180o，球面几何E>180o，双曲几何E<180o。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">一个观察者在自己生活的物理空间中所能够观察和测量到的几何性质，就是这个空间的内蕴性质。比如说，球面的内蕴性质，就是生活在球面上的2维爬虫感受到的几何性质。我们人类当然是3维的生物，不是什么2维爬虫。但是，因为我们的地球很大，我们的3维尺寸比起地球来说是很小的。因此，我们可以将自己设想为某种2维生物。比如，我们在地球上测量一个大三角形，就如图3b下中的球面三角形ABC，测地员将会发现，这个三角形的三个内角都是90度，因此，内角和E=270o，大于180度。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">图3b下所显示的是一个规则球面，它的空间弯曲程度到处都是一样的，但一般来说，空间的弯曲程度不一定处处相同，数学家们用“平</span></section>
+<p></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">行移动”的概念来研究空间的弯曲程度。</span><br></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">什么是平行移动？简单地说，就是将一个矢量平行于自身的方向沿着空间里的一条曲线移动。像汽车上的陀螺仪那样，汽车沿公路运动时，陀螺仪总是平行于自己原来的指向。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">在物理上，让大家更感兴趣的问题是：一个矢量平行移动一圈后再回到原来出发点的时候是否会有所改变？比如说，跟着汽车转了一圈的陀螺仪，指的方向是否还和原来出发时的方向一样？也许你不加思索就会给出答案：当然没有什么改变。但这是因为你习惯了用欧氏空间的直角坐标系来思考问题，从而轻易得出这个结论。如果我们假设地面是一个欧几里德平面，陀螺仪平行移动回到原处时，方向的确不会改变。但是，每个人都知道，地球是一个球体，所以我们实际上是生活在一个球面上。那么，如果从球面（或者别的曲面）的角度来研究这个问题，又会得出什么样的结论呢？</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">所谓“平行移动”的意思是说，在移动矢量的时候，尽可能保持矢量方向相对于自身没有旋转。好比一个女孩平行地前进、后退、左右移动，只要她的身体没有扭动，就叫平行移动。这样，当她移动一周回到出发点的时候，她认为她应该和原来出发时面对着同样的方向。如果她是在平面上移动的话，她的这个想法是正确的。但是，假如她是在球面上移动的话，她将发现自己面朝的方向可能不一样了！出发时她的脸朝左，回来时却是脸朝前，如图4b。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">假如将女孩面对的方向用一个箭头（矢量）来表示。图4a所示的是一个矢量在莫比乌斯带上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到10，也就是回到原来的出发位置时，得到的矢量和原来的反向。图4b中所示是球面上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到7，也就是回到原来的出发位置时，得到的矢量和原来的矢量垂直。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.4421553090332805" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXYsUGshOKFZt2Odp7z8iaficibQCNoYTy9VNCY9vichial5iaFjXYkBgs78JA/640?wx_fmt=png" data-type="png" data-w="631" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXYsUGshOKFZt2Odp7z8iaficibQCNoYTy9VNCY9vichial5iaFjXYkBgs78JA/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图4：（a）莫比乌斯带上的平行移动（b）球面上的平行移动</span></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="caret-color: rgb(51, 51, 51);color: rgb(51, 51, 51);font-size: 15px;"><br></span></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">上面的两个例子说明，矢量在曲面上平行移动一周之后，不一定还能保持原来的方向，可能与出发时有所差别。这个差别正好与曲面的高斯曲率有关系，反映了曲面内在的弯曲程度。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<p style="margin-top: 8px;max-width: 100%;min-height: 1em;white-space: normal;font-size: 17px;height: 32px;text-align: justify;color: rgb(0, 187, 236);line-height: 18px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="line-height: 28px;float: left;display: block;padding: 4px 10px;max-width: 100%;color: rgb(255, 255, 255);background-color: rgb(0, 187, 236);margin-left: 8px;margin-right: 8px;">4</section>
+<section style="padding-right: 2px;padding-bottom: 3px;padding-left: 2px;max-width: 100%;line-height: 28px;float: left;display: block;font-size: 15px;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 18px;"><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">阿扁的世界</strong><strong class style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></strong></span></section>
+<p></p>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">下面，我们研究锥面上的平行移动，看看锥面与“真正的平面”有何不同。让我们想象有一个极小极扁的平面生物“阿扁”，生活在一张平坦的纸上，如图5a。阿扁使用直角坐标系对他的平坦世界进行观察和测量。他感受到的几何，是标准的欧几里德几何：三角形的三个内角之和等于180度；过不在同一直线上的三点，可以作一个圆；直角三角形的两条直角边的长度的平方和等于斜边长的平方……</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">阿扁学过微积分，还会计算许多图形的面积。阿扁经常在他的平坦世界中驾车旅行，绕行一圈回来之后，他车上的陀螺仪方向总是与原来方向相同，如图5a所示的那样。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">有一天，来了一个3维世界的小生物“阿三”。阿三看中了阿扁生活的这张纸，并且灵感突发，把这张纸剪去了一个角。比如说，像图5b中图所画的情形，剪去了一个45度的角，然后将剩余图形的两条剪缝黏在一块儿，做成了一个图5c所示的锥面。阿扁是个2维小爬虫，他看不见阿三，也感觉不到阿三的存在，更不可能知道阿三对他的世界干了些什么。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">不过，生活在纸上的阿扁并没有立即感到他的世界有什么变化。照样是欧氏几何，他画的直角坐标轴仍然在那儿。当他拿着他的（平面）陀螺仪，沿着他的小圆圈（如图5b中的C1那样）旅行，进而回到原来出发点的时候，陀螺仪的指向和原来一样。这说明，矢量平行移动的规律好像没有任何改变。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.29127725856697817" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXR5B1dMRtlXkXjiaISKH70lTjz1aFSz1x6usbXicOGwt2FbXIW763oXJQ/640?wx_fmt=png" data-type="png" data-w="642" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXR5B1dMRtlXkXjiaISKH70lTjz1aFSz1x6usbXicOGwt2FbXIW763oXJQ/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图5：阿扁的世界</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">阿扁的技术越来越高，胆子越来越大，旅游路线也走得越来越远。他逐渐发现了一些问题。比如说，当他沿着图5b中所示的C2那样的曲线走一圈回到原出发点时，他的陀螺仪的指向和出发时有了一个45度的角度差。这个新发现令阿扁既激动又困惑。于是，他进行了更多的带陀螺仪绕圈实验，绕了好多个不同的圈，终于总结出了一个规律：他生活的世界中，在右图中所标记的点O附近，是一个特殊的区域，只要他移动的闭曲线中包含了这个区域，陀螺仪的指向就总是和原来出发时的方向相差45度左右。如果行走的圈没有包括这个点的话，便不会使陀螺仪的方向发生任何改变。当时的阿扁，技术还不够精确，还没有搞清楚这个区域是多大，况且，他也有点害怕那块神秘兮兮的地方，不敢在那儿逗留过久，作太多的探索，以防遭遇生命危险。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">阿扁喜欢读书学习新知识，他从一本数学书中了解到，如果陀螺仪走一圈方向改变的话，说明你所在的空间是弯曲的。因此，通过对多次实验结果的总结归纳，阿扁提出一个假设：他所在的世界基本是平坦的，除了那块该死的区域之外！</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">再回到我们的世界来看待球面几何。陀螺仪走一圈后方向改变的值，叫做平行移动一周后产生的角度亏损，可用θ表示。角度亏损与空间的高斯曲率有关，一个标准球面上的高斯曲率处处相等。因此，如果有某种生活在球面上的扁平生物的话，他沿任何曲线绕行一圈后，陀螺仪方向都会有变化，而且，角度亏损θ是不固定的，它与绕行回路所包围的球面面积A成正比，其比例系数对球面而言是一个定植，就等于曲面的高斯曲率α。角度亏损θ = α*A。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">如果研究对象不是标准的球面，而是一般的2维曲面，上述“角度亏损θ正比于区域面积A”的结论在大范围内不能成立，但在2维曲面某个给定的P点附近，当绕行的回路趋近于无限小的时候仍然成立。也就是说：无限小的角度亏损dθ将正比于无限小的区域面积dA：dθ = α*dA。这时的α= dθ/dA，便是曲面上这一点的曲率。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">阿扁也想通了这些道理，明白他的世界不是球面，而大多数地方都是平面，只有一点不对，那一点附近的空间是弯曲的。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">阿扁将上面有关曲面曲率与无限小平行移动角度亏损的关系（α= dθ/dA）用到锥面。因为锥面是一个可展曲面。它所有地方的几何都与平面上的欧几里德几何一样，除了那个顶点以外。也就是说，锥面上每个点的曲率都等于0，但顶点是一个曲率等于无穷大的奇点。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">有了这些数学知识，阿扁恍然大悟：原来我生活的世界是一个锥面！</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="text-align: center;margin-left: 8px;margin-right: 8px;"><img class data-ratio="0.5362068965517242" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXXhMTIXfOFxXrt9vicNibzLy1m2HAe4q6D5vQgJRzQJZjeayhsFc9ibTAQ/640?wx_fmt=png" data-type="png" data-w="580" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXXhMTIXfOFxXrt9vicNibzLy1m2HAe4q6D5vQgJRzQJZjeayhsFc9ibTAQ/640?wx_fmt=png"></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;text-align: center;"><span style="max-width: 100%;font-size: 15px;color: rgb(136, 136, 136);box-sizing: border-box !important;overflow-wrap: break-word !important;">图6：锥面和球面上的平行移动</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">人类是3维空间的生物，我们的世界是3维的。就像前面所描述的“阿三”，当然要比那个可怜的平面生物“阿扁”高明多了。阿扁反复测量了许多次，用他的2维扁平脑袋，作了极端困难的“抽象”，才弄明白了他的锥面世界！而我们在3维世界中看2维就能看得非常清楚了：锥面是一个可展曲面，或者说，本来就是由阿三将一张平面的“纸”剪去了一个角而粘成的。因此，我们瞄一眼就知道，阿扁的锥面世界处处都是平坦的，除了那一个顶点O之外。</span></section>
+<p style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;"><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"></p>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;">在锥面上作平行移动时，为什么当移动路径包括了顶点O的时候就会有角度亏损呢？从我们的3维世界更容易理解这个问题。在图6a中，我们将锥面从顶点剪开后重新展开还原成一个平面图形。这个“剪去一角的平面图形”与整个欧几里德平面的区别在于，图中的A和B是锥面上的同一点，因此，直线OA和OB需要被理解为是同一条线。这样，我们就明白了角度亏损的来源。</span></section>
+<section style="max-width: 100%;min-height: 1em;caret-color: rgb(62, 62, 62);color: rgb(62, 62, 62);white-space: normal;margin-left: 8px;margin-right: 8px;"><span style="letter-spacing: 1px;font-size: 15px;"><br></span></section>
+<p></p>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2590675" style='font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;font-size: 16px;letter-spacing: 0.544px;text-align: start;white-space: normal;background-color: rgb(255, 255, 255);'>
+<p class style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;font-family: 微软雅黑;text-align: center;widows: 1;line-height: 25.6px;color: rgb(105, 105, 105);box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong style="max-width: 100%;letter-spacing: 1px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;font-size: 12px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong style="max-width: 100%;color: rgb(136, 136, 136);font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">— THE END —</strong></span></strong></p>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625487" style='font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;font-size: 16px;letter-spacing: 0.544px;text-align: start;white-space: normal;background-color: rgb(255, 255, 255);'>
+<section class style="margin-right: auto;margin-left: auto;text-align: center;width: 210px;"></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2697295">
+<section class style="margin-right: auto;margin-left: auto;text-align: center;width: 210px;"><img class data-ratio="0.1871508379888268" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" data-type="png" data-w="358" style="margin-right: auto;margin-left: auto;visibility: visible !important;width: 358px !important;" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png"></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625492">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2617381">
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485303&idx=1&sn=f193c206e8b295ef3a110eefc136334d&chksm=ebe9cdcadc9e44dc54e5df48568ab39afd4bd9b80c45c2cb3703acee933645b3108897fe817e&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">越南71岁的工程师，给全世界的机械人送了一份大礼</a></span><br></section>
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485303&idx=2&sn=da0b6cd881580a4a60db0e07894b6d78&chksm=ebe9cdcadc9e44dc7cf1ea7ea4068ad959ab7098f63c3f667deb003062a5dd4c110f78d07980&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">《庆余年》范闲殿前背诗合集：中华诗词真是太美了！</a></span></section>
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485305&idx=1&sn=86b039db563a60dbb494136b11a30ef5&chksm=ebe9cdc4dc9e44d29e6e4e8f5b6173650048aa80f1a1e6b3ba2a95301ad4d31e21032c8309ec&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">马克思的数学手稿</a></span></section>
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485056&idx=2&sn=92f735f3b3ee3445b7c166129b18a7a9&chksm=ebe9cc3ddc9e452ba9cf6f78bb20bb2e14a86fde39a3d9528d32adc0aa4ec73d9ca31b107df3&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">斯坦福大学教育学院院长：学习本身就是一门学问</a></span></section>
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485119&idx=1&sn=affbb1602f620c3df6e3d3c1051387c6&chksm=ebe9cc02dc9e4514ad6f7e59d5148cb7770bd8f72c4ffe173dfe91a116763fd2228362b3dadc&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">施一公：没有高考，就没有一批非常优秀的社会精英从农村走出来</a></span></section>
+<section class style="margin-right: 8px;margin-left: 8px;max-width: 100%;letter-spacing: 0.544px;min-height: 1em;widows: 1;color: rgb(62, 62, 62);font-family: 微软雅黑;line-height: 1.75em;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(255, 76, 0);letter-spacing: 1px;font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485256&idx=2&sn=882c7713d3c74f991cc976b896e6719e&chksm=ebe9cdf5dc9e44e327af826a002a6b155392f4a44c7af4c845712443a0a73117db0e1e1fe714&scene=21#wechat_redirect" data-itemshowtype="0" tab="innerlink" data-linktype="2" hasload="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);cursor: pointer;" rel="noopener noreferrer">这回真要涨工资了！国务院教育督导办：2020年把义务教育教师平均工资收入水平不低于当地公务员作为督导检查重点</a></span></section>
+</section>
+</section>
+</section>
+</section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2834228">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2800910"></section>
+</section>
+
+			</div>
+</article>
+
+<div id="comments" class="fbox comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/286/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="286" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+
+		</main>
+	</div>
+
+
+<aside id="secondary" class="featured-sidebar widget-area">
+	<section id="search-7" class="fbox swidgets-wrap widget widget_search"><form role="search" target="_blank" method="get" class="search-form" action="https://google.com/search">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="q">
+					<input type="hidden" name="sitesearch" value="stime.cc" style="display: block;">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Recent Posts</h4></div>		<ul>
+											<li>
+					<a href="https://stime.cc/article/289/">16个让你烧脑让你晕的悖论</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/288/">如何用数学方法估算一个女生前男友的数量？</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/287/">世界级北大数学天才远走美国大学，走之前他说了3句话，发人深省</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/286/" aria-current="page">懂相对论之从弯曲空间的几何开始</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/285/">“苦瓜”数学家柯西的故事及柯西中值定理</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/284/">机器学习萌新必学的Top10算法</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/283/">蒙格斯智库：孙涤教授“实锤”！莱布尼茨二进制确实受《易经》启发？中华文明的又一大贡献</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/282/">时间之箭：从熵到大爆炸再到万物理论</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/281/">密码学家王小云：十年破解MD5和SHA-1两大国际密码</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/280/">杨振宁讲（经典）数学笑话兼论数学和物理的关系</a>
+											<span class="post-date">2020/1/19</span>
+									</li>
+					</ul>
+		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Archives</h4></div>		<ul>
+				<li><a href="https://stime.cc/article/date/2020/01/">January 2020</a> (136)</li>
+		</ul>
+			</section></aside>
+</div>
+</div>
+
+<footer id="colophon" class="site-footer clearfix">
+
+	<div class="content-wrap">
+		
+			
+			
+		</div>
+
+		<div class="site-info">
+			Copyright ©2020 | S时代		</div>
+	</footer></div>
+
+
+
+
+
+
+<div id="smobile-menu" class="mobile-only"></div>
+<div id="mobile-menu-overlay"></div>
+
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/navigation.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/script.js"></script>
+</body>
+</html>

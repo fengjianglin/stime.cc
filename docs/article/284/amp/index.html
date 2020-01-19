@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html amp lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/284/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZficzqGbphfYHNUX31gqJaEJLKDibia9yBgRfianBfoh2GOhPo5o56Ibwiadw/640?wx_fmt=png"},{"@type":"WebPage","@id":"https://stime.cc/article/284/#webpage","url":"https://stime.cc/article/284/","inLanguage":"en-US","name":"\u673a\u5668\u5b66\u4e60\u840c\u65b0\u5fc5\u5b66\u7684Top10\u7b97\u6cd5 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/284/#primaryimage"},"datePublished":"2020-01-19T02:51:41+00:00","dateModified":"2020-01-19T02:51:41+00:00"},{"@type":"Article","@id":"https://stime.cc/article/284/#article","isPartOf":{"@id":"https://stime.cc/article/284/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u673a\u5668\u5b66\u4e60\u840c\u65b0\u5fc5\u5b66\u7684Top10\u7b97\u6cd5","datePublished":"2020-01-19T02:51:41+00:00","dateModified":"2020-01-19T02:51:41+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/284/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/284/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+	<title>机器学习萌新必学的Top10算法 - S时代</title>
+		<link rel="canonical" href="https://stime.cc/article/284/">
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-93b8ea5{display:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c41d69d{white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{font-size:16px;text-align:center;caret-color:#333;max-width:100%;letter-spacing:.544px;background-color:#fff;font-family:微软雅黑}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5bb8ef1{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;font-family:Arial;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{max-width:100%;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{max-width:100%;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-03c7ebe{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{color:#3e3e3e;max-width:100%;width:120px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{margin-bottom:10px;padding-right:10px;padding-left:10px;max-width:100%;box-sizing:border-box;height:30px;background-color:#505150;line-height:30px;border-radius:10px;display:inline-block;color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9cf1ce8{font-size:13px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{max-width:100%;width:120px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{margin-right:auto;margin-left:auto;padding-bottom:120px;max-width:100%;box-sizing:border-box;border-radius:100%;overflow:hidden;width:120px;height:0px;background-image:url("https://mmbiz.qpic.cn/mmbiz_jpg/pSqFmkOFya0U8BgAuI1JybObB7Q9Q4PgboZOQlzpxxUGGxExfgCnfXibCzic5T6JSknDib5TEnq38ibjeF9BudsLibw/640?wx_fmt=jpeg");background-position:50% 50%;background-size:cover}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{margin-left:10px;padding-left:10px;max-width:100%;box-sizing:border-box;border-left:1px solid #505150}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{max-width:100%;color:#f79646;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0ad1dbc{color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{max-width:100%;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5ef5574{max-width:100%;font-size:14px;color:#888;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5ef5574{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{color:#3e3e3e;margin-bottom:10px;max-width:100%;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{max-width:100%;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ca7adb3{max-width:100%;color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-60fc92b{color:#888;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0e751ee{color:#888;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{font-size:14px;letter-spacing:.544px;max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bdb20a3{color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5de4178{color:#3e3e3e}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d411caf{font-size:14px;color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-237434d{background-image:url("https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya2vrNLaROjMnLfep6uO3eQhasQuXoCDhGnX9a8ne1vsicaPia5JIglA6npQfIuvKVpMh48dSIOF6S4A/640?wx_fmt=png");background-repeat:repeat;background-size:149px 139px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-087bdda{padding:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d9b7f37{font-size:14px;letter-spacing:2px;line-height:1.8em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4b7e5ac{margin:0px 8px;padding:0px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-24b5c78{color:#7b0c00;font-family:微软雅黑;letter-spacing:1px;caret-color:#3e3e3e;background-color:#f7f7f8;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f3d42ac{max-width:100%;min-height:1em;caret-color:#3e3e3e;color:#3e3e3e;font-size:16px;white-space:normal;line-height:1.75em;text-align:justify;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f3d42ac{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fb49fad{max-width:100%;caret-color:#3e3e3e;color:#3e3e3e;font-size:16px;white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fb49fad{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f3ec3f8{max-width:100%;min-height:1em;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f3ec3f8{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1aae7f7{font-weight:700;letter-spacing:1px;text-align:center;background-color:#fff;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9713f94{letter-spacing:1px;caret-color:#3e3e3e;color:#3e3e3e;font-family:arial,sans-serif;text-align:justify;word-spacing:1px;background-color:#fff;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-aa4f0b2{margin-top:10px;margin-bottom:10px;max-width:100%;border-left-width:10px;border-left-color:rgba(128,128,128,.0745098);caret-color:#3e3e3e;color:#3e3e3e;white-space:normal;font-family:arial,sans-serif;font-size:small;background-color:rgba(128,128,128,.0470588)}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-aa4f0b2{padding-top:2px;padding-right:6px;padding-bottom:2px;box-sizing:border-box;word-wrap:break-word;line-height:1.7;letter-spacing:1px;word-spacing:1px;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a491bb8{max-width:100%;font-size:16px;text-align:justify;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a491bb8{margin-top:20px;margin-bottom:20px;box-sizing:border-box;overflow-wrap:break-word;min-height:1em;line-height:1.7}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d2f19d9{letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3614448{margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8993f3c{background-position:center center;border-width:1px;border-style:solid;border-color:#eeedeb;background-repeat:no-repeat;background-size:22px;transform:rotate(0rad);background-color:#eeedeb}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8993f3c{width:670px;height:411.21px;visibility:visible;overflow-wrap:break-word;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-59c632d{max-width:100%;color:#8f8f8f;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-59c632d{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8ab4d35{max-width:100%;white-space:normal;text-align:right;color:#8f8f8f;line-height:1;font-family:arial,sans-serif;background-color:#fff;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8ab4d35{font-size:13px;box-sizing:border-box;overflow-wrap:break-word;letter-spacing:1px;word-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-090022f{max-width:100%;color:#00997f}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-090022f{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f859660{max-width:100%;caret-color:#3e3e3e;color:#3e3e3e;font-size:16px;white-space:normal;font-family:arial,sans-serif;background-color:#fff;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f859660{margin-top:20px;margin-bottom:20px;box-sizing:border-box;overflow-wrap:break-word;min-height:1em;line-height:1.7;letter-spacing:1px;word-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-20b6f83{text-align:center;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-aa14160{margin:20px 8px;padding-left:15px;font-weight:bold;max-width:100%;caret-color:#3e3e3e;color:#3e3e3e;white-space:normal;line-height:1.2;font-family:arial,sans-serif;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-aa14160{font-size:20px;box-sizing:border-box;overflow-wrap:break-word;letter-spacing:1px;word-spacing:1px;border-left:6px solid #00997f}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8bdd01f{font-size:17px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f650ee3{max-width:100%;caret-color:#3e3e3e;color:#3e3e3e;font-size:16px;white-space:normal;font-family:arial,sans-serif;background-color:#fff;text-align:justify;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f650ee3{margin-top:20px;margin-bottom:20px;box-sizing:border-box;overflow-wrap:break-word;min-height:1em;line-height:1.7;letter-spacing:1px;word-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-499df8f{font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f24dc3{white-space:normal;max-width:100%;min-height:1em;letter-spacing:.544px;background-color:#fff;font-family:微软雅黑;text-align:center;widows:1;font-size:16px;line-height:25.6px;color:#696969}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f24dc3{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdee54d{max-width:100%;letter-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdee54d{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd320b9{max-width:100%;font-size:12px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd320b9{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-238198f{max-width:100%;color:#888;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-238198f{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c004a24{margin:0px auto;text-align:center;width:210px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dc3ee2b{margin:0px auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dc3ee2b{visibility:visible;width:358px;height:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e770fc3{max-width:100%;letter-spacing:.544px;white-space:normal;min-height:1em;font-size:16px;widows:1;color:#3e3e3e;font-family:微软雅黑;line-height:1.75em;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e770fc3{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{max-width:100%;color:#ff4c00;letter-spacing:1px;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{box-sizing:border-box;overflow-wrap:break-word}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">机器学习萌新必学的Top10算法</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-19T10:51:41+00:00">
+		3 mins ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<section class="xmteditor amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2865871">
+<section class=" amp-wp-3614448">
+<section class=" amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class=" amp-wp-3614448">
+<section class=" amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2549807">
+<section class=" amp-wp-c41d69d">
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class="amp-wp-c44cf1c">
+<section class="amp-wp-9af8ac0">
+<section class="amp-wp-01bc5a7">
+<section class="amp-wp-9af8ac0">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-9af8ac0">
+<section class=" amp-wp-5bb8ef1">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-5a1efc8">
+<section class="amp-wp-03c7ebe">
+<section data-width="120px" class="amp-wp-39be138">
+<section class=" amp-wp-8fb30d2" data-brushtype="text"><span class="amp-wp-9cf1ce8">算法数学俱乐部</span></section>
+<section class="amp-wp-6149c84">
+<section data-role="circle" data-width="100%" class="amp-wp-45f644e"></section>
+</section>
+</section>
+<section class=" amp-wp-b60cbb1">
+<p dir="ltr" class=" amp-wp-2f60fd0"><span class="amp-wp-9d763cf">日期</span><span class="amp-wp-a534d8b">：</span><span class="amp-wp-0e751ee">2020年01月05日</span></p>
+<p dir="ltr" class="amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">正文共</span>：</span><span class="amp-wp-0ad1dbc"><span class="amp-wp-a534d8b">3656</span><span class="amp-wp-c612488">字</span></span><span class="amp-wp-5ef5574">10</span><span class="amp-wp-0e751ee">图</span></p>
+<p class="amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">预计阅读时间</span>：<span class="amp-wp-60fc92b">10</span></span><span class="amp-wp-0e751ee">分钟</span></p>
+<p><span class="amp-wp-fd9f9ee"><span class="amp-wp-bdb20a3">来源</span><span class="amp-wp-5de4178">:</span></span><span class="amp-wp-d411caf">量子位</span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<p></p>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2720669">
+<section class="amp-wp-237434d">
+<section class="amp-wp-087bdda">
+<section class="amp-wp-d9b7f37">
+<section class="amp-wp-4b7e5ac"><span class="amp-wp-24b5c78"> 在机器学习领域里，不存在一种万能的算法可以完美解决所有问题，尤其是像预测建模的监督学习里。</span></section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-f3d42ac"><span class="amp-wp-499df8f"><br></span></section>
+<section data-id="89091" data-tools="135编辑器" class="amp-wp-fb49fad">
+<section class="amp-wp-7940173">
+<section class="amp-wp-7940173">
+<section class="amp-wp-f3ec3f8"><span class="amp-wp-1aae7f7"> </span><br></section>
+</section>
+</section>
+</section>
+<section class="amp-wp-3614448"><span class="amp-wp-9713f94">比方说，神经网络不见得比决策树好，同样反过来也不成立。</span><br></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">最后的结果是有很多因素在起作用的，比方说数据集的大小以及组成。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">所以，针对你要解决的问题，最好是尝试多种不同的算法。并借一个测试集来评估不同算法之间的表现，最后选出一个结果最好的。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">当然，你要选适合解决你问题的算法来尝试。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">比方说，要打扫房子，你会用真空吸尘器，扫把，拖把；你绝对不会翻出一把铲子来开始挖坑，对吧。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">大的原则</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">不过呢，对于所有预测建模的监督学习算法来说，还是有一些通用的底层原则的。</span></section>
+<blockquote class="amp-wp-aa4f0b2">
+<section class="amp-wp-a491bb8"><span class="amp-wp-d2f19d9">机器学习算法，指的是要学习一个目标函数，能够尽可能地还原输入和输出之间的关系。</span></section>
+</blockquote>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">然后根据新的输入值X，来预测出输出值Y。精准地预测结果是机器学习建模的任务。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">So，Top10机器学习算法，了解一下。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-499df8f">线性回归 </span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">统计学与机器学习领域里研究最多的算法。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">做预测建模，最重要的是准确性（尽可能减小预测值和实际值的误差）。</span><span class="amp-wp-499df8f">哪怕牺牲可解释性，也要尽可能提高准确性。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">为了达到这个目的，我们会从不同领域（包括统计学）参考或照搬算法。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">线性回归可用一条线表示输入值X和输出值Y之间的关系，这条线的斜率的值，也叫系数。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.5277078085642317" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZficzqGbphfYHNUX31gqJaEJLKDibia9yBgRfianBfoh2GOhPo5o56Ibwiadw/640?wx_fmt=png" data-type="png" data-w="794" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZficzqGbphfYHNUX31gqJaEJLKDibia9yBgRfianBfoh2GOhPo5o56Ibwiadw/640?wx_fmt=png" width="794" height="419" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZficzqGbphfYHNUX31gqJaEJLKDibia9yBgRfianBfoh2GOhPo5o56Ibwiadw/640?wx_fmt=png" width="794" height="419" class=""></noscript></amp-img></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">比方说，y = B0 + B1*x</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">我们就可以根据X值来预测Y值。</span><span class="amp-wp-499df8f">机器学习的任务就是找出系数B0和B1。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">从数据中建立线性回归的模型有不同的方法，比方说线性代数的最小二乘法、梯度下降优化。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">线性回归已经存在了200多年，相关研究已经很多了。</span><span class="amp-wp-499df8f">用这个算法关键在于要尽可能地移除相似的变量以及清洗数据。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">对算法萌新来说，是最简单的算法了。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">2 .逻辑回归</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">这方法来自统计学领域，是一种可以用在二元分类问题上的方法。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">逻辑回归，和线性回归相似，都是要找出输入值的系数权重。不同的地方在于，对输出值的预测改成了逻辑函数。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">逻辑函数看起来像字母S，输出值的范围是0到1。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-d2f19d9">把逻辑函数的输出值加一个处理规则，就能得到分类结果，非0即1。<br class="amp-wp-7940173">比方说，可以规定输入值小于0.5，那么输出值就是1。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.8237410071942446" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZf5FVj703vyLhmJNmJ9MdKicXrjumScZGIGV6P5vlVdVlOmVJP4bg4VuA/640?wx_fmt=png" data-type="png" data-w="556" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZf5FVj703vyLhmJNmJ9MdKicXrjumScZGIGV6P5vlVdVlOmVJP4bg4VuA/640?wx_fmt=png" width="556" height="458" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZf5FVj703vyLhmJNmJ9MdKicXrjumScZGIGV6P5vlVdVlOmVJP4bg4VuA/640?wx_fmt=png" width="556" height="458" class=""></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 逻辑回归</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这个算法还可以用来预测数据分布的概率，适用于需要更多数据论证支撑的预测。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">和线性回归相似，如果把和输出不相干的因子或者相近的因子剔除掉的话，逻辑回归算法的表现会更好。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">对于二元分类问题，逻辑回归是个可快速上手又有效的算法。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">3.线性判别分析</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">逻辑回归算法，只能用于二分问题。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">当输出的结果类别超过两类的时候，就要用线性判别分析算法了。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这种算法的可视化结果还比较一目了然，能看出数据在统计学上的特征。</span><span class="amp-wp-499df8f">这上面的结果都是分别计算得到的，单一的输入值可以是每一类的中位数，也可以是每一类值的跨度。</span></section>
+<section class="amp-wp-3614448"><amp-img data-ratio="0.7776096822995462" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfQw9Vib1ia8o84WXh4kZq1KVaY5wotN8u4QANNmXOq3dRhO7vj8OMyhKw/640?wx_fmt=png" data-type="png" data-w="661" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfQw9Vib1ia8o84WXh4kZq1KVaY5wotN8u4QANNmXOq3dRhO7vj8OMyhKw/640?wx_fmt=png" width="661" height="514" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfQw9Vib1ia8o84WXh4kZq1KVaY5wotN8u4QANNmXOq3dRhO7vj8OMyhKw/640?wx_fmt=png" width="661" height="514" class=""></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 线性判别分析</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">基于对每种类别计算之后所得到的判别值，取最大值做出预测。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这种方法是假定数据符合高斯分布。</span><span class="amp-wp-499df8f">所以，最好在预测之前把异常值先踢掉。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">对于分类预测问题来说，这种算法既简单又给力。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">4. 分类与回归树</span></h1>
+<section class="amp-wp-f859660"><span class="amp-wp-499df8f">预测模型里，决策树也是非常重要的一种算法。</span></section>
+<section class="amp-wp-f859660"><span class="amp-wp-499df8f">可以用分两叉的树来表示决策树的模型。</span><span class="amp-wp-499df8f">每一个节点代表一个输入，每个分支代表一个变量（默认变量是数字类型）</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.5464824120603015" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfZ5Ae99z6yQJFjmWZHiaPcBPNVsicGaQZxOm1n68Wibtnn9kMfM6gVNFyA/640?wx_fmt=png" data-type="png" data-w="796" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfZ5Ae99z6yQJFjmWZHiaPcBPNVsicGaQZxOm1n68Wibtnn9kMfM6gVNFyA/640?wx_fmt=png" width="796" height="435" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfZ5Ae99z6yQJFjmWZHiaPcBPNVsicGaQZxOm1n68Wibtnn9kMfM6gVNFyA/640?wx_fmt=png" width="796" height="435" class=""></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 决策树</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">决策树的叶节点指的是输出变量。</span><span class="amp-wp-499df8f">预测的过程会经过决策树的分岔口，直到最后停在了一个叶节点上，对应的就是输出值的分类结果。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">决策树很好学，也能很快地得到预测结果。</span><span class="amp-wp-499df8f">对于大部分问题来说，得到的结果还挺准确，也不要求对数据进行预处理。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">5.朴素贝叶斯分类器</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这种预测建模的算法强大到超乎想象。</span><br class="amp-wp-7940173"><span class="amp-wp-499df8f">这种模型，可以直接从你的训练集中计算出来两种输出类别的概率。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">一个是每种输出种类的概率；</span><span class="amp-wp-499df8f">另外一个，是根据给定的x值，得到的是有条件的种类概率。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">一旦计算之后，概率的模型可以用贝叶斯定理预测新的数据。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">当你的数据是实数值，那么按理说应该是符合高斯分布的，也就很容易估算出这个概率。</span></section>
+<section class="amp-wp-f859660"><amp-img data-ratio="0.61375" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/YicUhk5aAGtBu1KvjWeMvfdAobXEDFqGnOGng7fDJCAIToR6jficAexhYo13IBAwBGKeAGvoxCWOqib9Wpx8xRqibw/640?wx_fmt=png" data-type="png" data-w="800" height="476" width="776" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/YicUhk5aAGtBu1KvjWeMvfdAobXEDFqGnOGng7fDJCAIToR6jficAexhYo13IBAwBGKeAGvoxCWOqib9Wpx8xRqibw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-8993f3c" layout="intrinsic"><noscript><img height="476" width="776" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/YicUhk5aAGtBu1KvjWeMvfdAobXEDFqGnOGng7fDJCAIToR6jficAexhYo13IBAwBGKeAGvoxCWOqib9Wpx8xRqibw/640?wx_fmt=png" class="amp-wp-8993f3c"></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 贝叶斯定理</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">朴素贝叶斯定理之所以名字里有个“朴素”，是因为这种算法假定每个输入的变量都是独立的。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">不过，真实的数据不可能满足这个隐藏前提。</span><span class="amp-wp-499df8f">尽管如此，这个方法对很多复杂的问题还是很管用的。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">6.K近邻算法</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">最近K近邻的模型表示，就是整个训练集。</span><span class="amp-wp-499df8f">很直截了当，对吧？</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">对新数据的预测，是搜索整个训练集的值，找到K个最近的例子（literally的邻居）。</span><span class="amp-wp-499df8f">然后总结K个输出的变量。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这种算法难就难在，怎么定义两个数据的相似度（相距多近算相似）。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">如果你的特征(attributes)属于同一个尺度的话，那最简单的方法是用欧几里得距离。</span><span class="amp-wp-499df8f">这个数值，你可以基于每个输入变量之间的距离来计算得出。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.7503649635036497" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZftQMMLQCsficrIZFlIIOJuBXAndvRrlaJnz7HMRyZruNIQRt65LsNPsg/640?wx_fmt=png" data-type="png" data-w="685" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZftQMMLQCsficrIZFlIIOJuBXAndvRrlaJnz7HMRyZruNIQRt65LsNPsg/640?wx_fmt=png" width="685" height="514" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZftQMMLQCsficrIZFlIIOJuBXAndvRrlaJnz7HMRyZruNIQRt65LsNPsg/640?wx_fmt=png" width="685" height="514" class=""></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 最近邻法</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">最近邻法，需要占用大量的内存空间来放数据，这样在需要预测的时候就可以进行即时运算（或学习）。</span><span class="amp-wp-499df8f">也可以不断更新训练集，使得预测更加准确。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">距离或亲密度这个思路遇到更高维度（大量的输入变量）就行不通了，会影响算法的表现。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这叫做维度的诅咒。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-59c632d">当（数学）空间维度增加时，分析和组织高维空间（通常有成百上千维），因体积指数增加而遇到各种问题场景。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">所以最好只保留那些和输出值有关的输入变量。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">7.学习矢量量化</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">最近邻法的缺点是，你需要整个训练集。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">而学习矢量量化（后简称LVQ）这个神经网络算法，是自行选择训练样例。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.4434673366834171" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfBnE12n14UdQ3hygdUXYR4XiaFXWWwUkwCzVTHYVJ92wqJN519aQg9Rw/640?wx_fmt=png" data-type="png" data-w="796" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfBnE12n14UdQ3hygdUXYR4XiaFXWWwUkwCzVTHYVJ92wqJN519aQg9Rw/640?wx_fmt=png" width="796" height="353" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfBnE12n14UdQ3hygdUXYR4XiaFXWWwUkwCzVTHYVJ92wqJN519aQg9Rw/640?wx_fmt=png" width="796" height="353" class=""></noscript></amp-img></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">LVQ，是一组矢量，也叫码本。</span><span class="amp-wp-499df8f">一开始，矢量是随机选的，经过几次学习算法迭代之后，慢慢选出最能代表训练集的矢量。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">学习完成后，码本就可以用来预测了，就像最近邻法那样。</span><span class="amp-wp-499df8f">计算新输入样例和码本的距离，可以找出最相近的邻居，也就是最匹配的码本。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">如果你重新调整数据尺度，把数据归到同一个范围里，比如说0到1之间，那就可以获得最好的结果。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">如果用最近邻法就获得了不错的结果，那么可以再用LVQ优化一下，减轻训练集储存压力。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">8.支持向量机（简称SVM）</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这可能是机器学习里最受欢迎的算法了。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">超平面是一条可以分割输入变量的空间的“线”。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">支持向量机的超平面，是能把输入变量空间尽可能理想地按种类切割，要么是0，要么是1。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">在二维空间里，你可以把超平面可以分割变量空间的那条“线”。</span><span class="amp-wp-499df8f">这条线能把所有的输入值完美一分为二。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">SVM的学习目标就是要找出这个超平面。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.5784313725490197" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfJFR8Vibpuia1wvtVH2L8Ihh9ro8oW05eCU6eInbjHugoiclWxf1IQjGsw/640?wx_fmt=png" data-type="png" data-w="612" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfJFR8Vibpuia1wvtVH2L8Ihh9ro8oW05eCU6eInbjHugoiclWxf1IQjGsw/640?wx_fmt=png" width="612" height="354" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfJFR8Vibpuia1wvtVH2L8Ihh9ro8oW05eCU6eInbjHugoiclWxf1IQjGsw/640?wx_fmt=png" width="612" height="354" class=""></noscript></amp-img></section>
+<h6 class="amp-wp-8ab4d35"><span class="amp-wp-499df8f"><strong class="amp-wp-090022f">△</strong> 支持矢量机</span></h6>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">超平面和挨得最近的数据点之间的距离，叫做边缘。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">最理想的超平面，是可以无误差地划分训练数据。</span><span class="amp-wp-499df8f"> 也就是说，每一类数据里距离超平面最近的向量与超平面之间的距离达到最大值。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">这些点就叫做支持向量，他们定义了超平面。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">从实际操作上，最理想的算法是能找到这些把最近矢量与超平面值距离最大化的点。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">支持向量可能是最强的拿来就用的分类器了。</span><span class="amp-wp-499df8f">值得用数据集试试。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">9.随机森林</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">随机森林，属于一种重复抽样算法，是最受欢迎也最强大的算法之一。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">在统计学里，bootstrap是个估算值大小很有效的方法。</span><span class="amp-wp-499df8f">比方说估算平均值。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">从数据库中取一些样本，计算平均值，重复几次这样的操作，获得多个平均值。</span><span class="amp-wp-499df8f">然后平均这几个平均值，希望能得到最接近真实的平均值。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">而bagging算法，是每次取多个样本，然后基于这些样本建模。</span><span class="amp-wp-499df8f">当要预测新数据的时候，之前建的这些模型都做次预测，最后取这些预测值的平均数，尽力接近真实的输出值。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.6073446327683616" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfvNb5cu9WrsC2GPOaSU9LYAnsZABYXXvs7XoS1wHGibYCm1xHyOAP1Xg/640?wx_fmt=png" data-type="png" data-w="708" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfvNb5cu9WrsC2GPOaSU9LYAnsZABYXXvs7XoS1wHGibYCm1xHyOAP1Xg/640?wx_fmt=png" width="708" height="430" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfvNb5cu9WrsC2GPOaSU9LYAnsZABYXXvs7XoS1wHGibYCm1xHyOAP1Xg/640?wx_fmt=png" width="708" height="430" class=""></noscript></amp-img></section>
+<section class="amp-wp-f859660"><span class="amp-wp-499df8f">随机森林在这个基础上稍微有点变化。</span><br></section>
+<section class="amp-wp-f859660"><span class="amp-wp-499df8f">它包含多个决策树的分类器， 并且其输出的类别是由个别树输出的类别的众数而定。</span></section>
+<section class="amp-wp-f859660"><span class="amp-wp-499df8f">如果你的高方差算法取得了不错的结果（比方说决策树），那么用随机森林的话会进一步拿到更好的结果。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">10. 提升(Boosting)算法和自适应增强(Adaboost)算法</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">Boosting的核心是，对同一个训练集训练不同的分类器（弱分类器），然后把这些弱分类器集合起来，构成一个更强的最终分类器（强分类器）。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">所得到的第二个弱分类器会纠正第一个弱分类器的误差。</span><span class="amp-wp-499df8f">弱分类器的不断叠加，直到预测结果完美为止。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">Adaboost算法是首个成功用于二元分类问题的提升算法。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">现在有很多提升方法都是基于Adaboost。</span></section>
+<section class="amp-wp-20b6f83"><amp-img data-ratio="0.564945226917058" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfbAx0rl0st61PVkGofO4yTQiaB1Jb7Ot4pE0sicOWV3xU8ZPJztZbqvKg/640?wx_fmt=png" data-type="png" data-w="639" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfbAx0rl0st61PVkGofO4yTQiaB1Jb7Ot4pE0sicOWV3xU8ZPJztZbqvKg/640?wx_fmt=png" width="639" height="361" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkxAlHEYKL3uacmerV9IUIZfbAx0rl0st61PVkGofO4yTQiaB1Jb7Ot4pE0sicOWV3xU8ZPJztZbqvKg/640?wx_fmt=png" width="639" height="361" class=""></noscript></amp-img></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">AdaBoost适用于短的决策树。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">在第一个树建立出来之后，不同的样本训练之后的表现可以作参考，用不同的样本训练弱分类器，然后根据错误率给样本一个权重。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">很难预测的训练数据应该给更多的权重，反过来，好预测的就少一点权重。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">模型按顺序一个一个建，每个训练数据的权重都会受到上一个决策树表现的影响。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">当所有的决策树都建好之后，看新数据的预测表现，结果准不准。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">因为训练数据对于矫正算法非常重要，所以要确保数据清洗干净了，不要有奇奇怪怪的偏离值。</span></section>
+<h1 class="amp-wp-aa14160"><span class="amp-wp-8bdd01f">最后的最后</span></h1>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">面对海量的机器学习算法，萌新最爱问的是，“我该选什么算法？</span><span class="amp-wp-499df8f">”</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">在回答这个问题之前，要先想清楚：</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">1）数据的数量、质量、本质；</span><br class="amp-wp-7940173"><span class="amp-wp-499df8f">2）可供计算的时间；</span><br class="amp-wp-7940173"><span class="amp-wp-499df8f">3）这个任务的紧急程度；</span><br class="amp-wp-7940173"><span class="amp-wp-499df8f">4）你用这个数据想做什么。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">要知道，即使是老司机，也无法闭着眼睛说哪个算法能拿到最好的结果。</span><span class="amp-wp-499df8f">还是得动手试。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">其实机器学习的算法很多的，以上只是介绍用得比较多的类型，比较适合萌新试试手找找感觉。</span></section>
+<section class="amp-wp-f650ee3"><span class="amp-wp-499df8f">最后，附编译来源，</span><br class="amp-wp-7940173"><span class="amp-wp-499df8f">https://www.kdnuggets.com/2018/02/tour-top-10-algorithms-machine-learning-newbies.html</span></section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2834228">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2800910">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2796721">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2744604">
+<p></p>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2590675">
+<p class=" amp-wp-2f24dc3"><strong class="amp-wp-cdee54d"><span class="amp-wp-fd320b9"><strong class="amp-wp-238198f">— THE END —</strong></span></strong></p>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625487">
+<section class=" amp-wp-c004a24"></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2697295">
+<section class=" amp-wp-c004a24"><amp-img class="amp-wp-enforced-sizes amp-wp-dc3ee2b" data-ratio="0.1871508379888268" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" data-type="png" data-w="358" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67" layout="intrinsic"><noscript><img class=" amp-wp-dc3ee2b" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67"></noscript></amp-img></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625492">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2617381">
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485332&idx=2&sn=f17470b6d1d39cc4d8942da978e62914&chksm=ebe9cd29dc9e443f9e2b1de2858c2eb8693718fdf548d7a0986834f926dfdd8e0cd0811b4268&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">梯度下降背后的数学原理几何？</a></span><br></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485328&idx=1&sn=80b9770924afe276f344c007646e7884&chksm=ebe9cd2ddc9e443bff469273d73e2dafd49ec0bfbb3d16e2be57e1d80a49c0748ebcd8760013&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">“苦瓜”数学家柯西的故事及柯西中值定理</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485325&idx=1&sn=635ea4c790659e8c4e9c206884c38f05&chksm=ebe9cd30dc9e44260958efbe42e7d4c72095b120507cfcd59c584f5a4a2cae94fbd74800935b&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">层次分析法告诉你如何选择一部手机</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485056&idx=2&sn=92f735f3b3ee3445b7c166129b18a7a9&chksm=ebe9cc3ddc9e452ba9cf6f78bb20bb2e14a86fde39a3d9528d32adc0aa4ec73d9ca31b107df3&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">斯坦福大学教育学院院长：学习本身就是一门学问</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485328&idx=2&sn=12bb1707148943bffad675e2921c1d8f&chksm=ebe9cd2ddc9e443bfeb3c5a0f29c9211d38cad5085e49201d0375d185173a7a8bd1e5273be99&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">为什么计算神经科学和AI会融合</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485332&idx=1&sn=92248481b67ee55fa7047aa0efbf4f0d&chksm=ebe9cd29dc9e443fe248aabe4f543c26084d02e6009c8932e6df1e5ced0d06df1f106c39122c&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">如何黑掉一台根本不联网的电脑</a></span></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/284/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

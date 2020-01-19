@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html amp lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/268/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRtxJ1unpgEKrcibQmrib4UUFibOZzvgicmUyVGxia3kJMQj8O3Lv4oh0nAPA/640"},{"@type":"WebPage","@id":"https://stime.cc/article/268/#webpage","url":"https://stime.cc/article/268/","inLanguage":"en-US","name":"\u9762\u8bd5\u5b98\u95ee\u6211\u540c\u6b65\u5bb9\u5668\uff08\u5982Vector\uff09\u7684\u6240\u6709\u64cd\u4f5c\u4e00\u5b9a\u662f\u7ebf\u7a0b\u5b89\u5168\u7684\u5417\uff1f\u6211\u61f5\u4e86\uff01 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/268/#primaryimage"},"datePublished":"2020-01-19T02:44:55+00:00","dateModified":"2020-01-19T02:44:55+00:00"},{"@type":"Article","@id":"https://stime.cc/article/268/#article","isPartOf":{"@id":"https://stime.cc/article/268/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u9762\u8bd5\u5b98\u95ee\u6211\u540c\u6b65\u5bb9\u5668\uff08\u5982Vector\uff09\u7684\u6240\u6709\u64cd\u4f5c\u4e00\u5b9a\u662f\u7ebf\u7a0b\u5b89\u5168\u7684\u5417\uff1f\u6211\u61f5\u4e86\uff01","datePublished":"2020-01-19T02:44:55+00:00","dateModified":"2020-01-19T02:44:55+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/268/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/268/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+	<title>面试官问我同步容器（如Vector）的所有操作一定是线程安全的吗？我懵了！ - S时代</title>
+		<link rel="canonical" href="https://stime.cc/article/268/">
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-090d3d2{margin-right:8px;margin-left:8px;font-family:-apple-system-font,system-ui,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;letter-spacing:.544px;white-space:normal;color:#3e3e3e;font-size:16px;background-color:#fff;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-867b8c1{font-size:12px;letter-spacing:.5px;caret-color:#333}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-579cf97{color:#888;font-size:10px;letter-spacing:.544px;caret-color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9eb6301{margin:5px 8px;font-family:-apple-system-font,system-ui,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;white-space:normal;color:#3e3e3e;font-size:16px;background-color:#fff;caret-color:#333;text-size-adjust:auto;letter-spacing:.5px;text-align:center;line-height:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-95a4bc4{font-size:13px;color:#888;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3614448{margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e389e04{line-height:1.5em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f2c16be{color:inherit;line-height:inherit;font-size:15px;letter-spacing:.5px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4cc708d{font-size:13px;letter-spacing:.5px;line-height:inherit;color:#808080}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4cc708d{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6bc40b5{line-height:inherit;color:#808080;letter-spacing:.5px;font-size:13px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6bc40b5{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7f36d40{font-size:13px;letter-spacing:.5px;line-height:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7f36d40{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f6be2d5{font-size:13px;letter-spacing:.5px;line-height:inherit;color:#a5da2d}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f6be2d5{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0294a6b{font-size:13px;letter-spacing:.5px;line-height:inherit;color:#ff9823}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0294a6b{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2d9fd66{letter-spacing:.5px;line-height:inherit;color:#eedc70}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2d9fd66{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7a2b7e7{line-height:inherit;color:#ae87fa;letter-spacing:.5px;font-size:13px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7a2b7e7{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5507b2b{letter-spacing:.5px;line-height:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5507b2b{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-418c03a{letter-spacing:.5px;line-height:inherit;color:#a5da2d}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-418c03a{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-89ad7e8{letter-spacing:.5px;line-height:inherit;color:#ff9823}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-89ad7e8{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-53ef304{font-size:13px;letter-spacing:.5px;line-height:inherit;color:#ae87fa}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-53ef304{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4b3eae7{font-size:14px;letter-spacing:0px;font-family:Consolas,Inconsolata,Courier,monospace;border-radius:0px;color:#a9b7c6;background:#282b2e;padding:.5em;margin-left:8px;margin-right:8px;line-height:1.5em;overflow-y:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4b3eae7{overflow-wrap:normal;word-break:normal;overflow-x:auto;display:-webkit-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3c03cff{letter-spacing:.5px;line-height:inherit;color:#f82375}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3c03cff{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6e907cf{letter-spacing:.5px;line-height:inherit;color:#ae87fa}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6e907cf{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c1e8b3d{font-size:13px;letter-spacing:.5px;line-height:inherit;color:#f82375}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c1e8b3d{overflow-wrap:inherit;word-break:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4c9f57e{letter-spacing:.5px;font-size:13px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-03070a8{font-size:inherit;color:inherit;line-height:inherit}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d1cbdee{font-size:inherit;color:inherit;line-height:inherit;display:inline-block;margin-right:auto;margin-left:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-87e8f6c{font-size:inherit;color:inherit;line-height:inherit;display:block;margin-right:auto;margin-left:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7622b0d{color:#ff6827;font-family:-apple-system-font,system-ui,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;font-size:15px;letter-spacing:.5px;text-align:center;word-spacing:2px;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ed0a09c{margin-right:8px;margin-left:8px;clear:both;min-height:1em;color:#333;font-size:16px;letter-spacing:.5px;text-align:center;line-height:2em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ff91a47{font-size:28px;background-color:#fefefe}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-111dcae{margin-top:-1.2em;margin-bottom:.65em;color:#333;font-size:16px;letter-spacing:.5px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b546613{margin-right:auto;margin-left:auto;border-top:1px solid #212122;border-right-color:#212122;border-bottom-color:#212122;border-left-color:#212122;width:135.391px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-17c9043{margin-right:8px;margin-left:8px;clear:both;min-height:1em;color:#333;font-size:16px;letter-spacing:.5px;text-align:center;line-height:1.5em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fe408c4{color:#000}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-768e1f2{font-size:18px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d71f97d{font-size:inherit;color:inherit;margin:1.5em 8px;line-height:1.5em}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dc8356e{font-size:15px;letter-spacing:.5px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdd8ca0{text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7073343{font-size:16px;color:#3e3e3e;line-height:1.6;letter-spacing:0px;font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9b9d949{line-height:1.6;letter-spacing:0px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6659372{margin-right:.5em;margin-left:.5em;letter-spacing:.544px;word-spacing:2px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-89dafd2{letter-spacing:3px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ecb39b7{color:#a0a0a0;font-size:14px;letter-spacing:2px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4b41ab9{margin:5px 8px;font-size:inherit;color:inherit;line-height:1.5em;text-align:right}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bd14c31{font-size:14px;letter-spacing:2px;word-spacing:2px;color:#000}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7db95b4{color:#a0a0a0;font-size:14px;letter-spacing:2px;word-spacing:2px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bbf76f1{color:#ff2941}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">面试官问我同步容器（如Vector）的所有操作一定是线程安全的吗？我懵了！</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-19T10:44:55+00:00">
+		9 mins ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<p data-mpa-powered-by="yiban.io" class="amp-wp-090d3d2"><span class="amp-wp-579cf97"><br></span></p>
+<p class="amp-wp-090d3d2"><span class="amp-wp-867b8c1"></span><span class="amp-wp-579cf97"><amp-img data-ratio="0.5604166666666667" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRtxJ1unpgEKrcibQmrib4UUFibOZzvgicmUyVGxia3kJMQj8O3Lv4oh0nAPA/640" data-w="960" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRtxJ1unpgEKrcibQmrib4UUFibOZzvgicmUyVGxia3kJMQj8O3Lv4oh0nAPA/640" width="960" height="538" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRtxJ1unpgEKrcibQmrib4UUFibOZzvgicmUyVGxia3kJMQj8O3Lv4oh0nAPA/640" width="960" height="538" class=""></noscript></amp-img></span></p>
+<p class="amp-wp-9eb6301"><span class="amp-wp-95a4bc4"></span></p>
+<p class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">为了方便编写出线程安全的程序，Java里面提供了一些线程安全类和并发工具，比如：同步容器、并发容器、阻塞队列等。</span></p>
+<p class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">最常见的同步容器就是Vector和Hashtable了，那么，同步容器的所有操作都是线程安全的吗？</span></p>
+<p class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">这个问题不知道你有没有想过，本文就来深入分析一下这个问题，一个很容易被忽略的问题。</span></p>
+<section>
+<p class="amp-wp-ed0a09c"><em><span class="amp-wp-ff91a47"><strong>1</strong></span></em><br></p>
+<section class="amp-wp-111dcae">
+<section data-width="20%" class="amp-wp-b546613"></section>
+</section>
+<p class="amp-wp-17c9043"><span class="amp-wp-fe408c4"><strong><span class="amp-wp-768e1f2">同步容器</span></strong></span></p>
+</section>
+<p class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">在Java中，同步容器主要包括2类：</span></p>
+<ul class="list-paddingleft-2 amp-wp-3614448">
+<li>
+<section class="amp-wp-e389e04"><span class="amp-wp-f2c16be">1、Vector、Stack、HashTable</span></section>
+</li>
+<li>
+<section class="amp-wp-e389e04"><span class="amp-wp-f2c16be">2、Collections类中提供的静态工厂方法创建的类</span></section>
+</li>
+</ul>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">本文拿相对简单的Vecotr来举例，我们先来看下Vector中几个重要方法的源码：</span></section>
+<pre class="amp-wp-03070a8"><section class="amp-wp-4b3eae7"><span class="amp-wp-4c9f57e"><span class="amp-wp-3c03cff"><span class="amp-wp-5507b2b">public</span> <span class="amp-wp-5507b2b">synchronized</span> <span class="amp-wp-5507b2b">boolean</span> <span class="amp-wp-418c03a">add</span><span class="amp-wp-89ad7e8">(E e)</span> </span>{</span><br><span class="amp-wp-4c9f57e">    modCount++;</span><br><span class="amp-wp-4c9f57e">    ensureCapacityHelper(elementCount + <span class="amp-wp-53ef304">1</span>);</span><br><span class="amp-wp-4c9f57e">    elementData[elementCount++] = e;</span><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">return</span> <span class="amp-wp-c1e8b3d">true</span>;</span><br><span class="amp-wp-4c9f57e">}</span><br><br><span class="amp-wp-4c9f57e"><span class="amp-wp-c1e8b3d"><span class="amp-wp-7f36d40">public</span> <span class="amp-wp-7f36d40">synchronized</span> E <span class="amp-wp-f6be2d5">remove</span><span class="amp-wp-0294a6b">(<span class="amp-wp-c1e8b3d">int</span> index)</span> </span>{</span><br><span class="amp-wp-4c9f57e">    modCount++;</span><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">if</span> (index >= elementCount)</span><br><span class="amp-wp-4c9f57e">        <span class="amp-wp-c1e8b3d">throw</span> <span class="amp-wp-c1e8b3d">new</span> ArrayIndexOutOfBoundsException(index);</span><br><span class="amp-wp-4c9f57e">    E oldValue = elementData(index);</span><br><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">int</span> numMoved = elementCount - index - <span class="amp-wp-53ef304">1</span>;</span><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">if</span> (numMoved > <span class="amp-wp-53ef304">0</span>)</span><br><span class="amp-wp-4c9f57e">        System.arraycopy(elementData, index+<span class="amp-wp-53ef304">1</span>, elementData, index,</span><br><span class="amp-wp-4c9f57e">                         numMoved);</span><br><span class="amp-wp-4c9f57e">    elementData[--elementCount] = <span class="amp-wp-c1e8b3d">null</span>; <span class="amp-wp-4cc708d">// Let gc do its work</span></span><span class="amp-wp-6bc40b5"></span><br><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">return</span> oldValue;</span><br><span class="amp-wp-4c9f57e">}</span><br><br><span class="amp-wp-4c9f57e"><span class="amp-wp-c1e8b3d"><span class="amp-wp-7f36d40">public</span> <span class="amp-wp-7f36d40">synchronized</span> E <span class="amp-wp-f6be2d5">get</span><span class="amp-wp-0294a6b">(<span class="amp-wp-c1e8b3d">int</span> index)</span> </span>{</span><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">if</span> (index >= elementCount)</span><br><span class="amp-wp-4c9f57e">        <span class="amp-wp-c1e8b3d">throw</span> <span class="amp-wp-c1e8b3d">new</span> ArrayIndexOutOfBoundsException(index);</span><br><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">return</span> elementData(index);</span><br><span class="amp-wp-4c9f57e">}</span><span class="amp-wp-dc8356e"></span><br></section></pre>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">可以看到，Vector这样的同步容器的所有公有方法全都是synchronized的，也就是说，我们可以在多线程场景中放心的使用单独这些方法，因为这些方法本身的确是线程安全的。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">但是，请注意上面这句话中，有一个比较关键的词：单独</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-7622b0d">因为，虽然同步容器的所有方法都加了锁，但是对这些容器的复合操作无法保证其线程安全性。需要客户端通过主动加锁来保证。</span><span class="amp-wp-7622b0d"></span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">简单举一个例子，我们定义如下删除Vector中最后一个元素方法：</span></section>
+<pre class="amp-wp-03070a8"><section class="amp-wp-4b3eae7"><span class="amp-wp-4c9f57e"><span class="amp-wp-3c03cff"><span class="amp-wp-5507b2b">public</span> Object <span class="amp-wp-418c03a">deleteLast</span>(<span class="amp-wp-89ad7e8">Vector v</span>)</span>{</span><br><span class="amp-wp-4c9f57e">    <span class="amp-wp-c1e8b3d">int</span> lastIndex  = v.size()<span class="amp-wp-53ef304">-1</span>;</span><br><span class="amp-wp-4c9f57e">    v.<span class="amp-wp-c1e8b3d">remove</span>(lastIndex);</span><br><span class="amp-wp-4c9f57e">}</span><span class="amp-wp-dc8356e"></span><br></section></pre>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">上面这个方法是一个复合方法，包括size(）和remove()，乍一看上去好像并没有什么问题，无论是size()方法还是remove()方法都是线程安全的，那么整个deleteLast方法应该也是线程安全的。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">但是时，如果多线程调用该方法的过程中，remove方法有可能抛出ArrayIndexOutOfBoundsException。</span></section>
+<pre class="amp-wp-03070a8"><section class="amp-wp-4b3eae7"><span class="amp-wp-4c9f57e">Exception <span class="amp-wp-3c03cff">in</span> thread <span class="amp-wp-2d9fd66">"Thread-1"</span> java.lang.ArrayIndexOutOfBoundsException: Array index <span class="amp-wp-3c03cff">out</span> of range: <span class="amp-wp-6e907cf">879</span></span><span class="amp-wp-7a2b7e7"></span><br><span class="amp-wp-4c9f57e">    at java.util.Vector.<span class="amp-wp-c1e8b3d">remove</span>(Vector.java:<span class="amp-wp-53ef304">834</span>)</span><br><span class="amp-wp-4c9f57e">    at com.hollis.Test.deleteLast(EncodeTest.java:<span class="amp-wp-53ef304">40</span>)</span><br><span class="amp-wp-4c9f57e">    at com.hollis.Test$<span class="amp-wp-53ef304">2.</span>run(EncodeTest.java:<span class="amp-wp-53ef304">28</span>)</span><br><span class="amp-wp-4c9f57e">    at java.lang.Thread.run(Thread.java:<span class="amp-wp-53ef304">748</span>)</span><span class="amp-wp-dc8356e"></span><br></section></pre>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">我们上面贴了remove的源码，我们可以分析得出：当index >= elementCount时，会抛出ArrayIndexOutOfBoundsException ，也就是说，当当前索引值不再有效的时候，将会抛出这个异常。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">因为removeLast方法，有可能被多个线程同时执行，当线程2通过index()获得索引值为10，在尝试通过remove()删除该索引位置的元素之前，线程1把该索引位置的值删除掉了，这时线程一在执行时便会抛出异常。</span></section>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.25508819538670285" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRIBInh9PV8pfQB98NeibzsHOEuEibMiah1CTseTd5EcaaBRocAxGISbO2Q/640?wx_fmt=jpeg" data-type="jpeg" data-w="737" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRIBInh9PV8pfQB98NeibzsHOEuEibMiah1CTseTd5EcaaBRocAxGISbO2Q/640?wx_fmt=jpeg" width="737" height="188" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRIBInh9PV8pfQB98NeibzsHOEuEibMiah1CTseTd5EcaaBRocAxGISbO2Q/640?wx_fmt=jpeg" width="737" height="188" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">为了避免出现类似问题，可以尝试加锁：</span></section>
+<pre class="amp-wp-03070a8"><section class="amp-wp-4b3eae7"><span class="amp-wp-4c9f57e"><span class="amp-wp-3c03cff"><span class="amp-wp-5507b2b">public</span> <span class="amp-wp-5507b2b">void</span> <span class="amp-wp-418c03a">deleteLast</span>(<span class="amp-wp-89ad7e8"></span>) </span>{</span><br><span class="amp-wp-4c9f57e">    synchronized (v) {</span><br><span class="amp-wp-4c9f57e">        <span class="amp-wp-c1e8b3d">int</span> index = v.size() - <span class="amp-wp-53ef304">1</span>;</span><br><span class="amp-wp-4c9f57e">        v.<span class="amp-wp-c1e8b3d">remove</span>(index);</span><br><span class="amp-wp-4c9f57e">    }</span><br><span class="amp-wp-4c9f57e">}</span><span class="amp-wp-dc8356e"></span><br></section></pre>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">如上，我们在deleteLast中，对v进行加锁，即可保证同一时刻，不会有其他线程删除掉v中的元素。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">另外，如果以下代码会被多线程执行时，也要特别注意：</span></section>
+<pre class="amp-wp-03070a8"><section class="amp-wp-4b3eae7"><span class="amp-wp-4c9f57e"><span class="amp-wp-3c03cff">for</span> (<span class="amp-wp-3c03cff">int</span> i = <span class="amp-wp-6e907cf">0</span>; i < v.size(); i++) {</span><br><span class="amp-wp-4c9f57e">    v.<span class="amp-wp-c1e8b3d">remove</span>(i);</span><br><span class="amp-wp-4c9f57e">}</span><span class="amp-wp-dc8356e"></span><br></section></pre>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">由于，不同线程在同一时间操作同一个Vector，其中包括删除操作，那么就同样有可能发生线程安全问题。</span><span class="amp-wp-7622b0d">所以，在使用同步容器的时候，如果涉及到多个线程同时执行删除操作，就要考虑下是否需要加锁。</span></section>
+<section>
+<p class="amp-wp-ed0a09c"><em><span class="amp-wp-ff91a47"><strong>2</strong></span></em><br></p>
+<section class="amp-wp-111dcae">
+<section data-width="20%" class="amp-wp-b546613"></section>
+</section>
+<p class="amp-wp-17c9043"><span class="amp-wp-fe408c4"><strong><span class="amp-wp-768e1f2">同步容器的问题</span></strong></span></p>
+</section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">前面说过了，同步容器直接保证单个操作的线程安全性，但是无法保证复合操作的线程安全，遇到这种情况时，必须要通过主动加锁的方式来实现。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">而且，除此之外，</span><span class="amp-wp-7622b0d">同步容易由于对其所有方法都加了锁，这就导致多个线程访问同一个容器的时候，只能进行顺序访问，即使是不同的操作，也要排队</span><span class="amp-wp-dc8356e">，如get和add要排队执行。这就大大的降低了容器的并发能力。</span></section>
+<section>
+<p class="amp-wp-ed0a09c"><em><span class="amp-wp-ff91a47"><strong>3</strong></span></em><br></p>
+<section class="amp-wp-111dcae">
+<section data-width="20%" class="amp-wp-b546613"></section>
+</section>
+<p class="amp-wp-17c9043"><span class="amp-wp-fe408c4"><strong><span class="amp-wp-768e1f2">并发容器</span></strong></span></p>
+</section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">针对前文提到的同步容器存在的并发度低问题，从Java5开始，java.util.concurent包下，提供了大量支持高效并发的访问的集合类，我们称之为并发容器。</span></section>
+<figure class="amp-wp-03070a8"><amp-img data-ratio="0.9134615384615384" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRafShHplrGpwuepicPSibLTuFrjAchFjhyq0kicGbdYYxFNk1ibg7fBibD0g/640?wx_fmt=jpeg" data-type="jpeg" data-w="208" title="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRafShHplrGpwuepicPSibLTuFrjAchFjhyq0kicGbdYYxFNk1ibg7fBibD0g/640?wx_fmt=jpeg" width="208" height="190" class="amp-wp-enforced-sizes amp-wp-d1cbdee" layout="intrinsic"><noscript><img title src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LDJE14LEwQdOfQsD3BhaXRafShHplrGpwuepicPSibLTuFrjAchFjhyq0kicGbdYYxFNk1ibg7fBibD0g/640?wx_fmt=jpeg" width="208" height="190" class=" amp-wp-87e8f6c"></noscript></amp-img></figure>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">针对前文提到的同步容器的复合操作的问题，一般在Map中发生的比较多，所以在ConcurrentHashMap中增加了对常用复合操作的支持，比如putIfAbsent()、replace()，这2个操作都是原子操作，可以保证线程安全。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">另外，并发包中的CopyOnWriteArrayList和CopyOnWriteArraySet是Copy-On-Write的两种实现。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">Copy-On-Write容器即写时复制的容器。通俗的理解是当我们往一个容器添加元素的时候，不直接往当前容器添加，而是先将当前容器进行Copy，复制出一个新的容器，然后新的容器里添加元素，添加完元素之后，再将原容器的引用指向新的容器。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-7622b0d">CopyOnWriteArrayList中add/remove等写方法是需要加锁的，而读方法是没有加锁的。</span><span class="amp-wp-dc8356e"></span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">这样做的好处是我们可以对CopyOnWrite容器进行并发的读，当然，这里读到的数据可能不是最新的。因为写时复制的思想是通过延时更新的策略来实现数据的最终一致性的，并非强一致性。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">但是，作为代替Vector的CopyOnWriteArrayList并没有解决同步容器的复合操作的线程安全性问题。</span></section>
+<section>
+<p class="amp-wp-ed0a09c"><em><span class="amp-wp-ff91a47"><strong>4</strong></span></em><br></p>
+<section class="amp-wp-111dcae">
+<section data-width="20%" class="amp-wp-b546613"></section>
+</section>
+<p class="amp-wp-17c9043"><span class="amp-wp-fe408c4"><strong><span class="amp-wp-768e1f2">总结</span></strong></span></p>
+</section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">本文介绍了同步容器和并发容器。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">同步容器是通过加锁实现线程安全的，并且只能保证单独的操作是线程安全的，无法保证复合操作的线程安全性。并且同步容器的读和写操作之间会互相阻塞。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">并发容器是Java 5中提供的，主要用来代替同步容器。有更好的并发能力。而且其中的ConcurrentHashMap定义了线程安全的复合操作。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">在多线程场景中，如果使用并发容器，一定要注意复合操作的线程安全问题。必要时候要主动加锁。</span></section>
+<section class="amp-wp-d71f97d"><span class="amp-wp-dc8356e">在并发场景中，建议直接使用java.util.concurent包中提供的容器类，如果需要复合操作时，建议使用有些容器自身提供的复合方法。</span></section>
+<p class="amp-wp-cdd8ca0"><amp-img class="rich_pages amp-wp-enforced-sizes" data-ratio="0.5555555555555556" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" data-type="png" data-w="900" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" width="900" height="500" layout="intrinsic"><noscript><img class="rich_pages" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uChmeeX1Fpy76wXSVxMiaQMMAWdDrcZW2of9SKBg0XHDWwG7kV34aQr4oer9fuZhaqNE6uDGGrlEFpET4aXbIrQ/640?wx_fmt=png" width="900" height="500"></noscript></amp-img></p>
+<section class="amp-wp-7073343">
+<section>
+<section class="amp-wp-9b9d949">
+<section data-mpa-template-id="1025112" data-mpa-color="null" data-mpa-category="fav" class="amp-wp-6659372">
+<section class="amp-wp-89dafd2">
+<p><span class="amp-wp-ecb39b7"></span></p>
+</section>
+</section>
+</section>
+</section>
+<p class="amp-wp-4b41ab9"><span class="amp-wp-bd14c31">好文章，我</span><span class="amp-wp-7db95b4"><span class="amp-wp-bbf76f1">在看</span>❤️</span></p>
+</section>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/268/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

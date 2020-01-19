@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html amp lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/286/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png"},{"@type":"WebPage","@id":"https://stime.cc/article/286/#webpage","url":"https://stime.cc/article/286/","inLanguage":"en-US","name":"\u61c2\u76f8\u5bf9\u8bba\u4e4b\u4ece\u5f2f\u66f2\u7a7a\u95f4\u7684\u51e0\u4f55\u5f00\u59cb - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/286/#primaryimage"},"datePublished":"2020-01-19T02:52:08+00:00","dateModified":"2020-01-19T02:52:08+00:00"},{"@type":"Article","@id":"https://stime.cc/article/286/#article","isPartOf":{"@id":"https://stime.cc/article/286/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u61c2\u76f8\u5bf9\u8bba\u4e4b\u4ece\u5f2f\u66f2\u7a7a\u95f4\u7684\u51e0\u4f55\u5f00\u59cb","datePublished":"2020-01-19T02:52:08+00:00","dateModified":"2020-01-19T02:52:08+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/286/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/286/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+	<title>懂相对论之从弯曲空间的几何开始 - S时代</title>
+		<link rel="canonical" href="https://stime.cc/article/286/">
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-93b8ea5{display:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c41d69d{white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{font-size:16px;text-align:center;caret-color:#333;max-width:100%;letter-spacing:.544px;background-color:#fff;font-family:微软雅黑}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5bb8ef1{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;font-family:Arial;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{max-width:100%;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{max-width:100%;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-03c7ebe{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{color:#3e3e3e;max-width:100%;width:120px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{margin-bottom:10px;padding-right:10px;padding-left:10px;max-width:100%;box-sizing:border-box;height:30px;background-color:#505150;line-height:30px;border-radius:10px;display:inline-block;color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9cf1ce8{font-size:13px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{max-width:100%;width:120px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{margin-right:auto;margin-left:auto;padding-bottom:120px;max-width:100%;box-sizing:border-box;border-radius:100%;overflow:hidden;width:120px;height:0px;background-image:url("https://mmbiz.qpic.cn/mmbiz_jpg/pSqFmkOFya0U8BgAuI1JybObB7Q9Q4PgboZOQlzpxxUGGxExfgCnfXibCzic5T6JSknDib5TEnq38ibjeF9BudsLibw/640?wx_fmt=jpeg");background-position:50% 50%;background-size:cover}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{margin-left:10px;padding-left:10px;max-width:100%;box-sizing:border-box;border-left:1px solid #505150}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{max-width:100%;color:#f79646;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0ad1dbc{color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{max-width:100%;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{color:#3e3e3e;margin-bottom:10px;max-width:100%;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{max-width:100%;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ca7adb3{max-width:100%;color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-60fc92b{color:#888;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0e751ee{color:#888;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{font-size:14px;letter-spacing:.544px;max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bdb20a3{color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5de4178{color:#3e3e3e}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d411caf{font-size:14px;color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-83343c2{letter-spacing:1px;max-width:100%;line-height:1.75em;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-83343c2{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bbf1480{caret-color:#333;color:#333;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6f36e09{margin-top:8px;max-width:100%;min-height:1em;white-space:normal;font-size:17px;height:32px;text-align:justify;color:#00bbec;line-height:18px;font-family:微软雅黑;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6f36e09{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-87ade05{line-height:28px;float:left;display:block;padding:4px 10px;max-width:100%;color:#fff;background-color:#00bbec;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-44e0ad6{padding-right:2px;padding-bottom:3px;padding-left:2px;max-width:100%;line-height:28px;float:left;display:block;font-size:15px;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-44e0ad6{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-768e1f2{font-size:18px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3614448{margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-20b6f83{text-align:center;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d8cd23f{max-width:100%;min-height:1em;caret-color:#3e3e3e;color:#3e3e3e;white-space:normal;margin-left:8px;margin-right:8px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ce139f2{max-width:100%;font-size:15px;color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ce139f2{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b6b9a55{max-width:100%;min-height:1em;caret-color:#3e3e3e;color:#3e3e3e;white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-31ab496{max-width:100%;min-height:1em;caret-color:#3e3e3e;color:#3e3e3e;white-space:normal;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d2f19d9{letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-be328d1{max-width:100%;min-height:1em;letter-spacing:.544px;font-family:微软雅黑;text-align:center;widows:1;line-height:25.6px;color:#696969}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-be328d1{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b9dc8b4{max-width:100%;letter-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b9dc8b4{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a95a9bb{max-width:100%;font-size:12px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a95a9bb{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-84b4eab{max-width:100%;color:#888;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-84b4eab{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c678c93{font-family:-apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;font-size:16px;letter-spacing:.544px;text-align:start;white-space:normal;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c1b58e0{margin-right:auto;margin-left:auto;text-align:center;width:210px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8386ba0{margin-right:auto;margin-left:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8386ba0{visibility:visible;width:358px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7f87e7b{margin-right:8px;margin-left:8px;max-width:100%;letter-spacing:.544px;min-height:1em;widows:1;color:#3e3e3e;font-family:微软雅黑;line-height:1.75em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7f87e7b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{max-width:100%;color:#ff4c00;letter-spacing:1px;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-66ea78b{-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">懂相对论之从弯曲空间的几何开始</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-19T10:52:08+00:00">
+		3 mins ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<section class="amp-wp-3614448">
+<section class="xmteditor amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2820150">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2796723">
+<section class=" amp-wp-3614448">
+<section class=" amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2549807">
+<section class=" amp-wp-c41d69d">
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class="amp-wp-c44cf1c">
+<section class="amp-wp-9af8ac0">
+<section class="amp-wp-01bc5a7">
+<section class="amp-wp-9af8ac0">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-9af8ac0">
+<section class=" amp-wp-5bb8ef1">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-5a1efc8">
+<section class="amp-wp-03c7ebe">
+<section data-width="120px" class="amp-wp-39be138">
+<section class=" amp-wp-8fb30d2" data-brushtype="text"><span class="amp-wp-9cf1ce8">算法数学俱乐部</span></section>
+<section class="amp-wp-6149c84">
+<section data-role="circle" data-width="100%" class="amp-wp-45f644e"></section>
+</section>
+</section>
+<section class=" amp-wp-b60cbb1">
+<p dir="ltr" class=" amp-wp-2f60fd0"><span class="amp-wp-9d763cf">日期</span><span class="amp-wp-a534d8b">：</span><span class="amp-wp-0e751ee">2019年12月28日</span></p>
+<p dir="ltr" class="amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">正文共</span>：</span><span class="amp-wp-0ad1dbc"><span class="amp-wp-a534d8b">6053</span><span class="amp-wp-c612488">字7</span></span><span class="amp-wp-0e751ee">图</span></p>
+<p class="amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">预计阅读时间</span>：<span class="amp-wp-60fc92b">16</span></span><span class="amp-wp-0e751ee">分钟</span></p>
+<p><span class="amp-wp-fd9f9ee"><span class="amp-wp-bdb20a3">来源</span><span class="amp-wp-5de4178">:</span></span><span class="amp-wp-d411caf">科学网博主文/张天蓉 </span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section></section>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.5549295774647888" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png" data-type="png" data-w="710" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png" width="710" height="394" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXr1xbMQrQO6ZoAMT8Gq19nichFiaE1oOMex776uibW37oJiad9aFmF4iawSQ/640?wx_fmt=png" width="710" height="394"></noscript></amp-img></section>
+<p class="amp-wp-6f36e09"></p>
+<section class="amp-wp-87ade05">1</section>
+<section class="amp-wp-44e0ad6"><span class="amp-wp-768e1f2"><strong class=" amp-wp-7940173">古老的几何学</strong><strong class=" amp-wp-7940173"></strong></span></section>
+<p></p>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">几何是一门古老的学科，在公元前由几何大师欧几里德创立，至今两千多年威力不减。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">欧几里德几何是一个漂亮的公理系统，它只需要设定几条简单的、符合直觉、大家公认、不证自明的命题（称为公理或公设），然后从这几条命题出发，推导证明其它命题，继而推导证明更多命题，如此继续下去，一套数学理论便建立起来了。这就像是建造高楼大厦，“公理”就是水平放在地基第一层的大“砖块”，有了牢靠坚实的基础，其它砖块便能够一层一层叠上去，万丈高楼也就能够平地而起。基底砖块破缺了，或者置放得不平稳，楼房就可能会倒塌。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">欧几里德平面几何的公理有五条。他就从这简单的五条公理出发，推演出了所有的平面几何定理，建造出欧氏几何的宏伟大厦。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">数学逻辑推理创造的奇迹令人吃惊。不过，当人们反复思考这几条公理时，觉得前面4条显然都是不言自明的，唯有第五条公理比较复杂，听起来不像一个简单而容易被人接受的直觉概念。于是，人们就自然提出疑问：这第五条是公理吗？它是否可以由其它4条公理推导出来？大家的意思就是说，欧氏平面几何的大厦用前面4块“大砖头”可能也就足以支撑了。这第五块砖头，恐怕本来就是放置在另外四块砖头之上的。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">欧氏平面几何的第五条公理也称为“平行公理”，可表述为：“过直线外的一点，有且仅有一条平行线。”</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">一位名叫尼古拉·罗巴切夫斯基（Nikolai Lobachevsky，1792 – 1856）的年轻俄罗斯数学家突发奇想：如果将这条公理稍稍改变一下，也就是说，将大厦下面的某块基石稍微移动一下，会产生什么样的后果呢？比如说改成：“过直线外的一点，至少有两条平行线。”</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">这一改非同小可，几字之差，生出了与欧氏几何完全不同的另一种几何，人们称之为“非欧几何”或“罗氏几何”。非欧几何的大厦同样拔地而起、稳固牢靠，逻辑上完整而严密，但看起来却有些古怪。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">罗氏几何体系得到古怪而不合常理的命题是必然的，因为被罗巴切夫斯基改变之后的第五公设，本身就与人们的日常生活经验不相符合。过平面上直线外的一点，怎么可能作出多条不同的直线与已知直线不相交呢？由此而建造出来的数学逻辑大厦，当然会是个怪物。比如说，罗氏几何导出了如下古怪的命题：同一直线的垂线和斜线不一定相交；不存在矩形，因为四边形不可能四个角都是直角；不存在相似三角形；过不在同一直线上的三点，不一定能作一个圆；一个三角形的三个内角之和小于180度……这种奇怪的“几何大厦”，能有什么用处呢？有人嗤之以鼻，心想，不过是疯子数学家玩的游戏而已！</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">那些嘲笑罗巴切夫斯基的人没有料到，几十年之后，非欧几何在爱因斯坦的广义相对论中找到了用武之地，它正是爱因斯坦广义相对论描述的一种弯曲空间所遵循的几何！</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<p class="amp-wp-b6b9a55"></p>
+<p class="amp-wp-6f36e09"></p>
+<section class="amp-wp-87ade05">2</section>
+<section class="amp-wp-44e0ad6"><span class="amp-wp-768e1f2"><strong class=" amp-wp-7940173">几何上的无穷小</strong><strong class=" amp-wp-7940173"></strong></span></section>
+<p></p>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-83343c2">不过，真正与广义相对论弯曲空间有关的是“黎曼几何”，它比上面所说的非欧几何更进了一步，属于微分几何。<br class="amp-wp-7940173"></span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">欧几里德之后，笛卡尔发明了解析几何，牛顿和莱布尼茨发明了微积分。两者之结合使得那个时代的数学和物理如虎添翼，面目一新。像罗巴切夫斯基那样使用传统的公理方法来研究几何，显然要输人一筹。欧拉、克莱洛、蒙日以及高斯等人认识到了这一点，创立并发展了微分几何。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">微分几何的先行者、法国数学家亚历克西斯·克莱洛（Alexis Clairaut，1713 – 1763）对空间曲线进行了深入研究，第一次研究了空间曲线的曲率和挠率（当时被他称之为双重曲率）。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">什么是曲线的曲率和挠率？我们从图1a所示的三条平面曲线来认识曲率。图中的三条曲线，就像是三条形状不同的平地上的高速公路。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.32125984251968503" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXHd9fbeIKYX8ydNL6vo4ZceRrYVwqc8Q7gkIia7Emw1gJBKOCnZQ4Tiag/640?wx_fmt=png" data-type="png" data-w="635" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXHd9fbeIKYX8ydNL6vo4ZceRrYVwqc8Q7gkIia7Emw1gJBKOCnZQ4Tiag/640?wx_fmt=png" width="635" height="204" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXHd9fbeIKYX8ydNL6vo4ZceRrYVwqc8Q7gkIia7Emw1gJBKOCnZQ4Tiag/640?wx_fmt=png" width="635" height="204"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图1：曲线的曲率和挠率</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">我们首先需要引进曲线的切线，或称之为“切矢量”的概念。切矢量即为，当曲线上两点无限接近时，它们的连线的极限位置所决定的矢量。图1a所示的公路上标示的箭头，便是在曲线上各个点切矢量的直观图像。而曲率是什么呢？曲率表征曲线的弯曲程度。比如，图1a中最上面一条公路是直线，直线不会拐弯，我们说，它的弯曲程度为0，即曲率等于0。切矢量旋转得越快，曲线的弯曲程度也越大。所以，数学上就把曲率定义为曲线的切矢量对于弧长的旋转速度。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">平地上弯弯曲曲的公路可以看作是平面曲线，用“曲率”就可以描述它们。如果公路是修建在山区中，它们一边转弯一边还要盘旋向上或者向下。这时候，汽车驶过的路径便不再是平面曲线，而是空间曲线了。对于山间的公路，如图1b所示，我们除了可以看到其弯曲的程度之外，还能观察到公路往上（或者向下）绕行的快慢。我们将这个描述绕行快慢的几何量叫做“挠率”。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">一条空间曲线的曲率和挠率在空间的变化规律完全决定了这条曲线。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">从上面对空间曲线的研究，可以看出微分几何的方法比欧氏几何公理式的方法要强有力多了。与曲线类似，微分几何也能用以研究曲面，曲率和挠率的概念，也能推广到曲面上，去定义复杂得多的曲率张量。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.5602503912363067" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXnlGwKzlRl5jV2lwLjKniakd6VIsRn90Qozvc7a8h3gSsZrlgbPpCic9w/640?wx_fmt=png" data-type="png" data-w="639" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXnlGwKzlRl5jV2lwLjKniakd6VIsRn90Qozvc7a8h3gSsZrlgbPpCic9w/640?wx_fmt=png" width="639" height="358" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXnlGwKzlRl5jV2lwLjKniakd6VIsRn90Qozvc7a8h3gSsZrlgbPpCic9w/640?wx_fmt=png" width="639" height="358"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图2：各种曲面</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">曲面的形状变幻无穷，按照我们感兴趣的性质，可以将其分为两大类：可展曲面和不可展曲面。初看图2a和图2b所画出的曲面，也许你看不出这两类图形有何区别。它们都是从三维空间看到的形状。不管可展还是不可展，看起来不都是“弯曲的”、“不平的”吗？然而，如果你再仔细观察，就会发现，可展曲面的“弯曲”与不可展曲面的“弯曲”有着本质的区别。简单地说，可展曲面在本质上是“平的”，它们可以被展开成一个平面。比如，将图2b所示的锥面，用剪刀剪一条线直到顶点，就可以没有任何皱褶地将它平摊到桌子上。柱面也可以沿着与中心线平行的任何直线剪开，成为一个平面。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">但是，图2a所列举的不可展曲面，就不能展开成平面了。那是真正的、本质上的“不平”。一顶做成了近似半个球面的帽子，你无论怎样剪裁它，都无法将其没有皱褶地摊成一个平面。另一方面，你用一张平平的纸，很容易卷成一个圆筒（柱面），或者是做成一顶锥形的帽子，但你无法做出一个球面来。你顶多只能将这张纸剪成许多小纸片，粘成一个近似的球面！</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">谈到这儿，你大概已经基本明白了“可展”和“不可展”的区别到底是什么。尽管两类曲面在嵌入3维空间之后看起来都是弯曲的，但是，可展曲面的内在本质是“平的”，不可展曲面的内在本质是“不平”。区分这两类曲面“内在本质”的概念叫做“内蕴性”，研究这种性质的几何叫做内蕴几何。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">曲面弯曲的内蕴性最早被“数学王子”高斯注意到，后为黎曼所发展，并推广到大于3的n维流形。因而，黎曼几何是一种内蕴几何。换言之，内蕴性指的是曲面（或曲线）不依赖于它在三维空间中嵌入方式的某些性质。也就是说，它是曲面某些内在的、本质的几何属性。高斯用高斯曲率——两个主曲率的乘积，来表征曲面的这种属性（图3a）。如果一个曲面的高斯曲率为0，说明它本质上是平的，是可展曲面，如图3b所示。如果一个曲面的高斯曲率不为0，说明它本质上是不平的，是不可展曲面，如图3c所示。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">高斯曲率不为0的情形又有两种。正的高斯曲率对应于球面几何（图3c的下图），负的高斯曲率对应于马鞍面（图3c的上图）。马鞍面上的几何就是前面所介绍的罗巴切夫斯基几何，又被称为双曲几何。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.4546875" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYX0Kvxdna5z86slicj2xU3tHjvszlvNibic4KXcTlnzd9XLVkicjZARpJPiaA/640?wx_fmt=png" data-type="png" data-w="640" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYX0Kvxdna5z86slicj2xU3tHjvszlvNibic4KXcTlnzd9XLVkicjZARpJPiaA/640?wx_fmt=png" width="640" height="291" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYX0Kvxdna5z86slicj2xU3tHjvszlvNibic4KXcTlnzd9XLVkicjZARpJPiaA/640?wx_fmt=png" width="640" height="291"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图3：曲面的两个主曲率及高斯曲率</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<p class="amp-wp-6f36e09"></p>
+<section class="amp-wp-87ade05">3</section>
+<section class="amp-wp-44e0ad6"><span class="amp-wp-768e1f2"><strong class=" amp-wp-7940173">爬虫的几何</strong><strong class=" amp-wp-7940173"></strong></span></section>
+<p></p>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">可是，又该如何判定我们所面对的是哪一种几何呢？最简单的办法是测量曲面上一个三角形三个内角之和E=A+B+C。平面几何的E=180o，球面几何E>180o，双曲几何E<180o。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">一个观察者在自己生活的物理空间中所能够观察和测量到的几何性质，就是这个空间的内蕴性质。比如说，球面的内蕴性质，就是生活在球面上的2维爬虫感受到的几何性质。我们人类当然是3维的生物，不是什么2维爬虫。但是，因为我们的地球很大，我们的3维尺寸比起地球来说是很小的。因此，我们可以将自己设想为某种2维生物。比如，我们在地球上测量一个大三角形，就如图3b下中的球面三角形ABC，测地员将会发现，这个三角形的三个内角都是90度，因此，内角和E=270o，大于180度。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">图3b下所显示的是一个规则球面，它的空间弯曲程度到处都是一样的，但一般来说，空间的弯曲程度不一定处处相同，数学家们用“平</span></section>
+<p></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">行移动”的概念来研究空间的弯曲程度。</span><br></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">什么是平行移动？简单地说，就是将一个矢量平行于自身的方向沿着空间里的一条曲线移动。像汽车上的陀螺仪那样，汽车沿公路运动时，陀螺仪总是平行于自己原来的指向。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">在物理上，让大家更感兴趣的问题是：一个矢量平行移动一圈后再回到原来出发点的时候是否会有所改变？比如说，跟着汽车转了一圈的陀螺仪，指的方向是否还和原来出发时的方向一样？也许你不加思索就会给出答案：当然没有什么改变。但这是因为你习惯了用欧氏空间的直角坐标系来思考问题，从而轻易得出这个结论。如果我们假设地面是一个欧几里德平面，陀螺仪平行移动回到原处时，方向的确不会改变。但是，每个人都知道，地球是一个球体，所以我们实际上是生活在一个球面上。那么，如果从球面（或者别的曲面）的角度来研究这个问题，又会得出什么样的结论呢？</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">所谓“平行移动”的意思是说，在移动矢量的时候，尽可能保持矢量方向相对于自身没有旋转。好比一个女孩平行地前进、后退、左右移动，只要她的身体没有扭动，就叫平行移动。这样，当她移动一周回到出发点的时候，她认为她应该和原来出发时面对着同样的方向。如果她是在平面上移动的话，她的这个想法是正确的。但是，假如她是在球面上移动的话，她将发现自己面朝的方向可能不一样了！出发时她的脸朝左，回来时却是脸朝前，如图4b。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">假如将女孩面对的方向用一个箭头（矢量）来表示。图4a所示的是一个矢量在莫比乌斯带上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到10，也就是回到原来的出发位置时，得到的矢量和原来的反向。图4b中所示是球面上的平行移动，当矢量从位置1出发，沿着数字1、2、3……一直移动到7，也就是回到原来的出发位置时，得到的矢量和原来的矢量垂直。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.4421553090332805" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXYsUGshOKFZt2Odp7z8iaficibQCNoYTy9VNCY9vichial5iaFjXYkBgs78JA/640?wx_fmt=png" data-type="png" data-w="631" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXYsUGshOKFZt2Odp7z8iaficibQCNoYTy9VNCY9vichial5iaFjXYkBgs78JA/640?wx_fmt=png" width="631" height="279" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXYsUGshOKFZt2Odp7z8iaficibQCNoYTy9VNCY9vichial5iaFjXYkBgs78JA/640?wx_fmt=png" width="631" height="279"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图4：（a）莫比乌斯带上的平行移动（b）球面上的平行移动</span></section>
+<section class="amp-wp-31ab496"><span class="amp-wp-bbf1480"><br></span></section>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">上面的两个例子说明，矢量在曲面上平行移动一周之后，不一定还能保持原来的方向，可能与出发时有所差别。这个差别正好与曲面的高斯曲率有关系，反映了曲面内在的弯曲程度。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<p class="amp-wp-6f36e09"></p>
+<section class="amp-wp-87ade05">4</section>
+<section class="amp-wp-44e0ad6"><span class="amp-wp-768e1f2"><strong class=" amp-wp-7940173">阿扁的世界</strong><strong class=" amp-wp-7940173"></strong></span></section>
+<p></p>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">下面，我们研究锥面上的平行移动，看看锥面与“真正的平面”有何不同。让我们想象有一个极小极扁的平面生物“阿扁”，生活在一张平坦的纸上，如图5a。阿扁使用直角坐标系对他的平坦世界进行观察和测量。他感受到的几何，是标准的欧几里德几何：三角形的三个内角之和等于180度；过不在同一直线上的三点，可以作一个圆；直角三角形的两条直角边的长度的平方和等于斜边长的平方……</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">阿扁学过微积分，还会计算许多图形的面积。阿扁经常在他的平坦世界中驾车旅行，绕行一圈回来之后，他车上的陀螺仪方向总是与原来方向相同，如图5a所示的那样。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">有一天，来了一个3维世界的小生物“阿三”。阿三看中了阿扁生活的这张纸，并且灵感突发，把这张纸剪去了一个角。比如说，像图5b中图所画的情形，剪去了一个45度的角，然后将剩余图形的两条剪缝黏在一块儿，做成了一个图5c所示的锥面。阿扁是个2维小爬虫，他看不见阿三，也感觉不到阿三的存在，更不可能知道阿三对他的世界干了些什么。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">不过，生活在纸上的阿扁并没有立即感到他的世界有什么变化。照样是欧氏几何，他画的直角坐标轴仍然在那儿。当他拿着他的（平面）陀螺仪，沿着他的小圆圈（如图5b中的C1那样）旅行，进而回到原来出发点的时候，陀螺仪的指向和原来一样。这说明，矢量平行移动的规律好像没有任何改变。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-3614448"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.29127725856697817" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXR5B1dMRtlXkXjiaISKH70lTjz1aFSz1x6usbXicOGwt2FbXIW763oXJQ/640?wx_fmt=png" data-type="png" data-w="642" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXR5B1dMRtlXkXjiaISKH70lTjz1aFSz1x6usbXicOGwt2FbXIW763oXJQ/640?wx_fmt=png" width="642" height="187" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXR5B1dMRtlXkXjiaISKH70lTjz1aFSz1x6usbXicOGwt2FbXIW763oXJQ/640?wx_fmt=png" width="642" height="187"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图5：阿扁的世界</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">阿扁的技术越来越高，胆子越来越大，旅游路线也走得越来越远。他逐渐发现了一些问题。比如说，当他沿着图5b中所示的C2那样的曲线走一圈回到原出发点时，他的陀螺仪的指向和出发时有了一个45度的角度差。这个新发现令阿扁既激动又困惑。于是，他进行了更多的带陀螺仪绕圈实验，绕了好多个不同的圈，终于总结出了一个规律：他生活的世界中，在右图中所标记的点O附近，是一个特殊的区域，只要他移动的闭曲线中包含了这个区域，陀螺仪的指向就总是和原来出发时的方向相差45度左右。如果行走的圈没有包括这个点的话，便不会使陀螺仪的方向发生任何改变。当时的阿扁，技术还不够精确，还没有搞清楚这个区域是多大，况且，他也有点害怕那块神秘兮兮的地方，不敢在那儿逗留过久，作太多的探索，以防遭遇生命危险。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">阿扁喜欢读书学习新知识，他从一本数学书中了解到，如果陀螺仪走一圈方向改变的话，说明你所在的空间是弯曲的。因此，通过对多次实验结果的总结归纳，阿扁提出一个假设：他所在的世界基本是平坦的，除了那块该死的区域之外！</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">再回到我们的世界来看待球面几何。陀螺仪走一圈后方向改变的值，叫做平行移动一周后产生的角度亏损，可用θ表示。角度亏损与空间的高斯曲率有关，一个标准球面上的高斯曲率处处相等。因此，如果有某种生活在球面上的扁平生物的话，他沿任何曲线绕行一圈后，陀螺仪方向都会有变化，而且，角度亏损θ是不固定的，它与绕行回路所包围的球面面积A成正比，其比例系数对球面而言是一个定植，就等于曲面的高斯曲率α。角度亏损θ = α*A。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">如果研究对象不是标准的球面，而是一般的2维曲面，上述“角度亏损θ正比于区域面积A”的结论在大范围内不能成立，但在2维曲面某个给定的P点附近，当绕行的回路趋近于无限小的时候仍然成立。也就是说：无限小的角度亏损dθ将正比于无限小的区域面积dA：dθ = α*dA。这时的α= dθ/dA，便是曲面上这一点的曲率。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">阿扁也想通了这些道理，明白他的世界不是球面，而大多数地方都是平面，只有一点不对，那一点附近的空间是弯曲的。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">阿扁将上面有关曲面曲率与无限小平行移动角度亏损的关系（α= dθ/dA）用到锥面。因为锥面是一个可展曲面。它所有地方的几何都与平面上的欧几里德几何一样，除了那个顶点以外。也就是说，锥面上每个点的曲率都等于0，但顶点是一个曲率等于无穷大的奇点。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">有了这些数学知识，阿扁恍然大悟：原来我生活的世界是一个锥面！</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-20b6f83"><amp-img class="amp-wp-enforced-sizes" data-ratio="0.5362068965517242" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXXhMTIXfOFxXrt9vicNibzLy1m2HAe4q6D5vQgJRzQJZjeayhsFc9ibTAQ/640?wx_fmt=png" data-type="png" data-w="580" style="" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXXhMTIXfOFxXrt9vicNibzLy1m2HAe4q6D5vQgJRzQJZjeayhsFc9ibTAQ/640?wx_fmt=png" width="580" height="311" layout="intrinsic"><noscript><img class="" style src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/951TjTgiabkw6JuoXJ8xXNickID6pANpYXXhMTIXfOFxXrt9vicNibzLy1m2HAe4q6D5vQgJRzQJZjeayhsFc9ibTAQ/640?wx_fmt=png" width="580" height="311"></noscript></amp-img></section>
+<section class="amp-wp-d8cd23f"><span class="amp-wp-ce139f2">图6：锥面和球面上的平行移动</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">人类是3维空间的生物，我们的世界是3维的。就像前面所描述的“阿三”，当然要比那个可怜的平面生物“阿扁”高明多了。阿扁反复测量了许多次，用他的2维扁平脑袋，作了极端困难的“抽象”，才弄明白了他的锥面世界！而我们在3维世界中看2维就能看得非常清楚了：锥面是一个可展曲面，或者说，本来就是由阿三将一张平面的“纸”剪去了一个角而粘成的。因此，我们瞄一眼就知道，阿扁的锥面世界处处都是平坦的，除了那一个顶点O之外。</span></section>
+<p class="amp-wp-b6b9a55"><br class="amp-wp-7940173"></p>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9">在锥面上作平行移动时，为什么当移动路径包括了顶点O的时候就会有角度亏损呢？从我们的3维世界更容易理解这个问题。在图6a中，我们将锥面从顶点剪开后重新展开还原成一个平面图形。这个“剪去一角的平面图形”与整个欧几里德平面的区别在于，图中的A和B是锥面上的同一点，因此，直线OA和OB需要被理解为是同一条线。这样，我们就明白了角度亏损的来源。</span></section>
+<section class="amp-wp-31ab496"><span class="amp-wp-d2f19d9"><br></span></section>
+<p></p>
+<section class=" amp-wp-c678c93" data-style-type="5" data-tools="新媒体排版" data-id="2590675">
+<p class=" amp-wp-be328d1"><strong class="amp-wp-b9dc8b4"><span class="amp-wp-a95a9bb"><strong class="amp-wp-84b4eab">— THE END —</strong></span></strong></p>
+</section>
+<section class=" amp-wp-c678c93" data-style-type="5" data-tools="新媒体排版" data-id="2625487">
+<section class=" amp-wp-c1b58e0"></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2697295">
+<section class=" amp-wp-c1b58e0"><amp-img class="amp-wp-enforced-sizes amp-wp-8386ba0" data-ratio="0.1871508379888268" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" data-type="png" data-w="358" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67" layout="intrinsic"><noscript><img class=" amp-wp-8386ba0" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67"></noscript></amp-img></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625492">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2617381">
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485303&idx=1&sn=f193c206e8b295ef3a110eefc136334d&chksm=ebe9cdcadc9e44dc54e5df48568ab39afd4bd9b80c45c2cb3703acee933645b3108897fe817e&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">越南71岁的工程师，给全世界的机械人送了一份大礼</a></span><br></section>
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485303&idx=2&sn=da0b6cd881580a4a60db0e07894b6d78&chksm=ebe9cdcadc9e44dc7cf1ea7ea4068ad959ab7098f63c3f667deb003062a5dd4c110f78d07980&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">《庆余年》范闲殿前背诗合集：中华诗词真是太美了！</a></span></section>
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485305&idx=1&sn=86b039db563a60dbb494136b11a30ef5&chksm=ebe9cdc4dc9e44d29e6e4e8f5b6173650048aa80f1a1e6b3ba2a95301ad4d31e21032c8309ec&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">马克思的数学手稿</a></span></section>
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485056&idx=2&sn=92f735f3b3ee3445b7c166129b18a7a9&chksm=ebe9cc3ddc9e452ba9cf6f78bb20bb2e14a86fde39a3d9528d32adc0aa4ec73d9ca31b107df3&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">斯坦福大学教育学院院长：学习本身就是一门学问</a></span></section>
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485119&idx=1&sn=affbb1602f620c3df6e3d3c1051387c6&chksm=ebe9cc02dc9e4514ad6f7e59d5148cb7770bd8f72c4ffe173dfe91a116763fd2228362b3dadc&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">施一公：没有高考，就没有一批非常优秀的社会精英从农村走出来</a></span></section>
+<section class=" amp-wp-7f87e7b"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485256&idx=2&sn=882c7713d3c74f991cc976b896e6719e&chksm=ebe9cdf5dc9e44e327af826a002a6b155392f4a44c7af4c845712443a0a73117db0e1e1fe714&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer" class="amp-wp-66ea78b">这回真要涨工资了！国务院教育督导办：2020年把义务教育教师平均工资收入水平不低于当地公务员作为督导检查重点</a></span></section>
+</section>
+</section>
+</section>
+</section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2834228">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2800910"></section>
+</section>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/286/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

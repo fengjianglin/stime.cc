@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html amp lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/285/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/ermopMHneadMlkR8BnV3KEe4CCQoofloYQauQyxDQu9ZlTOPj0P47hx54o20hRK65yzGibRDFx6Pd8VUHSgTEyQ/640?wx_fmt=gif"},{"@type":"WebPage","@id":"https://stime.cc/article/285/#webpage","url":"https://stime.cc/article/285/","inLanguage":"en-US","name":"\u201c\u82e6\u74dc\u201d\u6570\u5b66\u5bb6\u67ef\u897f\u7684\u6545\u4e8b\u53ca\u67ef\u897f\u4e2d\u503c\u5b9a\u7406 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/285/#primaryimage"},"datePublished":"2020-01-19T02:51:52+00:00","dateModified":"2020-01-19T02:51:52+00:00"},{"@type":"Article","@id":"https://stime.cc/article/285/#article","isPartOf":{"@id":"https://stime.cc/article/285/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u201c\u82e6\u74dc\u201d\u6570\u5b66\u5bb6\u67ef\u897f\u7684\u6545\u4e8b\u53ca\u67ef\u897f\u4e2d\u503c\u5b9a\u7406","datePublished":"2020-01-19T02:51:52+00:00","dateModified":"2020-01-19T02:51:52+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/285/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/285/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+	<title>“苦瓜”数学家柯西的故事及柯西中值定理 - S时代</title>
+		<link rel="canonical" href="https://stime.cc/article/285/">
+	<script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 640px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://stime.cc/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ac5570e{margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3614448{margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-93b8ea5{display:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c41d69d{white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{font-size:16px;text-align:center;caret-color:#333;max-width:100%;letter-spacing:.544px;background-color:#fff;font-family:微软雅黑}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c44cf1c{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9af8ac0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5bb8ef1{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;font-family:Arial;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{max-width:100%;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-01bc5a7{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{max-width:100%;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5a1efc8{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-03c7ebe{padding:10px;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;line-height:25.6px;letter-spacing:.544px;min-height:0px;background-image:none;background-clip:border-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-width:0px;border-style:none;border-color:#3e3e3e;bottom:auto;display:flex;float:none;height:auto;left:auto;max-height:none;min-width:0px;text-align:justify;top:auto;z-index:auto;visibility:visible;clear:none}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{color:#3e3e3e;max-width:100%;width:120px;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-39be138{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{margin-bottom:10px;padding-right:10px;padding-left:10px;max-width:100%;box-sizing:border-box;height:30px;background-color:#505150;line-height:30px;border-radius:10px;display:inline-block;color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8fb30d2{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9cf1ce8{font-size:13px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{max-width:100%;width:120px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6149c84{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{margin-right:auto;margin-left:auto;padding-bottom:120px;max-width:100%;box-sizing:border-box;border-radius:100%;overflow:hidden;width:120px;height:0px;background-image:url("https://mmbiz.qpic.cn/mmbiz_jpg/pSqFmkOFya0U8BgAuI1JybObB7Q9Q4PgboZOQlzpxxUGGxExfgCnfXibCzic5T6JSknDib5TEnq38ibjeF9BudsLibw/640?wx_fmt=jpeg");background-position:50% 50%;background-size:cover}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-45f644e{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{margin-left:10px;padding-left:10px;max-width:100%;box-sizing:border-box;border-left:1px solid #505150}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b60cbb1{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{max-width:100%;color:#f79646;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d763cf{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0ad1dbc{color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{max-width:100%;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c612488{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{color:#3e3e3e;margin-bottom:10px;max-width:100%;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f60fd0{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{max-width:100%;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a534d8b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ca7adb3{max-width:100%;color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-60fc92b{color:#888;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0e751ee{color:#888;font-size:14px;letter-spacing:.544px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{font-size:14px;letter-spacing:.544px;max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd9f9ee{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bdb20a3{color:#f79646}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5de4178{color:#3e3e3e}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d411caf{font-size:14px;color:#888}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-91cf6c7{box-sizing:border-box;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-18bb93d{display:inline-block;width:100%;vertical-align:top;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6bdd9b3{margin-top:10px;margin-bottom:10px;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7adc439{display:inline-block;width:100%;box-shadow:#ccc 2px 2px 2px;border-color:#070707;border-style:solid;border-width:2px;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-267b761{box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5ebd419{padding:10px;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a535824{text-align:justify;font-size:14px;letter-spacing:3px;line-height:2;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2da4b68{padding:10px;max-width:100%;box-sizing:border-box;text-align:center;color:#fff;font-size:19px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2da4b68{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-215add3{margin-top:19px;margin-bottom:19px;max-width:100%;box-sizing:border-box;min-height:1em;line-height:1.75em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-215add3{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a497a41{max-width:100%;letter-spacing:1px;color:#000;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a497a41{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8dff27b{color:#3e3e3e;font-size:16px;white-space:normal;caret-color:#3e3e3e;max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8dff27b{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a473a7c{margin-top:10px;margin-bottom:10px;max-width:100%;box-sizing:border-box;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-a473a7c{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2a260d3{box-sizing:border-box;vertical-align:middle}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2a260d3{overflow-wrap:break-word;visibility:visible;width:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6c4368b{max-width:100%;box-sizing:border-box;vertical-align:middle;display:inline-block}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-6c4368b{overflow-wrap:break-word;overflow:hidden}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2d24f42{margin:19px 8px 15px;max-width:100%;box-sizing:border-box;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2d24f42{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4351bfc{margin:10px 8px 15px;max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4351bfc{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b6f8639{padding:2px 3px;max-width:100%;box-sizing:border-box;width:670px;background-image:url("https://mmbiz.qpic.cn/mmbiz_gif/ic8UeUFfn618UDAia62yUgibriautibKGYdD0MhEqG8qOiajeMHF7abhmQELQxTrCwOicCodEaycb1ItHrx9VESxdgLow/640?wx_fmt=gif");line-height:1.6;background-attachment:scroll;vertical-align:top;display:inline-block;background-size:auto;background-position:0% 0%;background-repeat:repeat repeat}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b6f8639{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-07cba76{margin-top:1px;margin-bottom:1px;max-width:100%;box-sizing:border-box;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-07cba76{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fdb45aa{padding:10px;border-width:1px;border-style:solid;border-color:transparent;width:664.02px;display:inline-block;max-width:100%;box-sizing:border-box;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fdb45aa{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-12429e6{max-width:100%;box-sizing:border-box;text-align:left}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-12429e6{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-998434e{margin-top:16px;margin-bottom:16px;max-width:100%;box-sizing:border-box;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-998434e{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-713f39c{padding:3px;border-width:3px;border-style:solid;border-color:black;max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-713f39c{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-df48fb9{padding:10px;border-width:1px;border-style:solid;border-color:#808080;max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-df48fb9{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-644cc2b{max-width:100%;box-sizing:border-box;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-644cc2b{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-da846b9{max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-da846b9{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e4b9276{margin:16px 8px 15px;max-width:100%;box-sizing:border-box;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e4b9276{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4679c12{max-width:100%;box-sizing:border-box;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4679c12{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-11994db{max-width:100%;box-sizing:border-box;width:670px;transform:rotate(0deg)}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-11994db{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b77ed08{margin-top:-4px;padding:10px;max-width:100%;box-sizing:border-box;background-color:#efefef}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b77ed08{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ece9824{margin:16px 8px 15px;max-width:100%;box-sizing:border-box;min-height:1em;text-align:justify;line-height:1.75em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ece9824{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2c8a753{max-width:100%;box-sizing:border-box;vertical-align:middle;display:inline-block}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2c8a753{word-wrap:break-word;overflow:hidden}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5212951{box-sizing:border-box;vertical-align:middle}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5212951{word-wrap:break-word;visibility:visible;width:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bdcf598{max-width:100%;box-sizing:border-box;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-bdcf598{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dd16470{margin-top:10px;margin-bottom:10px;max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dd16470{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ad3bcca{padding:10px;max-width:100%;box-sizing:border-box;background-color:#efefef}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ad3bcca{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-89aa967{letter-spacing:1px;max-width:100%;color:#0052ff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-89aa967{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-80585c8{max-width:100%;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-80585c8{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-602a4c9{margin:16px 8px 15px;max-width:100%;box-sizing:border-box;min-height:1em;line-height:1.75em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-602a4c9{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0684e72{margin-top:-4px;max-width:100%;box-sizing:border-box;width:670px;text-align:right}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0684e72{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cee61db{max-width:100%;box-sizing:border-box;width:50px;height:4px;background-color:#f96e57;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cee61db{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-df36bc6{max-width:100%;box-sizing:border-box;caret-color:#3e3e3e;color:#3e3e3e;font-size:16px;white-space:normal}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-df36bc6{word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0e5ffdd{box-sizing:border-box;word-wrap:break-word;visibility:visible;width:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7e0732a{margin:15px 8px;max-width:100%;min-height:1em;background-color:#fff;font-size:18px;line-height:1.75em;text-align:justify}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7e0732a{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-54c929a{max-width:100%;min-height:1em;background-color:#fff;font-size:18px;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-54c929a{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd8d83a{box-sizing:border-box;word-wrap:break-word;visibility:visible;width:600px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9e2a6bf{font-size:18px;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9e2a6bf{box-sizing:border-box;word-wrap:break-word;visibility:visible;width:558px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b27cb50{max-width:100%;min-height:1em;line-height:1.75em;text-align:center;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b27cb50{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1cd9153{max-width:100%;font-weight:700;color:#f00;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1cd9153{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b9836d8{margin:10px 8px 15px;max-width:100%;box-sizing:border-box;line-height:1.75em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b9836d8{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fb3324d{letter-spacing:1px;max-width:100%;color:#333;font-family:arial,宋体,sans-serif;text-indent:28px;background-color:#fff}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fb3324d{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-18ce3e5{letter-spacing:1px;max-width:100%;background-color:#fff;color:#333;font-family:arial,宋体,sans-serif;text-indent:28px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-18ce3e5{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d59516{max-width:100%;background-color:#fff;color:#333;font-family:arial,宋体,sans-serif;text-indent:28px;letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-9d59516{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-26150a0{max-width:100%;min-height:1em}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-26150a0{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1c242f0{border-width:0px;border-style:initial;border-color:initial;margin-right:auto;margin-left:auto;display:inline-block}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-1c242f0{width:220px;visibility:visible;overflow-wrap:break-word;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e92986a{border-width:0px;border-style:initial;border-color:initial;margin-right:auto;margin-left:auto;display:block}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e92986a{width:220px;visibility:visible;overflow-wrap:break-word;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2906057{max-width:100%;font-weight:700;color:#333;font-family:arial,宋体,sans-serif;text-indent:28px;background-color:#fff;letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2906057{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0c1632b{font-size:18px;max-width:100%;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0c1632b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-499df8f{font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b1d8568{max-width:100%;color:#f00}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-b1d8568{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-765a2e3{max-width:100%;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-765a2e3{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ea1de6d{letter-spacing:1px;max-width:100%;color:#000}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-ea1de6d{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5d712ad{font-size:18px;max-width:100%;line-height:1.75em;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-5d712ad{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0f822c9{letter-spacing:1px;max-width:100%;font-weight:700}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4cf28e5{max-width:100%;min-height:1em;text-align:center;line-height:1.75em;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-4cf28e5{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3ac0a74{max-width:100%;min-height:1em;line-height:1.75em;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3ac0a74{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c0f4243{font-size:18px;max-width:100%;line-height:1.75em;text-align:justify;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c0f4243{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7940173{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3bf5968{letter-spacing:1px;max-width:100%}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-3bf5968{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-52efee8{margin-bottom:10px;max-width:100%;min-height:1em;line-height:1.75em;text-align:justify}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-52efee8{box-sizing:border-box;word-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f16a16f{max-width:100%;min-height:1em;line-height:1.75em;text-align:justify;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-f16a16f{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-14315d6{max-width:100%;min-height:1em;text-align:justify;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-14315d6{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-86077b2{letter-spacing:1px;max-width:100%;font-weight:700}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-86077b2{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0a82b09{max-width:100%;min-height:1em;text-align:center;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-0a82b09{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-160150c{max-width:100%;min-height:1em;margin-left:8px;margin-right:8px;margin-bottom:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-160150c{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cfca6c1{border-width:0px;border-style:initial;border-color:initial}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cfca6c1{width:auto;visibility:visible;overflow-wrap:break-word;box-sizing:border-box}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-d2f19d9{letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7b418d4{margin:10px 8px 15px;max-width:100%;box-sizing:border-box;text-align:center}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-7b418d4{overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-523938b{max-width:100%;letter-spacing:1px;font-size:15px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-523938b{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f24dc3{white-space:normal;max-width:100%;min-height:1em;letter-spacing:.544px;background-color:#fff;font-family:微软雅黑;text-align:center;widows:1;font-size:16px;line-height:25.6px;color:#696969}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-2f24dc3{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdee54d{max-width:100%;letter-spacing:1px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cdee54d{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd320b9{max-width:100%;font-size:12px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-fd320b9{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-238198f{max-width:100%;color:#888;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-238198f{box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-c004a24{margin:0px auto;text-align:center;width:210px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dc3ee2b{margin:0px auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-dc3ee2b{visibility:visible;width:358px;height:auto}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e770fc3{max-width:100%;letter-spacing:.544px;white-space:normal;min-height:1em;font-size:16px;widows:1;color:#3e3e3e;font-family:微软雅黑;line-height:1.75em;margin-left:8px;margin-right:8px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-e770fc3{box-sizing:border-box;overflow-wrap:break-word}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{max-width:100%;color:#ff4c00;letter-spacing:1px;font-size:14px}:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-cbf3568{box-sizing:border-box;overflow-wrap:break-word}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="https://stime.cc/">
+										<amp-img src="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				S时代			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">“苦瓜”数学家柯西的故事及柯西中值定理</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e786821a74ef0467825a7d60183307bc?s=24&d=mm&r=g" alt="S时代" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">S时代</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-01-19T10:51:52+00:00">
+		3 mins ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<section class="xmteditor amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+<section class="amp-wp-ac5570e">
+<section class="xmteditor amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+<section class="xmteditor amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section>
+<section>
+<section>
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2856246">
+<section class=" amp-wp-3614448">
+<section class=" amp-wp-93b8ea5" data-tools="新媒体管家" data-label="powered by xmt.cn"></section>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2549807">
+<section class=" amp-wp-c41d69d">
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class>
+<section>
+<section class="amp-wp-c44cf1c">
+<section class="amp-wp-9af8ac0">
+<section class="amp-wp-01bc5a7">
+<section class="amp-wp-9af8ac0">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-9af8ac0">
+<section class=" amp-wp-5bb8ef1">
+<section class=" amp-wp-01bc5a7">
+<section class=" amp-wp-5a1efc8">
+<section class="amp-wp-03c7ebe">
+<section data-width="120px" class="amp-wp-39be138">
+<section class=" amp-wp-8fb30d2" data-brushtype="text"><span class="amp-wp-9cf1ce8">数学算法俱乐部</span></section>
+<section class="amp-wp-6149c84">
+<section data-role="circle" data-width="100%" class="amp-wp-45f644e"></section>
+</section>
+</section>
+<section class=" amp-wp-b60cbb1">
+<p dir="ltr" class=" amp-wp-2f60fd0"><span class="amp-wp-9d763cf">日期</span><span class="amp-wp-a534d8b">：</span><span class="amp-wp-0e751ee">2020年01月03日</span></p>
+<p dir="ltr" class=" amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">正文共</span>：</span><span class="amp-wp-0ad1dbc"><span class="amp-wp-a534d8b">3078</span><span class="amp-wp-c612488">字72</span></span><span class="amp-wp-0e751ee">图</span></p>
+<p class="amp-wp-2f60fd0"><span class="amp-wp-a534d8b"><span class="amp-wp-ca7adb3">预计阅读时间</span>：<span class="amp-wp-60fc92b">8</span></span><span class="amp-wp-0e751ee">分钟</span></p>
+<p><span class="amp-wp-fd9f9ee"><span class="amp-wp-bdb20a3">来源</span><span class="amp-wp-5de4178">:</span></span><span class="amp-wp-d411caf">数苑校模</span></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<p></p>
+</section>
+<section class="xmt-style-block" data-style-type="2" data-tools="新媒体排版" data-id="9136">
+<section class=" amp-wp-267b761">
+<section class="amp-wp-91cf6c7">
+<section class=" amp-wp-18bb93d">
+<section class=" amp-wp-267b761">
+<section class=" amp-wp-6bdd9b3">
+<section class=" amp-wp-7adc439">
+<section class=" amp-wp-267b761">
+<section class=" amp-wp-5ebd419">
+<section class=" amp-wp-a535824">
+<section class="amp-wp-8dff27b">
+<section class="amp-wp-da846b9">
+<section class="amp-wp-2da4b68">
+<p class="amp-wp-215add3"><span class="amp-wp-a497a41">在历史上，有一位数学家叫欧拉，他的徒弟叫拉格朗日，他徒弟的徒弟叫柯西。</span></p>
+<p class="amp-wp-215add3"><span class="amp-wp-a497a41">这个徒弟的徒弟虽然比不上他，但是还是写了些东西的做出了一些成就的，他….</span></p>
+<p class="amp-wp-215add3"><span class="amp-wp-a497a41">他的著作多达28卷</span></p>
+<p class="amp-wp-215add3"><span class="amp-wp-a497a41">承包了那个时期的数学公式的前缀…</span></p>
+<p class="amp-wp-215add3"><span class="amp-wp-a497a41">他开创了积分几何，首先证明了阶数超过了的矩阵有特征值，成功地建立了极限论，首先阐明了有关定积分的概念，并且用这种积分来研究多种多样的问题等等等等</span></p>
+</section>
+</section>
+</section>
+<section class="amp-wp-8dff27b">
+<section class="amp-wp-a473a7c">
+<section class="amp-wp-6c4368b"><amp-img class="__bg_gif amp-wp-enforced-sizes amp-wp-2a260d3" data-ratio="1.1896552" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/ermopMHneadMlkR8BnV3KEe4CCQoofloYQauQyxDQu9ZlTOPj0P47hx54o20hRK65yzGibRDFx6Pd8VUHSgTEyQ/640?wx_fmt=gif" data-type="gif" data-w="58" width="58" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/ermopMHneadMlkR8BnV3KEe4CCQoofloYQauQyxDQu9ZlTOPj0P47hx54o20hRK65yzGibRDFx6Pd8VUHSgTEyQ/640?wx_fmt=gif" height="69" layout="intrinsic"><noscript><img class="__bg_gif amp-wp-2a260d3" width="58" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_gif/ermopMHneadMlkR8BnV3KEe4CCQoofloYQauQyxDQu9ZlTOPj0P47hx54o20hRK65yzGibRDFx6Pd8VUHSgTEyQ/640?wx_fmt=gif" height="69"></noscript></amp-img></section>
+<section class="amp-wp-6c4368b"></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-2d24f42"><span class="amp-wp-499df8f">学大家就是…</span><br class="amp-wp-80585c8"></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-7b418d4">
+<section class="amp-wp-2c8a753"><amp-img data-ratio="1.33213" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneadYYcjmCnKKmEoJ7DA4zovq2ib7suYWSuRDu4H5ALIs6WOiaTcdq2ZvoQ3df4Zr6rpggtGicDPUAPib6g/640?wx_fmt=jpeg" data-type="jpeg" data-w="554" width="554" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneadYYcjmCnKKmEoJ7DA4zovq2ib7suYWSuRDu4H5ALIs6WOiaTcdq2ZvoQ3df4Zr6rpggtGicDPUAPib6g/640?wx_fmt=jpeg" height="738" class="amp-wp-enforced-sizes amp-wp-5212951" layout="intrinsic"><noscript><img width="554" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneadYYcjmCnKKmEoJ7DA4zovq2ib7suYWSuRDu4H5ALIs6WOiaTcdq2ZvoQ3df4Zr6rpggtGicDPUAPib6g/640?wx_fmt=jpeg" height="738" class=" amp-wp-5212951"></noscript></amp-img></section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-4351bfc">
+<section class="amp-wp-b6f8639">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-07cba76">
+<section class="amp-wp-fdb45aa">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-12429e6">
+<p class="amp-wp-998434e"><span class="amp-wp-d2f19d9">放错了….换一张严肃的</span><br class="amp-wp-80585c8"></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-7b418d4">
+<section class="amp-wp-2c8a753"><amp-img data-ratio="1.0733333" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneacDTXOna4Kb9caAzt3Vt2ExjcVVzuo4vVfM3bia8hvvPU8GNfvjPMgePVp1Y1nHJcJm8NVsRszPFCg/640?wx_fmt=jpeg" data-type="jpeg" data-w="300" width="300" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneacDTXOna4Kb9caAzt3Vt2ExjcVVzuo4vVfM3bia8hvvPU8GNfvjPMgePVp1Y1nHJcJm8NVsRszPFCg/640?wx_fmt=jpeg" height="322" class="amp-wp-enforced-sizes amp-wp-5212951" layout="intrinsic"><noscript><img width="300" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/ermopMHneacDTXOna4Kb9caAzt3Vt2ExjcVVzuo4vVfM3bia8hvvPU8GNfvjPMgePVp1Y1nHJcJm8NVsRszPFCg/640?wx_fmt=jpeg" height="322" class=" amp-wp-5212951"></noscript></amp-img></section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-dd16470">
+<section class="amp-wp-713f39c">
+<section class="amp-wp-df48fb9">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-644cc2b">
+<section class="amp-wp-e4b9276"><span class="amp-wp-499df8f"><strong class="amp-wp-80585c8"><span class="amp-wp-da846b9">奥古斯丁·路易斯·柯西</span></strong><strong class="amp-wp-80585c8"><span class="amp-wp-da846b9"></span></strong></span></section>
+<section class="amp-wp-e4b9276"><span class="amp-wp-499df8f"><strong class="amp-wp-80585c8"><span class="amp-wp-da846b9">Augustin Louis Cauchy</span></strong><strong class="amp-wp-80585c8"><span class="amp-wp-da846b9"></span></strong></span></section>
+<section class="amp-wp-e4b9276"><span class="amp-wp-4679c12">1789.8.21—-1857.5.23</span></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-dd16470">
+<section class="amp-wp-11994db">
+<section class="amp-wp-cee61db"></section>
+</section>
+<section class="amp-wp-b77ed08">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">柯西法国数学家、物理学家、天文学家。他1789年出生于巴黎，父亲是一位精通古典文学的律师，与当时法国的大数学家拉格朗日与拉普拉斯交往密切。</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">柯西少年时代的数学才华颇受这两位数学家的赞赏，并预言柯西日后必成大器。（拉格朗日后面也确实担任了他的老师）</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">1807年至1810年柯西在<strong class="amp-wp-80585c8">工学院</strong>学习，曾当过<strong class="amp-wp-80585c8">交通道路工程师</strong>。由于身体欠佳，接受了拉格朗日和拉普拉斯的劝告，放弃工程师而致力于纯数学的研究。</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">1821年柯西提出极限定义的方法，把极限过程用不等式来刻画，后经魏尔斯特拉斯改进，成为现在所说的柯西极限定义。</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">虽然柯西主要研究数学分析领域，但他在其它方面的研究成果也很丰富。</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">复变函数的微积分理论就是由他创立的。在代数方面、理论物理、光学、弹性理论方面，也有突出贡献。</span></section>
+<section class="amp-wp-ece9824"><span class="amp-wp-d2f19d9">柯西的数学成就不仅辉煌，而且数量惊人。<strong class="amp-wp-80585c8">柯西全集有27卷，其论著有800多篇</strong>，在数学史上是仅次于欧拉的多产数学家。</span></section>
+</section>
+</section>
+</section>
+<section class="amp-wp-80585c8">
+<section class="amp-wp-7b418d4">
+<section class="amp-wp-2c8a753"><amp-img data-ratio="1.0221239" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/ermopMHneadMlkR8BnV3KEe4CCQooflokjXQevumWURrnWAwvONrjfCdVLcWjfKnSsGZewiacPiaRn87zTibMHbpA/640?wx_fmt=png" data-type="png" data-w="226" width="226" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/ermopMHneadMlkR8BnV3KEe4CCQooflokjXQevumWURrnWAwvONrjfCdVLcWjfKnSsGZewiacPiaRn87zTibMHbpA/640?wx_fmt=png" height="231" class="amp-wp-enforced-sizes amp-wp-5212951" layout="intrinsic"><noscript><img width="226" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/ermopMHneadMlkR8BnV3KEe4CCQooflokjXQevumWURrnWAwvONrjfCdVLcWjfKnSsGZewiacPiaRn87zTibMHbpA/640?wx_fmt=png" height="231" class=" amp-wp-5212951"></noscript></amp-img></section>
+</section>
+</section>
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-bdcf598"></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-dd16470">
+<section class="amp-wp-ad3bcca">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">那么大致介绍了一些正经的，接下来就让我们聊些不正经的他的人生经历吧！(/≧▽≦)/</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">是这样的，即使是大佬，也一定会有黑历史，柯西也不例外。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">他以前的绰号都很奇怪，一个是“苦瓜”，一个是“脑筋劈哩啪啦叫的人”(意思就是神经病)</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">苦瓜从上面的表情包上可以看出一些端倪——小时候的柯西长得可太严肃了。他平常像一颗植物一样，静静啥也不说。如果说了什么，也就是很简短的那种，正常智商的人基本都无法理解他在说什么….</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">想也知道，和这种大佬沟通，随时都会感受到智商受辱的。于是小伙伴们都叫他“苦瓜”了。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">（实际上叫苦瓜一定是因为周围的人还是爱他的）</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">至于“脑筋劈哩啪啦叫的人”，是因为当时法国正在流行社会哲学，但是柯西闲着没事的时候看的课外书是《拉格朗日数学全集》、《效法基督》这种画风的….</span></section>
+</section>
+</section>
+</section>
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-80585c8">
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">而且当时他学的还是工科的道路规划，所以会被这么叫，也不奇怪了…</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">之前提到过，柯西的父亲是一位精通古典文学的律师…所以其实柯西除了理科工科厉害至极以外，文学修养也很高。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">因为柯西他是<strong class="amp-wp-80585c8">在学数学之前先学文学</strong>的啊</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">至于为什么呢？有这两种说法：</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">朗格朗日觉得柯西十分聪明，让他15岁以前不要学数学。原因是他有个朋友叫拉普拉斯，从小学数学很刻苦，不到40就死了，所以拉格朗日觉得太早学数学的天才容易夭折(朗格朗日后来跟朋友说的)。他相信柯西日后必然能成为大数学家，所以15岁才把柯西接到自己的别墅独自教育柯西（包养）。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">最后拉格朗日经常被柯西虐。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">不过这种说法戏谑的成分比较多，另一种说法就靠谱多了。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">当时拉格朗日名声很大人缘广名声好，柯西的父亲看柯西很有数学天赋，自己又认识拉格朗日，就找到他希望他教柯西数学。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">拉格朗日有识人智慧，他看了柯西之后，觉得他头脑不错，但心胸不大，所以叫他父亲让他先学文学，培养情操提升道德修养。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">简单来说就是先学文学修身养性。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">不过似乎很多年后柯西当上数学院长，真的有排挤他人的嫌疑，人们也确实对于他疏于对于培养后辈这一点上有所争议。（<span class="amp-wp-89aa967"><strong class="amp-wp-7940173">明日来读，柯西如何坑了两位天才数学家</strong></span>）</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">不过除了这一点，柯西还有一个在当时十分有争议的地方，这可能和他的文学修养不错有关。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">那就是：<strong class="amp-wp-80585c8">他太能写了！！！！甚至上演了巴黎纸贵的可怕情景。</strong></span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">柯西年轻的时候向巴黎科学院学报投论文，<strong class="amp-wp-80585c8">非常之快，非常之多</strong><strong class="amp-wp-80585c8"></strong></span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">而这些论文写出来肯定是要印刷的…印刷厂为了印制这些论文抢购了巴黎市所有纸店的存货，使得市面上纸张短缺，纸价大增，印刷厂成本上升，民不聊生，社会各界怨声载道…</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">于是科学院通过决议，以后发表论文每篇篇幅<strong class="amp-wp-80585c8">不得超过4页</strong>。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">柯西：我只是想要创作！</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">于是柯西不少长篇论文不得在本国发表，只能改投别国刊物。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">可喜可贺，可喜可贺。</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">不过并不是他所有的创作质量都很高，因此他还曾被人批评高产而轻率。所以这样看，也算是节约资源了吧x</span></section>
+<section class="amp-wp-602a4c9"><span class="amp-wp-d2f19d9">总而言之，金无赤足，人无完人。名人趣事最大的贡献就是让我们了解到他们和常人相似的可爱的一面。柯西先生已经与世长辞，身后功名也由后人评判。</span></section>
+</section>
+</section>
+</section>
+</section>
+<section class="amp-wp-0684e72">
+<section class="amp-wp-cee61db"></section>
+</section>
+</section>
+</section>
+<section class="amp-wp-df36bc6">
+<section class="amp-wp-7b418d4"></section>
+<section class="amp-wp-7b418d4"><span class="amp-wp-d2f19d9">前方高能转入正题</span></section>
+<section class="amp-wp-54c929a"><amp-img data-ratio="1.9933333333333334" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdRicdJgXVIaYzeqjAmJAWt8s9EPwDY77BTia8v2CPiayX3Jiaw7VvfA8WdA/640?wx_fmt=png" data-type="png" data-w="600" width="600" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdRicdJgXVIaYzeqjAmJAWt8s9EPwDY77BTia8v2CPiayX3Jiaw7VvfA8WdA/640?wx_fmt=png" height="1196" class="amp-wp-enforced-sizes amp-wp-0e5ffdd" layout="intrinsic"><noscript><img width="600" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdRicdJgXVIaYzeqjAmJAWt8s9EPwDY77BTia8v2CPiayX3Jiaw7VvfA8WdA/640?wx_fmt=png" height="1196" class=" amp-wp-0e5ffdd"></noscript></amp-img></section>
+<section class="amp-wp-7e0732a"><span class="amp-wp-523938b">拉格朗日中值定理的意思就是：连接图像上两个点 </span><span class="amp-wp-d2f19d9">A, B <span class="amp-wp-3bf5968">画一条线，要求画出的线每个点都连续可导，那么你画出的这条线中至少会有一个点处的切线是与连接</span> A, B <span class="amp-wp-3bf5968">的直线平行的。</span></span><span class="amp-wp-523938b"></span></section>
+<section class="amp-wp-7e0732a"><span class="amp-wp-523938b">我们可以用一个直观的例子说明这个中值定理的意思：</span></section>
+<section class="amp-wp-7e0732a"><span class="amp-wp-523938b">有一辆汽车加速行驶，用8秒时间将距离从0推进到200米，很容易算出这8秒钟内汽车的平均速度为25米/秒，那么在这8秒内一定有某一时刻汽车的速度正好是25米/秒。</span></section>
+<section class="amp-wp-54c929a"><amp-img data-ratio="0.7233333333333334" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdN80DVZRTicP5BTCIVqr0uG8PFIqlTNTKNBicfHpmK2frHO2nz42DKk5w/640?" data-type="png" data-w="600" width="600" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdN80DVZRTicP5BTCIVqr0uG8PFIqlTNTKNBicfHpmK2frHO2nz42DKk5w/640?" height="434" class="amp-wp-enforced-sizes amp-wp-fd8d83a" layout="intrinsic"><noscript><img width="600" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdN80DVZRTicP5BTCIVqr0uG8PFIqlTNTKNBicfHpmK2frHO2nz42DKk5w/640?" height="434" class=" amp-wp-fd8d83a"></noscript></amp-img></section>
+<section class="amp-wp-7b418d4"><amp-img data-croporisrc="http://mmbiz.qpic.cn/mmbiz_png/uD4MX8ts0hf5uIGqXsmiaIrG3cc24ngMdj3xSsXWibAOoss4pGHrD9QntFAdJK5HCg8ibD4xS9vpHNPteXCK2SNGA/640?wx_fmt=png" data-cropx1="0" data-cropx2="600" data-cropy1="0" data-cropy2="1341.9354838709676" data-ratio="2.235" data-s="300,640" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrTWVKNkgnBTHJuqZbAx4xc2pc37EX19FYjUwe9qJAQS19qFKwPBg9A/640?wx_fmt=jpeg" data-type="jpeg" data-w="600" width="558" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrTWVKNkgnBTHJuqZbAx4xc2pc37EX19FYjUwe9qJAQS19qFKwPBg9A/640?wx_fmt=jpeg" height="1247.13" class="amp-wp-enforced-sizes amp-wp-9e2a6bf" layout="intrinsic"><noscript><img width="558" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrTWVKNkgnBTHJuqZbAx4xc2pc37EX19FYjUwe9qJAQS19qFKwPBg9A/640?wx_fmt=jpeg" height="1247.13" class=" amp-wp-9e2a6bf"></noscript></amp-img></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9"><span class="amp-wp-86077b2">柯西中值定理</span>是拉格朗日中值定理的推广，是微分学的基本定理之一。其几何意义为，用参数方程表示的曲线上至少有一点，它的切线平行于两端点所在的弦。该定理可以视作在参数方程下拉格朗日中值定理的表达形式。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9">柯西中值定理粗略地表明，对于两个端点之间的给定平面弧，至少有一个点，弧的切线通过其端点平行于切线。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9"><br></span></section>
+<section class="amp-wp-b27cb50"><span class="amp-wp-1cd9153">与拉氏定理的联系</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9">在柯西中值定理中，若取g(x)=x时，则其结论形式和拉格朗日中值定理的结论形式相同。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9">因此，拉格朗日中值定理为柯西中值定理的一个特例；反之，柯西中值定理可看作是拉格朗日中值定理的推广。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9"><strong class="amp-wp-7940173">证明</strong><strong class="amp-wp-7940173"></strong></span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9">可构造辅助函数</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9"> </span><amp-img data-ratio="0.0425531914893617" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicBpkcCiavb6q6GHzx3N5AYUHiaDoHibMoY3agDFtOaPn3HuEqsjDPc2Qw/640?wx_fmt=png" data-type="png" data-w="423" height="18" title="" width="423" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicBpkcCiavb6q6GHzx3N5AYUHiaDoHibMoY3agDFtOaPn3HuEqsjDPc2Qw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="423" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicBpkcCiavb6q6GHzx3N5AYUHiaDoHibMoY3agDFtOaPn3HuEqsjDPc2Qw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ， </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfE5tZMbPWc1NYs5HNMibfJnzQKTvexfzaS5auyFe5Dur20LKvltR0icg/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfE5tZMbPWc1NYs5HNMibfJnzQKTvexfzaS5auyFe5Dur20LKvltR0icg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfE5tZMbPWc1NYs5HNMibfJnzQKTvexfzaS5auyFe5Dur20LKvltR0icg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 在 </span><amp-img data-ratio="0.5483870967741935" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" data-type="png" data-w="31" height="17" title="" width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="17" title width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 上连续，在 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 内可导，且有 </span><amp-img data-ratio="0.1651376146788991" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLP3aPJ6C7ia79fjHzbeLF1icRnKeJMia6Fzc7WrBym6YUEsIzKasepkzSg/640?wx_fmt=png" data-type="png" data-w="109" height="18" title="" width="109" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLP3aPJ6C7ia79fjHzbeLF1icRnKeJMia6Fzc7WrBym6YUEsIzKasepkzSg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="109" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLP3aPJ6C7ia79fjHzbeLF1icRnKeJMia6Fzc7WrBym6YUEsIzKasepkzSg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-d2f19d9">由罗尔定理可知，存在 </span><amp-img data-ratio="0.3" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL3ju9bGaHaNB39qJRCbOYVyp78ianmdAOGyWhGibqYhAVIxqWibOw27e4w/640?wx_fmt=png" data-type="png" data-w="60" height="18" title="" width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL3ju9bGaHaNB39qJRCbOYVyp78ianmdAOGyWhGibqYhAVIxqWibOw27e4w/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL3ju9bGaHaNB39qJRCbOYVyp78ianmdAOGyWhGibqYhAVIxqWibOw27e4w/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，使得 </span><amp-img data-ratio="0.27692307692307694" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLFThhIDB2FLDClCsLHUrvQiaibFNbOlR2w7kFVbocRt2iaIiba8olEjNCpg/640?wx_fmt=png" data-type="png" data-w="65" height="18" title="" width="65" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLFThhIDB2FLDClCsLHUrvQiaibFNbOlR2w7kFVbocRt2iaIiba8olEjNCpg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="65" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLFThhIDB2FLDClCsLHUrvQiaibFNbOlR2w7kFVbocRt2iaIiba8olEjNCpg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，即 </span><amp-img data-ratio="0.06462585034013606" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLV8DggibXpsIfwaJxYbUmWWEJJ7NQeibk1iceicU1Vic5tjUyAyNntBTyxUQ/640?wx_fmt=png" data-type="png" data-w="294" height="19" title="" width="294" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLV8DggibXpsIfwaJxYbUmWWEJJ7NQeibk1iceicU1Vic5tjUyAyNntBTyxUQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="19" title width="294" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLV8DggibXpsIfwaJxYbUmWWEJJ7NQeibk1iceicU1Vic5tjUyAyNntBTyxUQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，又 </span><amp-img data-ratio="0.3114754098360656" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLyicZMIz4R96bnXsiaicfQESMl47qs9GfCUAYz5XInDPOibGEwxmzaPKOUA/640?wx_fmt=png" data-type="png" data-w="61" height="19" title="" width="61" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLyicZMIz4R96bnXsiaicfQESMl47qs9GfCUAYz5XInDPOibGEwxmzaPKOUA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="19" title width="61" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLyicZMIz4R96bnXsiaicfQESMl47qs9GfCUAYz5XInDPOibGEwxmzaPKOUA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9">，所以有 </span><amp-img data-ratio="0.2857142857142857" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlNvjI6PWPsyAMqANUwpCpT1Z4cibqbyLN9xZT458AbbsF05nseB9SOQ/640?wx_fmt=png" data-type="png" data-w="140" height="40" title="" width="140" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlNvjI6PWPsyAMqANUwpCpT1Z4cibqbyLN9xZT458AbbsF05nseB9SOQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="140" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlNvjI6PWPsyAMqANUwpCpT1Z4cibqbyLN9xZT458AbbsF05nseB9SOQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-160150c"></section>
+<section class="amp-wp-0a82b09"><span class="amp-wp-499df8f"><strong class="amp-wp-7940173"><span class="amp-wp-b1d8568">几何意义</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-b1d8568"></span></strong></span></section>
+<section class="amp-wp-b9836d8"><span class="amp-wp-d2f19d9"><span class="amp-wp-fb3324d">若令</span> </span><amp-img data-ratio="0.144" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdTicHmb1oibiacH2dAFCXE6yhoazJcy1hfBOial5icsIz7pJ2Gs4GEVnFgg/640?wx_fmt=png" data-type="png" data-w="125" height="18" title="" width="125" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdTicHmb1oibiacH2dAFCXE6yhoazJcy1hfBOial5icsIz7pJ2Gs4GEVnFgg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="125" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdTicHmb1oibiacH2dAFCXE6yhoazJcy1hfBOial5icsIz7pJ2Gs4GEVnFgg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> <span class="amp-wp-fb3324d">，这个形式可理解为</span>参数方程<span class="amp-wp-fb3324d">，而</span> </span><amp-img data-ratio="0.5063291139240507" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLp2YRnLpz4aiaiab5VIW1TfUNVbuRCshR77llV8V61Puic0ZM57gbXgg4A/640?wx_fmt=png" data-type="png" data-w="79" height="40" title="" width="79" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLp2YRnLpz4aiaiab5VIW1TfUNVbuRCshR77llV8V61Puic0ZM57gbXgg4A/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="79" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLp2YRnLpz4aiaiab5VIW1TfUNVbuRCshR77llV8V61Puic0ZM57gbXgg4A/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> <span class="amp-wp-18ce3e5">则是连接参数曲线两端点弦的斜率，</span> </span><amp-img data-ratio="1.0256410256410255" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLzrVNw2pXNsRD4IY6nHfpnUBInuCtGzPib5WJmN3KUYPRXqwFN1YqdPw/640?wx_fmt=png" data-type="png" data-w="39" height="40" title="" width="39" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLzrVNw2pXNsRD4IY6nHfpnUBInuCtGzPib5WJmN3KUYPRXqwFN1YqdPw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="39" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLzrVNw2pXNsRD4IY6nHfpnUBInuCtGzPib5WJmN3KUYPRXqwFN1YqdPw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> <span class="amp-wp-18ce3e5">表示曲线上某点处切线的斜率，在定理的条件下，结论可理解如下：</span></span><span class="amp-wp-9d59516"></span></section>
+<p class="amp-wp-26150a0"><amp-img data-ratio="0.8090909090909091" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLSZffxVSLEo6830ESeCLz9VVicXbMciccvbLSz7TCZKGe2K613CxP3LoQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="220" width="220" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLSZffxVSLEo6830ESeCLz9VVicXbMciccvbLSz7TCZKGe2K613CxP3LoQ/640?wx_fmt=jpeg" height="178" class="amp-wp-enforced-sizes amp-wp-1c242f0" layout="intrinsic"><noscript><img width="220" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_jpg/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLSZffxVSLEo6830ESeCLz9VVicXbMciccvbLSz7TCZKGe2K613CxP3LoQ/640?wx_fmt=jpeg" height="178" class=" amp-wp-e92986a"></noscript></amp-img></p>
+<section class="amp-wp-160150c"><span class="amp-wp-2906057">用参数方程表示的曲线上至少有一点，在这一点处的切线平行于连接两个端点的弦。</span></section>
+<h3 class="amp-wp-0c1632b"></h3>
+<section class="amp-wp-0a82b09"><span class="amp-wp-499df8f"><strong class="amp-wp-7940173"><span class="amp-wp-b1d8568">应用例子</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-b1d8568"></span></strong></span></section>
+<section class="amp-wp-160150c"></section>
+<h3 class="amp-wp-5d712ad"><span class="amp-wp-d2f19d9"><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968">1）泰勒公式</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968"></span></strong></span></h3>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">柯西中值定理最主要的应用是证明<span class="amp-wp-0f822c9">带有拉格朗日余项的</span> </span><amp-img data-ratio="0.8888888888888888" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdJzic8owLmxnOPjLRv8ELetcJCib9Lrvr33ksBbHlXzm5zWjG4MrorHQ/640?wx_fmt=png" data-type="png" data-w="9" height="8" title="" width="9" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdJzic8owLmxnOPjLRv8ELetcJCib9Lrvr33ksBbHlXzm5zWjG4MrorHQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="8" title width="9" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLdJzic8owLmxnOPjLRv8ELetcJCib9Lrvr33ksBbHlXzm5zWjG4MrorHQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> <span class="amp-wp-0f822c9">阶泰勒公式</span>，只要反复使用柯西中值定理多次就能证明，下面以 </span><amp-img data-ratio="0.34285714285714286" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLgCSmZibe90pa6YBzPtUV7pBcmicEYFicJmryiczibo58BeuPF6MK0Pe9PJA/640?wx_fmt=png" data-type="png" data-w="35" height="12" title="" width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLgCSmZibe90pa6YBzPtUV7pBcmicEYFicJmryiczibo58BeuPF6MK0Pe9PJA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="12" title width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLgCSmZibe90pa6YBzPtUV7pBcmicEYFicJmryiczibo58BeuPF6MK0Pe9PJA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 为例说明。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b"><span class="amp-wp-0f822c9">例1</span>设 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 在 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 内二次可微，证明：任意的 </span><amp-img data-ratio="0.2222222222222222" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL0afafR3b07YoKnnsY9s08eOpJ5dR6LLibhiaLtibdIJXXEvKJQgcjE8Tw/640?wx_fmt=png" data-type="png" data-w="81" height="18" title="" width="81" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL0afafR3b07YoKnnsY9s08eOpJ5dR6LLibhiaLtibdIJXXEvKJQgcjE8Tw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="81" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL0afafR3b07YoKnnsY9s08eOpJ5dR6LLibhiaLtibdIJXXEvKJQgcjE8Tw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ，在 </span><amp-img data-ratio="0.36666666666666664" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6P5Mzep0D3YkKMOSJMF5oqY71gEy0J9tThMXwvjRrK3gVhs9VI1Sww/640?wx_fmt=png" data-type="png" data-w="30" height="11" title="" width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6P5Mzep0D3YkKMOSJMF5oqY71gEy0J9tThMXwvjRrK3gVhs9VI1Sww/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="11" title width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6P5Mzep0D3YkKMOSJMF5oqY71gEy0J9tThMXwvjRrK3gVhs9VI1Sww/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 之间存在 </span><amp-img data-ratio="1.7777777777777777" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLKl2l8MWpRiaiaL46j9joKbErTN2tEOm0BtrH4GBgyeuv6azjZsV8F5Ew/640?wx_fmt=png" data-type="png" data-w="9" height="16" title="" width="9" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLKl2l8MWpRiaiaL46j9joKbErTN2tEOm0BtrH4GBgyeuv6azjZsV8F5Ew/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="16" title width="9" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLKl2l8MWpRiaiaL46j9joKbErTN2tEOm0BtrH4GBgyeuv6azjZsV8F5Ew/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ，使</span></section>
+<section class="amp-wp-4cf28e5"><amp-img data-ratio="0.10736196319018405" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrSPHch27MYDF3D823icNIMwvGeiaTpV18ZyuD4EAtxEArjllTVUU8wiaQ/640?wx_fmt=png" data-type="png" data-w="326" height="35" title="" width="326" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrSPHch27MYDF3D823icNIMwvGeiaTpV18ZyuD4EAtxEArjllTVUU8wiaQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="35" title width="326" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrSPHch27MYDF3D823icNIMwvGeiaTpV18ZyuD4EAtxEArjllTVUU8wiaQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">这就是函数 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 在点 </span><amp-img data-ratio="0.7333333333333333" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLY8sMbiaoLGlEYaZwlSeam9zxoaX22cMrcHBF9nSTkyknMvxg7tNggYg/640?wx_fmt=png" data-type="png" data-w="15" height="11" title="" width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLY8sMbiaoLGlEYaZwlSeam9zxoaX22cMrcHBF9nSTkyknMvxg7tNggYg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="11" title width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLY8sMbiaoLGlEYaZwlSeam9zxoaX22cMrcHBF9nSTkyknMvxg7tNggYg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 邻域内的一阶泰勒公式。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b"><span class="amp-wp-0f822c9">证明</span>令 </span><amp-img data-ratio="0.07171314741035857" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicJW8996y8yCicdgGDKLvYpp1LowlRP1yvIHyBXiczZ4FznlZhKMC0RcA/640?wx_fmt=png" data-type="png" data-w="251" height="18" title="" width="251" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicJW8996y8yCicdgGDKLvYpp1LowlRP1yvIHyBXiczZ4FznlZhKMC0RcA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="251" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLicJW8996y8yCicdgGDKLvYpp1LowlRP1yvIHyBXiczZ4FznlZhKMC0RcA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ， </span><amp-img data-ratio="0.1891891891891892" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLu6n5N2DBQ5cakPYUibMhQt8KDzAdZibryYxSsKS7TicicNNVXdibbic16rrA/640?wx_fmt=png" data-type="png" data-w="111" height="21" title="" width="111" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLu6n5N2DBQ5cakPYUibMhQt8KDzAdZibryYxSsKS7TicicNNVXdibbic16rrA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="21" title width="111" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLu6n5N2DBQ5cakPYUibMhQt8KDzAdZibryYxSsKS7TicicNNVXdibbic16rrA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b">利用 </span><amp-img data-ratio="0.14173228346456693" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXQduIFVv3O2XzGibDiamfCSWCJSYwXSpRkhxMXBo6ws0yNMibsxLicQCFg/640?wx_fmt=png" data-type="png" data-w="127" height="18" title="" width="127" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXQduIFVv3O2XzGibDiamfCSWCJSYwXSpRkhxMXBo6ws0yNMibsxLicQCFg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="127" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXQduIFVv3O2XzGibDiamfCSWCJSYwXSpRkhxMXBo6ws0yNMibsxLicQCFg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ， </span><amp-img data-ratio="0.1323529411764706" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLUIzqAHP04ibKE1Gics34h3HzBXethenwcC6HSia2ca4CWKRzxGfJpsyrQ/640?wx_fmt=png" data-type="png" data-w="136" height="18" title="" width="136" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLUIzqAHP04ibKE1Gics34h3HzBXethenwcC6HSia2ca4CWKRzxGfJpsyrQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="136" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLUIzqAHP04ibKE1Gics34h3HzBXethenwcC6HSia2ca4CWKRzxGfJpsyrQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ， </span><amp-img data-ratio="0.18" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRSiavSzgGwSIld3pQP8ZV8Ztq2u35kf7aUCc4XTmjaCicibeV0c1uWJ3w/640?wx_fmt=png" data-type="png" data-w="100" height="18" title="" width="100" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRSiavSzgGwSIld3pQP8ZV8Ztq2u35kf7aUCc4XTmjaCicibeV0c1uWJ3w/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="100" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRSiavSzgGwSIld3pQP8ZV8Ztq2u35kf7aUCc4XTmjaCicibeV0c1uWJ3w/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ， </span><amp-img data-ratio="0.2571428571428571" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfN3TRp9qSPwTAethneiaaG4aMbP8E3PcKQnmxe4WqHqibA7l4obTsx0g/640?wx_fmt=png" data-type="png" data-w="70" height="18" title="" width="70" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfN3TRp9qSPwTAethneiaaG4aMbP8E3PcKQnmxe4WqHqibA7l4obTsx0g/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="70" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfN3TRp9qSPwTAethneiaaG4aMbP8E3PcKQnmxe4WqHqibA7l4obTsx0g/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 。在两次应用到柯西中值定理后可以得到：</span></section>
+<section class="amp-wp-4cf28e5"><amp-img data-ratio="0.17054263565891473" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfsP3Lr4jO3gTP2Ja6qTSt49pZT2k2YpicndwfAAuOWib8Kpc0Eh3ObgQ/640?wx_fmt=png" data-type="png" data-w="258" height="44" title="" width="258" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfsP3Lr4jO3gTP2Ja6qTSt49pZT2k2YpicndwfAAuOWib8Kpc0Eh3ObgQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="44" title width="258" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfsP3Lr4jO3gTP2Ja6qTSt49pZT2k2YpicndwfAAuOWib8Kpc0Eh3ObgQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-4cf28e5"><amp-img data-ratio="0.091324200913242" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLsibToH029ianBQkXUJhCl66OIbse3IRriayuoLB0V6IErW5fj5Od7x0FQ/640?wx_fmt=png" data-type="png" data-w="438" height="40" title="" width="438" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLsibToH029ianBQkXUJhCl66OIbse3IRriayuoLB0V6IErW5fj5Od7x0FQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="438" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLsibToH029ianBQkXUJhCl66OIbse3IRriayuoLB0V6IErW5fj5Od7x0FQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-3ac0a74"><span class="amp-wp-765a2e3">命题得证。</span></section>
+<section class="amp-wp-160150c"></section>
+<h3 class="amp-wp-c0f4243"><span class="amp-wp-d2f19d9"><strong class="amp-wp-7940173"><span class="amp-wp-ea1de6d">2）洛必达法则</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-ea1de6d"></span></strong></span></h3>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">柯西中值定理的一个最重要的应用就是可以推导计算待定型的极限最有效的方法——洛必达法则。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">洛必达法则是求两个无穷小量或两个无穷大量的比的极限。在满足一定条件下可以化成两个函数的导数的比值极限，这样就有可能使得原待定型变成简便而有效的求非待定型极限的问题。</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">我们得出下面这个定理（洛必达法则）：</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">⑴两个函数 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 和 </span><amp-img data-ratio="0.6" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" data-type="png" data-w="30" height="18" title="" width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 在开区间 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 可微，并且在这个开区间上， </span><amp-img data-ratio="0.6" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" data-type="png" data-w="30" height="18" title="" width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="30" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLa0CoHmUbe3NEcppua88bqnxCraMNFcYlfqE5iacOS3HLuQR07gqZmWA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 的导数不等于0；</span></section>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">⑵存在极限 </span><amp-img data-ratio="0.35714285714285715" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRu83c5G43Vmjbe0yJiaqgiaRPBCtMZOvzkkwRjibh0hC5YlR4hG5ytzVg/640?wx_fmt=png" data-type="png" data-w="112" height="40" title="" width="112" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRu83c5G43Vmjbe0yJiaqgiaRPBCtMZOvzkkwRjibh0hC5YlR4hG5ytzVg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="112" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLRu83c5G43Vmjbe0yJiaqgiaRPBCtMZOvzkkwRjibh0hC5YlR4hG5ytzVg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> （或 </span><amp-img data-ratio="0.4666666666666667" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" data-type="png" data-w="15" height="7" title="" width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="7" title width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ），其中A为一个有限的常数。则在以下情况下： </span><amp-img data-ratio="0.12953367875647667" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLBAqAPHF1ibj2DuRgJzFG0rr2rPSFbSibxSDdTZT4tm5nRtl2iaCMU2rUg/640?wx_fmt=png" data-type="png" data-w="193" height="25" title="" width="193" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLBAqAPHF1ibj2DuRgJzFG0rr2rPSFbSibxSDdTZT4tm5nRtl2iaCMU2rUg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="25" title width="193" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLBAqAPHF1ibj2DuRgJzFG0rr2rPSFbSibxSDdTZT4tm5nRtl2iaCMU2rUg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b">（或者 </span><amp-img data-ratio="0.23148148148148148" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLPGhUA5OicSWlaG7O7TjZBiaKdgr4S1g5J4DYGEn8aq3ib0T1Picu3NJd9w/640?wx_fmt=png" data-type="png" data-w="108" height="25" title="" width="108" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLPGhUA5OicSWlaG7O7TjZBiaKdgr4S1g5J4DYGEn8aq3ib0T1Picu3NJd9w/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="25" title width="108" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLPGhUA5OicSWlaG7O7TjZBiaKdgr4S1g5J4DYGEn8aq3ib0T1Picu3NJd9w/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 和 </span><amp-img data-ratio="0.2358490566037736" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlGDnatXDrEYw3HgMvzMreW1wo3iafgMXcesQtC2WiaMOawlvgcY4F8sg/640?wx_fmt=png" data-type="png" data-w="106" height="25" title="" width="106" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlGDnatXDrEYw3HgMvzMreW1wo3iafgMXcesQtC2WiaMOawlvgcY4F8sg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="25" title width="106" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLlGDnatXDrEYw3HgMvzMreW1wo3iafgMXcesQtC2WiaMOawlvgcY4F8sg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ）。那么就有： </span><amp-img data-ratio="0.19047619047619047" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6FF4MhVrl5FsEw6L20E8sywVlz4VQHrYC5mu6uxQRIw9zUrAia2acSA/640?wx_fmt=png" data-type="png" data-w="210" height="40" title="" width="210" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6FF4MhVrl5FsEw6L20E8sywVlz4VQHrYC5mu6uxQRIw9zUrAia2acSA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="210" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL6FF4MhVrl5FsEw6L20E8sywVlz4VQHrYC5mu6uxQRIw9zUrAia2acSA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> （或 </span><amp-img data-ratio="0.4666666666666667" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" data-type="png" data-w="15" height="7" title="" width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="7" title width="15" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLhcc8OsRgNKUSwjmeYXKr7o0rGaxeCnebOPC1iaRVx6U5ll1HNdBDkrQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ）。在区间的另一个端点也存在相类似的结果。这个定理就称之为洛必达法则，能有效地应用于待定型的极限计算。</span></section>
+<section class="amp-wp-160150c"></section>
+<h3 class="amp-wp-5d712ad"><span class="amp-wp-d2f19d9"><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968">3）不等式</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968"></span></strong></span></h3>
+<section class="amp-wp-3ac0a74"><span class="amp-wp-523938b">柯西中值定理在不等式的证明也有广泛应用，关键是f(x)和g(x)要选得恰当。</span></section>
+<section class="amp-wp-3ac0a74"><span class="amp-wp-523938b"><span class="amp-wp-0f822c9">例3</span>试证明当 </span><amp-img data-ratio="0.37142857142857144" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXPPmiaCO3fKGMo7zYgr24Y5ibZJ3W5UqgKWJjAL27sicMz6NX01YwlgUA/640?wx_fmt=png" data-type="png" data-w="35" height="13" title="" width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXPPmiaCO3fKGMo7zYgr24Y5ibZJ3W5UqgKWJjAL27sicMz6NX01YwlgUA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="13" title width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLXPPmiaCO3fKGMo7zYgr24Y5ibZJ3W5UqgKWJjAL27sicMz6NX01YwlgUA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 时， </span><amp-img data-ratio="0.12558139534883722" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL18f4Qre19l8ZEBUR05MtdKDziaQQib0VyahbSIhq7etiaxAJIUiaEAmyww/640?wx_fmt=png" data-type="png" data-w="215" height="27" title="" width="215" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL18f4Qre19l8ZEBUR05MtdKDziaQQib0VyahbSIhq7etiaxAJIUiaEAmyww/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="27" title width="215" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxL18f4Qre19l8ZEBUR05MtdKDziaQQib0VyahbSIhq7etiaxAJIUiaEAmyww/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 。</span></section>
+<section class="amp-wp-3ac0a74"><span class="amp-wp-523938b">证明 设 </span><amp-img data-ratio="0.09574468085106383" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLMkL5VMibsH8NYs66MLDNddb0CcfyfOhZOxzRbgrZiaEgIC1ye6Q93ayQ/640?wx_fmt=png" data-type="png" data-w="282" height="27" title="" width="282" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLMkL5VMibsH8NYs66MLDNddb0CcfyfOhZOxzRbgrZiaEgIC1ye6Q93ayQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="27" title width="282" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLMkL5VMibsH8NYs66MLDNddb0CcfyfOhZOxzRbgrZiaEgIC1ye6Q93ayQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ，则 </span><amp-img data-ratio="0.2727272727272727" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLcnHAZXmSosCNicgHBYFqDWHdVObpAjGPpw3WibaEMy9fyAU1mtT5aHhw/640?wx_fmt=png" data-type="png" data-w="66" height="18" title="" width="66" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLcnHAZXmSosCNicgHBYFqDWHdVObpAjGPpw3WibaEMy9fyAU1mtT5aHhw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="66" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLcnHAZXmSosCNicgHBYFqDWHdVObpAjGPpw3WibaEMy9fyAU1mtT5aHhw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 在区间 </span><amp-img data-ratio="0.53125" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLaesbr1dFeb7pYmf1qFicSrpZq4UknZeIGlso4ibIqcdf9hPH4ySzmyVQ/640?wx_fmt=png" data-type="png" data-w="32" height="17" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLaesbr1dFeb7pYmf1qFicSrpZq4UknZeIGlso4ibIqcdf9hPH4ySzmyVQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="17" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLaesbr1dFeb7pYmf1qFicSrpZq4UknZeIGlso4ibIqcdf9hPH4ySzmyVQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> 上满足柯西中值定理条件，所以存在 </span><amp-img data-ratio="0.29508196721311475" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrhvu6YtLcwKPbFQE6bbaCVejnOibJxfmkic05FREKKNWMW053sibJicj2g/640?wx_fmt=png" data-type="png" data-w="61" height="18" title="" width="61" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrhvu6YtLcwKPbFQE6bbaCVejnOibJxfmkic05FREKKNWMW053sibJicj2g/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="61" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLrhvu6YtLcwKPbFQE6bbaCVejnOibJxfmkic05FREKKNWMW053sibJicj2g/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ，使 </span><amp-img data-ratio="0.28368794326241137" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLWia58aExicqa3FlZkPawpxwUDbJJUlNTVuxNdfXzTVZ63FGRdkpHBVrg/640?wx_fmt=png" data-type="png" data-w="141" height="40" title="" width="141" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLWia58aExicqa3FlZkPawpxwUDbJJUlNTVuxNdfXzTVZ63FGRdkpHBVrg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="40" title width="141" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLWia58aExicqa3FlZkPawpxwUDbJJUlNTVuxNdfXzTVZ63FGRdkpHBVrg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-523938b"> ，即</span></section>
+<section class="amp-wp-4cf28e5"><amp-img data-ratio="0.2786885245901639" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLIW2BQcuoQEcFocWENXVrUDiaC6g9SAiaxhJah13zkH4jaJULYmBOW74Q/640?wx_fmt=png" data-type="png" data-w="244" height="68" title="" width="244" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLIW2BQcuoQEcFocWENXVrUDiaC6g9SAiaxhJah13zkH4jaJULYmBOW74Q/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="68" title width="244" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLIW2BQcuoQEcFocWENXVrUDiaC6g9SAiaxhJah13zkH4jaJULYmBOW74Q/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-3ac0a74"><span class="amp-wp-523938b">结论得证。</span></section>
+<section class="amp-wp-160150c"></section>
+<h3 class="amp-wp-c0f4243"><span class="amp-wp-d2f19d9"><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968">4）中值点</span></strong><strong class="amp-wp-7940173"><span class="amp-wp-3bf5968"></span></strong></span></h3>
+<p class="amp-wp-52efee8"></p>
+<section class="amp-wp-f16a16f"><span class="amp-wp-523938b">中值点的存在性的证明是柯西中值定理最典型的应用之一。</span></section>
+<section class="amp-wp-14315d6"><span class="amp-wp-d2f19d9"><span class="amp-wp-86077b2">例4</span>设 </span><amp-img data-ratio="0.37142857142857144" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLffUYbArG0MaeHYgicQkNnusI5M9D1EoegOJWym5UlpibxmibyYibHSicxZg/640?wx_fmt=png" data-type="png" data-w="35" height="13" title="" width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLffUYbArG0MaeHYgicQkNnusI5M9D1EoegOJWym5UlpibxmibyYibHSicxZg/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="13" title width="35" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLffUYbArG0MaeHYgicQkNnusI5M9D1EoegOJWym5UlpibxmibyYibHSicxZg/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，函数 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfQlVbbzJefPsMdfZMTnXLcW1WpqFMuX4LNyOadCq4cSc0TiaIQGl8icQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 在区间 </span><amp-img data-ratio="0.5483870967741935" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" data-type="png" data-w="31" height="17" title="" width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="17" title width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 上连续，在 </span><amp-img data-ratio="0.5625" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" data-type="png" data-w="32" height="18" title="" width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="32" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEE5vVwcmibaly14ruxuBoDMdUszZUHlHTH11voCjzj4RibsR9vbPZOBA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 内可导，则存在 </span><amp-img data-ratio="0.3" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" data-type="png" data-w="60" height="18" title="" width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，使得 </span><amp-img data-ratio="0.295" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLmDHjrN4iaibsEfKvFwy5U1YYuicMqkr7cmZOnnqXzEaQvSmaEuKxiaxgibw/640?wx_fmt=png" data-type="png" data-w="200" height="59" title="" width="200" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLmDHjrN4iaibsEfKvFwy5U1YYuicMqkr7cmZOnnqXzEaQvSmaEuKxiaxgibw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="59" title width="200" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLmDHjrN4iaibsEfKvFwy5U1YYuicMqkr7cmZOnnqXzEaQvSmaEuKxiaxgibw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 。</span></section>
+<section class="amp-wp-14315d6"><span class="amp-wp-d2f19d9"><span class="amp-wp-86077b2">证明</span> 设 </span><amp-img data-ratio="0.4069767441860465" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEG0fH27bcTL5P8REFFVbW4IJWXqg9ibQBUoEgSF2kBY6ibaT2lZeC6mQ/640?wx_fmt=png" data-type="png" data-w="86" height="35" title="" width="86" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEG0fH27bcTL5P8REFFVbW4IJWXqg9ibQBUoEgSF2kBY6ibaT2lZeC6mQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="35" title width="86" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLEG0fH27bcTL5P8REFFVbW4IJWXqg9ibQBUoEgSF2kBY6ibaT2lZeC6mQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ， </span><amp-img data-ratio="0.5555555555555556" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLs5umlklDLnOiaGu9gaZQpDbialrc3M8kEGevn1vc3PoX7Gkz81rCq2bw/640?wx_fmt=png" data-type="png" data-w="63" height="35" title="" width="63" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLs5umlklDLnOiaGu9gaZQpDbialrc3M8kEGevn1vc3PoX7Gkz81rCq2bw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="35" title width="63" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLs5umlklDLnOiaGu9gaZQpDbialrc3M8kEGevn1vc3PoX7Gkz81rCq2bw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，显然 </span><amp-img data-ratio="0.24324324324324326" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLAWzYZndjBvheHFZSLyVNrjqxia3uUIpKF9WCxFxEBB8oI1ANazLqKNA/640?wx_fmt=png" data-type="png" data-w="74" height="18" title="" width="74" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLAWzYZndjBvheHFZSLyVNrjqxia3uUIpKF9WCxFxEBB8oI1ANazLqKNA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="74" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLAWzYZndjBvheHFZSLyVNrjqxia3uUIpKF9WCxFxEBB8oI1ANazLqKNA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 在 </span><amp-img data-ratio="0.5483870967741935" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" data-type="png" data-w="31" height="17" title="" width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="17" title width="31" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLJO7Jr7hL9La0MagFLichoIYKVuyvicicECxsuzroEWUHdtlOvV3tRa8MQ/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> 上满足柯西中值定理的条件，于是存在 </span><amp-img data-ratio="0.3" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" data-type="png" data-w="60" height="18" title="" width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，使得</span></section>
+<section class="amp-wp-0a82b09"><amp-img data-ratio="0.14488636363636365" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfzCO4VBEpCuiaHEC0CGkprhwIEUHJzSpRchjjRx6lEuyDgc9caBeghw/640?wx_fmt=png" data-type="png" data-w="352" height="51" title="" width="352" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfzCO4VBEpCuiaHEC0CGkprhwIEUHJzSpRchjjRx6lEuyDgc9caBeghw/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="51" title width="352" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLfzCO4VBEpCuiaHEC0CGkprhwIEUHJzSpRchjjRx6lEuyDgc9caBeghw/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img></section>
+<section class="amp-wp-160150c"><span class="amp-wp-d2f19d9">即存在 </span><amp-img data-ratio="0.3" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" data-type="png" data-w="60" height="18" title="" width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="18" title width="60" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLxE2OLUSA7HOXVd8PfPicOFicqyRp4HQUYlL7RvFP5ONt60AZO6vsypew/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，使得 </span><amp-img data-ratio="0.07224334600760456" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLnic0DvjfpPtlQlSKFd2lqESZltLSj4bWpLHzzTJdD79E4GQhPjzGAlA/640?wx_fmt=png" data-type="png" data-w="263" height="19" title="" width="263" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLnic0DvjfpPtlQlSKFd2lqESZltLSj4bWpLHzzTJdD79E4GQhPjzGAlA/640?wx_fmt=png" class="amp-wp-enforced-sizes amp-wp-cfca6c1" layout="intrinsic"><noscript><img height="19" title width="263" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/uJcKyGGBIvHPmiaMRx1VEPaeSGIYhEOxLnic0DvjfpPtlQlSKFd2lqESZltLSj4bWpLHzzTJdD79E4GQhPjzGAlA/640?wx_fmt=png" class="amp-wp-cfca6c1"></noscript></amp-img><span class="amp-wp-d2f19d9"> ，即可得结论。</span></section>
+<section class="amp-wp-7b418d4"><span class="amp-wp-523938b">怎么样你学会了吗？</span></section>
+<section class="amp-wp-7b418d4"><span class="amp-wp-523938b">动动手指转发给更多的同学吧</span></section>
+</section>
+<section class="xmt-style-block" data-style-type="5" data-tools="新媒体排版" data-id="2834228">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2800910">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2796721">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2744604">
+<p></p>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2590675">
+<p class=" amp-wp-2f24dc3"><strong class="amp-wp-cdee54d"><span class="amp-wp-fd320b9"><strong class="amp-wp-238198f">— THE END —</strong></span></strong></p>
+</section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625487">
+<section class=" amp-wp-c004a24"></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2697295">
+<section class=" amp-wp-c004a24"><amp-img class="amp-wp-enforced-sizes amp-wp-dc3ee2b" data-ratio="0.1871508379888268" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" data-type="png" data-w="358" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67" layout="intrinsic"><noscript><img class=" amp-wp-dc3ee2b" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/pSqFmkOFya18spZuOticj7bLrtCCQtBxpHx4BBD29iahkbNf25fqIiczCkvDTp0OFK2S9GVx8z8aaTvDKrIOsLPiaQ/640?wx_fmt=png" width="358" height="67"></noscript></amp-img></section>
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2625492">
+<section class data-style-type="5" data-tools="新媒体排版" data-id="2617381">
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485322&idx=1&sn=09356cf33fc9c3484c854d091228eed4&chksm=ebe9cd37dc9e4421cc82f1b09e2a0fab17a1e6f53f0a17e3d4077c713a7cd0349107a91f86ae&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">数学为什么叫“数学”</a></span><br></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485242&idx=2&sn=e7667e74ea5d21f69fadbceaa491c0fc&chksm=ebe9cd87dc9e44912e17925088ca41fdb44bbb2030f88a4deaff8e1f79e764f1e9b47c93ba3c&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">线性代数拾遗（四）：线性方程组的应用</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485067&idx=2&sn=c143f9b22cc37ba97b2736c046a0f557&chksm=ebe9cc36dc9e45203d049bfb10f76bc3f9143e378274b5f04d788aeac8e03eaa6209b3059071&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">世界上最奇怪的数学天才，被奖励100万却拒领，宁愿过得像乞丐</a></span></section>
+<section class=" amp-wp-e770fc3"><span class=" amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485056&idx=2&sn=92f735f3b3ee3445b7c166129b18a7a9&chksm=ebe9cc3ddc9e452ba9cf6f78bb20bb2e14a86fde39a3d9528d32adc0aa4ec73d9ca31b107df3&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">斯坦福大学教育学院院长：学习本身就是一门学问</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485119&idx=1&sn=affbb1602f620c3df6e3d3c1051387c6&chksm=ebe9cc02dc9e4514ad6f7e59d5148cb7770bd8f72c4ffe173dfe91a116763fd2228362b3dadc&scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">施一公：没有高考，就没有一批非常优秀的社会精英从农村走出来</a></span></section>
+<section class=" amp-wp-e770fc3"><span class="amp-wp-cbf3568">☞<a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzI4NTY3OTU3MA==&mid=2247485321&idx=2&sn=33e5ea9e678c3192866d72430bd8826b&chksm=ebe9cd34dc9e4422b1e59d1a07c86735bf024d14372472d88c7414cb70916eb2c08619f20629&scene=21#wechat_redirect" data-itemshowtype="0" data-linktype="2" rel="noopener noreferrer">袁隆平又有新身份！</a></span></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://stime.cc/uncategorized/" rel="category tag">未分类</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://stime.cc/article/285/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>S时代</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
