@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析 - S时代</title>
+
+
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://stime.cc/article/511/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析 - S时代">
+<meta property="og:description" content="数学模型在新型冠状病毒肺炎（COVID-19）疫情的预测、预警和风险分析中具有非常重要的作用。具体体现在利用少量和实时更新的数据，构建符合COVID-19传播和我国特有的防控策略的数学模型，发展包括数据处理、最小二乘法和MCMC方法等统计计算方法，确定模型未知参数，最终实现：1）确定传播风险指标（基本再生数）、达峰时间、峰值以及最终感染规模等在内的疫情技术指标；2）评估包括封城、密切跟踪隔离、检测和检出等重大防控策略的有效性和时效性。 这将为疾病预防控制、决策部门提供重要的决策依据，服务于国家重大突发性传染性疾病防控。 通过近20天各地市的严格防控，全国的新报告病例数已呈现下降趋势, 春节后的复工、复学也提上日程，核心问题是：何时复工或如何组织有序复工才能避免疫情的二次暴发？为了回答上述问题，通过收集湖北省卫健委和国家卫健委官网上报道的全国以及湖北各地市的疫情数据[1,2]、百度迁徙网站（http://qianxi.baidu.com）人口流动数据，以及春运期间武汉人口迁入和迁出趋势和流入到湖北其他地市的人口分布情况，我们基于文献[3，4]中的COVID-19疫情传播与控制模型框架，发展以武汉为中心的复杂网络模型，通过统计计算与参数估计确定网络模型未知参数，分析武汉及周边15个疫情严重地区复工的最佳时间，评估早复工对这些地区疫情发展特别是二次暴发风险的影响。 根据COVID-19传播机理，将自然传播过程的人群分为易感者类（S）、潜伏者类（E）、感染者类（有症状）（I）、感染者类（无症状）（A）、住院者类（H）和恢复者类（R）。依据严格的围堵缓疫策略，又将感染者密切接触的人群分为隔离的易感者类（Sq）和潜伏者类（Eq）。通过感染者密切接触追踪，假设q比率的接触者被隔离，其中被隔离的个体若被感染，则该个体隔离在Eq仓室，否则隔离在Sq仓室。根据如下的流程图，容易得到相应的动力学模型： 其中下标1表示武汉，下标换成i  则表示孝感、黄冈、荆州、咸宁、鄂州、襄阳、黄石、荆门、随州、仙桃、宜昌、天门、恩施州、十堰和潜江(n = 16)。城市间的邻接矩阵为分段函数矩阵M(t)= 。 1月23日前只考虑人口由武汉市迁出到其他城市，此时  表示人口由武汉流入第i 个城市，取正值。由于武汉市在1月23日“封城”，因而假设1月23日后没有人口流动，此时 = 0。考虑复工时人口流动重新开始，并且春节前从武汉流出的人返回工作岗位是从各地市重新流回武汉，此时表示从第i个城市流入武汉，取负值。 只考虑一个城市（如武汉）时，表示疫情传播风险的再生数为 其中S0表示易感者的初值。这里基于1月23日后的数据，估计出的是有防控措施的再生数，因此称为“控制再生数”。将数据分为三个阶段反映我国逐步强的控制措施的影响。基于除武汉外的各城市的累计病例数，采用最小二乘法来估计系统的未知参数，控制参数c和q随各城市、不同时间段不尽形同（见原文）。在COVID-19疫情初期，由于研制核酸检测试剂盒、检出和确诊等都需要时间，报告病例数明显低于实际的病例数，如图2所示。而且早期全国其他地区的病例主要来自武汉。因此，从其他城市的病例数来估计武汉市的实际病例数至关重要，根据网络模型拟合我们得到1月23日武汉市累计病例数的估计值为2214例，几乎是我国23日累计报告病例数（830例）的3倍，这说明在武汉封城时疫情就比较严重。 图2: 模型拟合的结果。蓝线是模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。 根据估计的参数值，得到了湖北省16个城市早期（第一阶段）的控制再生数（见原文表3），从表中可知武汉市早期的控制再生数为3.66，其他城市的控制再生数均小于武汉。这里估计武汉的再生数小于文献[3]中的估计值，一方面由于有一部分病例已经流入全国的其他城市，另一方面核酸检测试剂盒并没有检出很多病例[5]。早期控制再生数居前五位的城市（武汉除外）是荆门、十堰、随州、襄阳、宜昌。为了研究不断增强的防控措施对新发感染的影响，论文中还估计了第二、三阶段的控制再生数。结果表明多数城市的控制再生数明显下降，特别是目前各个城市的控制再生数均小于1，表明目前新发感染非常低，疫情在各地得到有效控制。 为了研究复工对湖北省境内各个城市疫情的影响，基于湖北省境内各个城市去年同期的流动网络结构和流动量模拟复杂网络模型，分别考虑了不同的复工时间以及控制强度的影响。模拟时只考虑各城市人口迁入武汉，不考虑迁出，假设迁入武汉总人口等于年前迁出武汉总人口。图3给出了3月2日的复工对各个城市疫情的影响， 可以看出3月2日的复工在较长的时间内除了个别城市如荆州、孝感、黄石病例数略有上浮外，不会引起其他各个城市疫情的二次暴发。 图3: 复工对各个城市疫情的影响。蓝线表示没有复工的模拟结果，黑线表示在3月2日复工的模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。 由于武汉周边疫情严重城市自1月26日开始才相继加强措施并报告完整的疫情数据，因此为了评估不断加强的防控措施的有效性，分阶段给出了16个城市的控制再生数。结论显示第一个阶段所有地区控制再生数均大于1，这意味着传播风险高；第二个阶段有9个城市小于1，控制初步见效；第三个阶段的控制再生数均小于1，则新发感染率全面降低。然后分别在时间节点2月17日，2月24日和3月2日变化网络节点中的关键参数（接触数c和隔离率q 变为23日封城之前的估计值），并依据百度迁徙给出的春节返程流入武汉的趋势增加流入率，评估复工导致二次暴发的风险。主要结论显示：湖北地区的复工不能早于3月2日，否则疫情可能二次暴发。若3月2日复工并有较强的防控措施，湖北各个城市的疫情在较长时间内将不会二次暴发。 相关论文近日在线发表于《中国科学：数学》，点击下方链接或“阅读原文”可免费阅读全文： 王霞，唐三一，陈勇，冯晓梅，肖燕妮，徐宗本. 新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析. DOI:10.1360/SSM-2020-0037,2020. 参考文献： 1. 湖北省卫生健康委员会. 2020 年 2 月 12 日湖北省新冠肺炎疫情情况. Http://wjw.hubei. gov.cn/fbjd/dtyw/202002/ t20200213 2025581.shtml, 2020 2. 中华人民共和国国家卫生健康委员会. 疫情通报. Http://www.nhc.gov.cn/xcs/xxgzbd /gzbd index.shtml, 2020 3. Tang B, Wang X, Li Q, et al....">
+<meta property="og:url" content="https://stime.cc/article/511/">
+<meta property="og:site_name" content="S时代">
+<meta property="article:section" content="未分类">
+<meta property="article:published_time" content="2020-02-22T03:26:25+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="数学模型在新型冠状病毒肺炎（COVID-19）疫情的预测、预警和风险分析中具有非常重要的作用。具体体现在利用少量和实时更新的数据，构建符合COVID-19传播和我国特有的防控策略的数学模型，发展包括数据处理、最小二乘法和MCMC方法等统计计算方法，确定模型未知参数，最终实现：1）确定传播风险指标（基本再生数）、达峰时间、峰值以及最终感染规模等在内的疫情技术指标；2）评估包括封城、密切跟踪隔离、检测和检出等重大防控策略的有效性和时效性。 这将为疾病预防控制、决策部门提供重要的决策依据，服务于国家重大突发性传染性疾病防控。 通过近20天各地市的严格防控，全国的新报告病例数已呈现下降趋势, 春节后的复工、复学也提上日程，核心问题是：何时复工或如何组织有序复工才能避免疫情的二次暴发？为了回答上述问题，通过收集湖北省卫健委和国家卫健委官网上报道的全国以及湖北各地市的疫情数据[1,2]、百度迁徙网站（http://qianxi.baidu.com）人口流动数据，以及春运期间武汉人口迁入和迁出趋势和流入到湖北其他地市的人口分布情况，我们基于文献[3，4]中的COVID-19疫情传播与控制模型框架，发展以武汉为中心的复杂网络模型，通过统计计算与参数估计确定网络模型未知参数，分析武汉及周边15个疫情严重地区复工的最佳时间，评估早复工对这些地区疫情发展特别是二次暴发风险的影响。 根据COVID-19传播机理，将自然传播过程的人群分为易感者类（S）、潜伏者类（E）、感染者类（有症状）（I）、感染者类（无症状）（A）、住院者类（H）和恢复者类（R）。依据严格的围堵缓疫策略，又将感染者密切接触的人群分为隔离的易感者类（Sq）和潜伏者类（Eq）。通过感染者密切接触追踪，假设q比率的接触者被隔离，其中被隔离的个体若被感染，则该个体隔离在Eq仓室，否则隔离在Sq仓室。根据如下的流程图，容易得到相应的动力学模型： 其中下标1表示武汉，下标换成i  则表示孝感、黄冈、荆州、咸宁、鄂州、襄阳、黄石、荆门、随州、仙桃、宜昌、天门、恩施州、十堰和潜江(n = 16)。城市间的邻接矩阵为分段函数矩阵M(t)= 。 1月23日前只考虑人口由武汉市迁出到其他城市，此时  表示人口由武汉流入第i 个城市，取正值。由于武汉市在1月23日“封城”，因而假设1月23日后没有人口流动，此时 = 0。考虑复工时人口流动重新开始，并且春节前从武汉流出的人返回工作岗位是从各地市重新流回武汉，此时表示从第i个城市流入武汉，取负值。 只考虑一个城市（如武汉）时，表示疫情传播风险的再生数为 其中S0表示易感者的初值。这里基于1月23日后的数据，估计出的是有防控措施的再生数，因此称为“控制再生数”。将数据分为三个阶段反映我国逐步强的控制措施的影响。基于除武汉外的各城市的累计病例数，采用最小二乘法来估计系统的未知参数，控制参数c和q随各城市、不同时间段不尽形同（见原文）。在COVID-19疫情初期，由于研制核酸检测试剂盒、检出和确诊等都需要时间，报告病例数明显低于实际的病例数，如图2所示。而且早期全国其他地区的病例主要来自武汉。因此，从其他城市的病例数来估计武汉市的实际病例数至关重要，根据网络模型拟合我们得到1月23日武汉市累计病例数的估计值为2214例，几乎是我国23日累计报告病例数（830例）的3倍，这说明在武汉封城时疫情就比较严重。 图2: 模型拟合的结果。蓝线是模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。 根据估计的参数值，得到了湖北省16个城市早期（第一阶段）的控制再生数（见原文表3），从表中可知武汉市早期的控制再生数为3.66，其他城市的控制再生数均小于武汉。这里估计武汉的再生数小于文献[3]中的估计值，一方面由于有一部分病例已经流入全国的其他城市，另一方面核酸检测试剂盒并没有检出很多病例[5]。早期控制再生数居前五位的城市（武汉除外）是荆门、十堰、随州、襄阳、宜昌。为了研究不断增强的防控措施对新发感染的影响，论文中还估计了第二、三阶段的控制再生数。结果表明多数城市的控制再生数明显下降，特别是目前各个城市的控制再生数均小于1，表明目前新发感染非常低，疫情在各地得到有效控制。 为了研究复工对湖北省境内各个城市疫情的影响，基于湖北省境内各个城市去年同期的流动网络结构和流动量模拟复杂网络模型，分别考虑了不同的复工时间以及控制强度的影响。模拟时只考虑各城市人口迁入武汉，不考虑迁出，假设迁入武汉总人口等于年前迁出武汉总人口。图3给出了3月2日的复工对各个城市疫情的影响， 可以看出3月2日的复工在较长的时间内除了个别城市如荆州、孝感、黄石病例数略有上浮外，不会引起其他各个城市疫情的二次暴发。 图3: 复工对各个城市疫情的影响。蓝线表示没有复工的模拟结果，黑线表示在3月2日复工的模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。 由于武汉周边疫情严重城市自1月26日开始才相继加强措施并报告完整的疫情数据，因此为了评估不断加强的防控措施的有效性，分阶段给出了16个城市的控制再生数。结论显示第一个阶段所有地区控制再生数均大于1，这意味着传播风险高；第二个阶段有9个城市小于1，控制初步见效；第三个阶段的控制再生数均小于1，则新发感染率全面降低。然后分别在时间节点2月17日，2月24日和3月2日变化网络节点中的关键参数（接触数c和隔离率q 变为23日封城之前的估计值），并依据百度迁徙给出的春节返程流入武汉的趋势增加流入率，评估复工导致二次暴发的风险。主要结论显示：湖北地区的复工不能早于3月2日，否则疫情可能二次暴发。若3月2日复工并有较强的防控措施，湖北各个城市的疫情在较长时间内将不会二次暴发。 相关论文近日在线发表于《中国科学：数学》，点击下方链接或“阅读原文”可免费阅读全文： 王霞，唐三一，陈勇，冯晓梅，肖燕妮，徐宗本. 新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析. DOI:10.1360/SSM-2020-0037,2020. 参考文献： 1. 湖北省卫生健康委员会. 2020 年 2 月 12 日湖北省新冠肺炎疫情情况. Http://wjw.hubei. gov.cn/fbjd/dtyw/202002/ t20200213 2025581.shtml, 2020 2. 中华人民共和国国家卫生健康委员会. 疫情通报. Http://www.nhc.gov.cn/xcs/xxgzbd /gzbd index.shtml, 2020 3. Tang B, Wang X, Li Q, et al....">
+<meta name="twitter:title" content="新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析 - S时代">
+<meta name="twitter:image" content="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyctsnMr7T9c9LuRiaGdJBBGObNDTxT8kusKiagkfsNia18YxcN48XCEyPaw/640?wx_fmt=png">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db","name":"S\u65f6\u4ee3","image":{"@type":"ImageObject","@id":"https://stime.cc/#personlogo","url":"https://stime.cc/wp-content/uploads/2020/01/bitbug_favicon.ico","width":128,"height":128,"caption":"S\u65f6\u4ee3"},"logo":{"@id":"https://stime.cc/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://stime.cc/#website","url":"https://stime.cc/","name":"S\u65f6\u4ee3","publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"potentialAction":{"@type":"SearchAction","target":"https://stime.cc/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://stime.cc/article/511/#primaryimage","url":"https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyctsnMr7T9c9LuRiaGdJBBGObNDTxT8kusKiagkfsNia18YxcN48XCEyPaw/640?wx_fmt=png"},{"@type":"WebPage","@id":"https://stime.cc/article/511/#webpage","url":"https://stime.cc/article/511/","inLanguage":"en-US","name":"\u65b0\u578b\u51a0\u72b6\u75c5\u6bd2\u80ba\u708e\u75ab\u60c5\u4e0b\u6b66\u6c49\u53ca\u5468\u8fb9\u5730\u533a\u4f55\u65f6\u590d\u5de5\uff1f\u6570\u636e\u9a71\u52a8\u7684\u7f51\u7edc\u6a21\u578b\u5206\u6790 - S\u65f6\u4ee3","isPartOf":{"@id":"https://stime.cc/#website"},"primaryImageOfPage":{"@id":"https://stime.cc/article/511/#primaryimage"},"datePublished":"2020-02-22T03:26:25+00:00","dateModified":"2020-02-22T03:26:25+00:00"},{"@type":"Article","@id":"https://stime.cc/article/511/#article","isPartOf":{"@id":"https://stime.cc/article/511/#webpage"},"author":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"headline":"\u65b0\u578b\u51a0\u72b6\u75c5\u6bd2\u80ba\u708e\u75ab\u60c5\u4e0b\u6b66\u6c49\u53ca\u5468\u8fb9\u5730\u533a\u4f55\u65f6\u590d\u5de5\uff1f\u6570\u636e\u9a71\u52a8\u7684\u7f51\u7edc\u6a21\u578b\u5206\u6790","datePublished":"2020-02-22T03:26:25+00:00","dateModified":"2020-02-22T03:26:25+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://stime.cc/article/511/#webpage"},"publisher":{"@id":"https://stime.cc/#/schema/person/3d7f7c032ea7508766887da0eacfa3db"},"image":{"@id":"https://stime.cc/article/511/#primaryimage"},"articleSection":"\u672a\u5206\u7c7b"}]}</script>
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Feed" href="https://stime.cc/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » Comments Feed" href="https://stime.cc/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="S时代 » 新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析 Comments Feed" href="https://stime.cc/article/511/feed/">
+<link rel="stylesheet" id="wp-block-library-css" href="https://stime.cc/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://stime.cc/wp-content/themes/bloggist/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bloggist-style-css" href="https://stime.cc/wp-content/themes/bloggist/style.css" type="text/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="bloggist-google-fonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=5.3.2" type="text/css" media="all">
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stime.cc/xmlrpc.php">
+<link rel="pingback" href="https://stime.cc/xmlrpc.php">
+		<style type="text/css">
+		body, .site, .swidgets-wrap h3, .post-data-text { background: ; }
+		.site-title a, .site-description { color: ; }
+		.sheader { background-color:  !important; }
+		.main-navigation ul li a, .main-navigation ul li .sub-arrow, .super-menu .toggle-mobile-menu,.toggle-mobile-menu:before, .mobile-menu-active .smenu-hide { color: ; }
+		#smobile-menu.show .main-navigation ul ul.children.active, #smobile-menu.show .main-navigation ul ul.sub-menu.active, #smobile-menu.show .main-navigation ul li, .smenu-hide.toggle-mobile-menu.menu-toggle, #smobile-menu.show .main-navigation ul li, .primary-menu ul li ul.children li, .primary-menu ul li ul.sub-menu li, .primary-menu .pmenu, .super-menu { border-color: ; border-bottom-color: ; }
+		#secondary .widget h3, #secondary .widget h3 a, #secondary .widget h4, #secondary .widget h1, #secondary .widget h2, #secondary .widget h5, #secondary .widget h6, #secondary .widget h4 a { color: ; }
+		#secondary .widget a, #secondary a, #secondary .widget li a , #secondary span.sub-arrow{ color: ; }
+		#secondary, #secondary .widget, #secondary .widget p, #secondary .widget li, .widget time.rpwe-time.published { color: ; }
+		#secondary .swidgets-wrap, #secondary .widget ul li, .featured-sidebar .search-field { border-color: ; }
+		.site-info, .footer-column-three input.search-submit, .footer-column-three p, .footer-column-three li, .footer-column-three td, .footer-column-three th, .footer-column-three caption { color: ; }
+		.footer-column-three h3, .footer-column-three h4, .footer-column-three h5, .footer-column-three h6, .footer-column-three h1, .footer-column-three h2, .footer-column-three h4, .footer-column-three h3 a { color: ; }
+		.footer-column-three a, .footer-column-three li a, .footer-column-three .widget a, .footer-column-three .sub-arrow { color: ; }
+		.footer-column-three h3:after { background: ; }
+		.site-info, .widget ul li, .footer-column-three input.search-field, .footer-column-three input.search-submit { border-color: ; }
+		.site-footer { background-color: ; }
+		.content-wrapper h2.entry-title a, .content-wrapper h2.entry-title a:hover, .content-wrapper h2.entry-title a:active, .content-wrapper h2.entry-title a:focus, .archive .page-header h1, .blogposts-list h2 a, .blogposts-list h2 a:hover, .blogposts-list h2 a:active, .search-results h1.page-title { color: ; }
+		.blogposts-list .post-data-text, .blogposts-list .post-data-text a, .content-wrapper .post-data-text *{ color: ; }
+		.blogposts-list p { color: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button { background: ; }
+		.page-numbers li a, .blogposts-list .blogpost-button, span.page-numbers.dots, .page-numbers.current, .page-numbers li a:hover { color: ; }
+		.archive .page-header h1, .search-results h1.page-title, .blogposts-list.fbox, span.page-numbers.dots, .page-numbers li a, .page-numbers.current { border-color: ; }
+		.blogposts-list .post-data-divider { background: ; }
+		.page .comments-area .comment-author, .page .comments-area .comment-author a, .page .comments-area .comments-title, .page .content-area h1, .page .content-area h2, .page .content-area h3, .page .content-area h4, .page .content-area h5, .page .content-area h6, .page .content-area th, .single  .comments-area .comment-author, .single .comments-area .comment-author a, .single .comments-area .comments-title, .single .content-area h1, .single .content-area h2, .single .content-area h3, .single .content-area h4, .single .content-area h5, .single .content-area h6, .single .content-area th, .search-no-results h1, .error404 h1 { color: ; }
+		.single .post-data-text, .page .post-data-text, .page .post-data-text a, .single .post-data-text a, .comments-area .comment-meta .comment-metadata a, .single .post-data-text * { color: ; }
+		.page .content-area p, .page article, .page .content-area table, .page .content-area dd, .page .content-area dt, .page .content-area address, .page .content-area .entry-content, .page .content-area li, .page .content-area ol, .single .content-area p, .single article, .single .content-area table, .single .content-area dd, .single .content-area dt, .single .content-area address, .single .entry-content, .single .content-area li, .single .content-area ol, .search-no-results .page-content p { color: ; }
+		.single .entry-content a, .page .entry-content a, .comment-content a, .comments-area .reply a, .logged-in-as a, .comments-area .comment-respond a { color: ; }
+		.comments-area p.form-submit input { background: ; }
+		.error404 .page-content p, .error404 input.search-submit, .search-no-results input.search-submit { color: ; }
+		.page .comments-area, .page article.fbox, .page article tr, .page .comments-area ol.comment-list ol.children li, .page .comments-area ol.comment-list .comment, .single .comments-area, .single article.fbox, .single article tr, .comments-area ol.comment-list ol.children li, .comments-area ol.comment-list .comment, .error404 main#main, .error404 .search-form label, .search-no-results .search-form label, .error404 input.search-submit, .search-no-results input.search-submit, .error404 main#main, .search-no-results section.fbox.no-results.not-found{ border-color: ; }
+		.single .post-data-divider, .page .post-data-divider { background: ; }
+		.single .comments-area p.form-submit input, .page .comments-area p.form-submit input { color: ; }
+		.bottom-header-wrapper { padding-top: px; }
+		.bottom-header-wrapper { padding-bottom: px; }
+		.bottom-header-wrapper { background: ; }
+		.bottom-header-wrapper *{ color: ; }
+		.header-widget a, .header-widget li a, .header-widget i.fa { color: ; }
+		.header-widget, .header-widget p, .header-widget li, .header-widget .textwidget { color: ; }
+		.header-widget .widget-title, .header-widget h1, .header-widget h3, .header-widget h2, .header-widget h4, .header-widget h5, .header-widget h6{ color: ; }
+		.header-widget.swidgets-wrap, .header-widget ul li, .header-widget .search-field { border-color: ; }
+		.bottom-header-title, .bottom-header-paragraph{ color: ; }
+
+		#secondary .widget-title-lines:after, #secondary .widget-title-lines:before { background: ; }
+
+
+		.header-widgets-wrapper .swidgets-wrap{ background: ; }
+		.top-nav-wrapper, .primary-menu .pmenu, .super-menu, #smobile-menu, .primary-menu ul li ul.children, .primary-menu ul li ul.sub-menu { background-color: ; }
+		#secondary .widget li, #secondary input.search-field, #secondary div#calendar_wrap, #secondary .tagcloud, #secondary .textwidget{ background: ; }
+		#secondary .swidget { border-color: ; }
+		.archive article.fbox, .search-results article.fbox, .blog article.fbox { background: ; }
+
+
+		.comments-area, .single article.fbox, .page article.fbox { background: ; }
+		</style>
+		<link rel="amphtml" href="https://stime.cc/article/511/amp/"><link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="32x32">
+<link rel="icon" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+<meta name="msapplication-TileImage" content="https://stime.cc/wp-content/uploads/2020/01/favicon.ico">
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?871eb580cf6efb97266170c43d350eff";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</head>
+
+<body class="post-template-default single single-post postid-511 single-format-standard masthead-fixed">
+	<div id="page" class="site">
+
+		<header id="masthead" class="sheader site-header clearfix">
+			<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+
+				<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+				<div class="top-nav-wrapper">
+					<div class="content-wrap">
+						<div class="logo-container"> 
+
+													<a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+									</div>
+				<div class="center-main-menu">
+					<div class="menu-caidan-container"><ul id="primary-menu" class="pmenu"><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/">首页</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="super-menu clearfix">
+			<div class="super-menu-inner">
+				<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
+
+									</a><a class="logofont" href="https://stime.cc/" rel="home">S时代</a>
+					
+	</div>
+</div>
+<div id="mobile-menu-overlay"></div>
+</header>
+
+
+	
+	
+
+<div class="content-wrap">
+
+
+	
+	<div class="header-widgets-wrapper">
+		
+	
+</div>
+
+
+
+</div>
+
+<div id="content" class="site-content clearfix">
+	<div class="content-wrap">
+
+	<div id="primary" class="featured-content content-area">
+		<main id="main" class="site-main">
+
+				<article id="post-511" class="posts-entry fbox post-511 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析</h1>		<div class="entry-meta">
+			<div class="blog-data-wrapper">
+				<div class="post-data-divider"></div>
+				<div class="post-data-positioning">
+					<div class="post-data-text">
+						<span class="posted-on">Posted on <a href="https://stime.cc/article/511/" rel="bookmark"><time class="entry-date published updated" datetime="2020-02-22T11:26:25+08:00">2020/2/22</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://stime.cc/article/author/fandyvon/">S时代</a></span></span>					</div>
+				</div>
+			</div>
+		</div>
+			</header>
+
+	<div class="entry-content">
+		<section style="line-height: 1.75em;text-indent: 0em;margin-bottom: 20px;"><span style="font-size:16px;font-family:仿宋;">数学模型在新型冠状病毒肺炎（COVID-19）疫情的预测、预警和风险分析中具有非常重要的作用。具体体现在利用少量和实时更新的数据，构建符合COVID-19传播和我国特有的防控策略的数学模型，发展包括数据处理、最小二乘法和MCMC方法等统计计算方法，确定模型未知参数，最终实现：1）确定传播风险指标（基本再生数）、达峰时间、峰值以及最终感染规模等在内的疫情技术指标；2）评估包括封城、密切跟踪隔离、检测和检出等重大防控策略的有效性和时效<span style="color:#0D0D0D;">性。</span> 这将为疾病预防控制、决策部门提供重要的决策依据，服务于国家重大突发性传染性疾病防控。</span></section>
+<section style="line-height: 1.75em;text-indent: 0em;margin-bottom: 20px;"><span style="font-size: 16px;font-family: 仿宋;">通过近20天各地市的严格防控，全国的新报告病例数已呈现下降趋势, 春节后的复工、复学也提上日程，核心问题是：何时复工或如何组织有序复工才能避免疫情的二次暴发？为了回答上述问题，通过收集湖北省卫健委和国家卫健委官网上报道的全国以及湖北各地市的疫情数据</span><span style="font-family: 仿宋;font-size: 14px;">[1,2]</span><span style="font-size: 16px;font-family: 仿宋;">、百度迁徙网站（<a href="http://qianxi.baidu.com" target="_blank" data-linktype="2" tab="outerlink" textvalue="http://qianxi.baidu.com" rel="noopener noreferrer">http://qianxi.baidu.com</a>）人口流动数据，以及春运期间武汉人口迁入和迁出趋势和流入到湖北其他地市的人口分布情况，我们基于文献</span><span style="font-family: 仿宋;font-size: 14px;">[3，4]</span><span style="font-size: 16px;font-family: 仿宋;">中的COVID-19疫情传播与控制模型框架，发展以武汉为中心的复杂网络模型，通过统计计算与参数估计确定网络模型未知参数，分析武汉及周边15个疫情严重地区复工的最佳时间，评估早复工对这些地区疫情发展特别是二次暴发风险的影响。</span></section>
+<section style="line-height: 1.75em;text-indent: 0em;margin-bottom: 20px;"><span style="font-size:16px;font-family:仿宋;">根据COVID-19传播机理，将自然传播过程的人群分为易感者类（S）、潜伏者类（E）、感染者类（有症状）（I）、感染者类（无症状）（A）、住院者类（H）和恢复者类（R）。依据严格的围堵缓疫策略，又将感染者密切接触的人群分为隔离的易感者类（S</span><span style="font-family: 仿宋;font-size: 16px;vertical-align: sub;text-indent: 32px;">q</span><span style="text-indent: 0em;font-size: 16px;font-family: 仿宋;">）和潜伏者类（E</span><span style="font-family: 仿宋;font-size: 16px;vertical-align: sub;text-indent: 32px;">q</span><span style="text-indent: 0em;font-size: 16px;font-family: 仿宋;">）。通过感染者密切接触追踪，假设q比率的接触者被隔离，其中被隔离的个体若被感染，则该个体隔离在<span style="text-indent: 0em;font-family: 仿宋;">E</span><span style="font-family: 仿宋;vertical-align: sub;text-indent: 32px;">q</span>仓室，否则隔离在<span style="font-family: 仿宋;">S</span><span style="font-family: 仿宋;vertical-align: sub;text-indent: 32px;">q</span>仓室。根据如下的流程图，容易得到相应的动力学模型：</span></section>
+<p style="text-align: center;"><img class="rich_pages js_insertlocalimg" style data-ratio="0.47741273100616016" data-type="png" data-w="974" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyctsnMr7T9c9LuRiaGdJBBGObNDTxT8kusKiagkfsNia18YxcN48XCEyPaw/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyctsnMr7T9c9LuRiaGdJBBGObNDTxT8kusKiagkfsNia18YxcN48XCEyPaw/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyctsnMr7T9c9LuRiaGdJBBGObNDTxT8kusKiagkfsNia18YxcN48XCEyPaw/640?wx_fmt=png"></p>
+<p style="text-align: center;"><img class="rich_pages js_insertlocalimg" style data-ratio="0.681917211328976" data-type="png" data-w="918" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc2f4MmkFS0VkVdbrJpMCese2KR2dzicVS1mvkabZFzOiawpCSS8NdWGFg/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc2f4MmkFS0VkVdbrJpMCese2KR2dzicVS1mvkabZFzOiawpCSS8NdWGFg/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc2f4MmkFS0VkVdbrJpMCese2KR2dzicVS1mvkabZFzOiawpCSS8NdWGFg/640?wx_fmt=png"></p>
+<p style="line-height: 29px;margin-top: 8px;vertical-align: middle;"><span style="font-size:16px;font-family:仿宋;">其中下标1表示武汉，下标换成<em>i </em></span><img class="rich_pages js_insertlocalimg" style="text-align: center;width: 104px;height: 20px;" data-ratio="0.1875" data-type="png" data-w="176" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyceibF8h1VCVJq9t1GibFZ4quaFB10TISOVZsrYIMgE9ekpHYOl6z11cgw/640?wx_fmt=png" data-s="300,640" data-cropsely2="19" data-cropsely1="2" data-cropselx2="104" data-cropselx1="0" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyceibF8h1VCVJq9t1GibFZ4quaFB10TISOVZsrYIMgE9ekpHYOl6z11cgw/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyceibF8h1VCVJq9t1GibFZ4quaFB10TISOVZsrYIMgE9ekpHYOl6z11cgw/640?wx_fmt=png"> <span style="font-size: 16px;font-family: 仿宋;">则表示孝感、黄冈、荆州、咸宁、鄂州、襄阳、黄石、荆门、随州、仙桃、宜昌、天门、恩施州、十堰和潜江(<em>n </em>= 16</span><span style="font-size: 16px;font-family: 仿宋;">)</span><span style="font-size: 16px;font-family: 仿宋;">。城市间的邻接矩阵为分段函数矩阵</span><em><span style="font-size:16px;">M(t)= </span></em><img class="rich_pages js_insertlocalimg" style="text-align: center;width: 69px;height: 31px;" data-ratio="0.4326923076923077" data-type="png" data-w="104" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc22WRytMDe48sIr3ib57JKzZRnqTNWYhiavdbibW3J7AEQnXASkD04QY0A/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc22WRytMDe48sIr3ib57JKzZRnqTNWYhiavdbibW3J7AEQnXASkD04QY0A/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUyc22WRytMDe48sIr3ib57JKzZRnqTNWYhiavdbibW3J7AEQnXASkD04QY0A/640?wx_fmt=png"><em><span style="font-size:16px;font-family:仿宋;">。</span></em><span style="font-size: 16px;font-family: 仿宋;"> 1</span><span style="font-size: 16px;font-family: 仿宋;">月23日前只考虑人口由武汉市迁出到其他城市，此时 </span><img class="rich_pages" style="text-align: center;width: 47px;height: 25px;" data-ratio="0.5277777777777778" data-type="png" data-w="72" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png"> <span style="font-size: 16px;font-family: 仿宋;">表示人口由武汉流入第<em style="font-family: 仿宋;font-size: 16px;white-space: normal;">i </em></span><span style="font-size: 16px;font-family: 仿宋;"></span><span style="font-size: 16px;font-family: 仿宋;">个城市，取正值。由于武汉市在1月23日“封城”，因而假设1月23日后没有人口流动，此时<img class="rich_pages" style="height: 24px;text-align: center;width: 46px;" data-ratio="0.5277777777777778" data-type="png" data-w="72" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png"> = 0</span><span style="font-size: 16px;font-family: 仿宋;"></span><span style="font-size: 16px;font-family: 仿宋;">。考虑复工时人口流动重新开始，并且春节前从武汉流出的人返回工作岗位是从各地市重新流回武汉，此时<img class="rich_pages" style="height: 24px;text-align: center;width: 46px;" data-ratio="0.5277777777777778" data-type="png" data-w="72" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycQwZS8GYSxx2XzDWicS2yeS4fpq8rrgZdLICe1hEZCMghxia1MGItX9vw/640?wx_fmt=png"></span><span style="font-size: 16px;font-family: 仿宋;"></span><span style="font-size: 16px;font-family: 仿宋;">表示从第<em>i</em></span><span style="font-size: 16px;font-family: 仿宋;"></span><span style="font-size: 16px;font-family: 仿宋;">个城市流入武汉，取负值。</span></p>
+<section style="text-align: justify;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;"><span style="font-size:16px;font-family:仿宋;">只考虑一个城市（如武汉）时，表示疫情传播风险的再生数为</span></section>
+<p style="text-align: center;line-height: 1.75em;margin-bottom: 10px;"><img class="rich_pages js_insertlocalimg" style="width: 344px;height: 57px;" data-ratio="0.16558018252933507" data-type="png" data-w="767" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycaKTRscXodS6w2o22ToN5EJ1O29EyXo7gYffuuBecsSrKnicibxnmzR9Q/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycaKTRscXodS6w2o22ToN5EJ1O29EyXo7gYffuuBecsSrKnicibxnmzR9Q/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycaKTRscXodS6w2o22ToN5EJ1O29EyXo7gYffuuBecsSrKnicibxnmzR9Q/640?wx_fmt=png"></p>
+<section style="line-height: 1.75em;margin-top: 8px;margin-bottom: 20px;"><span style="font-size:16px;font-family:仿宋;">其中<em>S</em></span><span style="font-family: 仿宋;font-size: 16px;"><sup>0</sup></span><span style="font-size:16px;font-family:仿宋;">表示易感者的初值。这里基于1月23日后的数据，估计出的是有防控措施的再生数，因此称为“控制再生数”。将数据分为三个阶段反映我国逐步强的控制措施的影响。基于除武汉外的各城市的累计病例数，采用最小二乘法来估计系统的未知参数，控制参数c和q随各城市、不同时间段不尽形同（见原文）。在COVID-19疫情初期，由于研制核酸检测试剂盒、检出和确诊等都需要时间，报告病例数明显低于实际的病例数，如图2所示。而且早期全国其他地区的病例主要来自武汉。因此，从其他城市的病例数来估计武汉市的实际病例数至关重要，根据网络模型拟合我们得到1月23日武汉市累计病例数的估计值为2214例，几乎是我国23日累计报告病例数（830例）的3倍，这说明在武汉封城时疫情就比较严重。</span></section>
+<section style="text-align: center;line-height: 1.75em;margin-bottom: 20px;"><img class="rich_pages js_insertlocalimg" style="width: 578px;height: 601px;" data-ratio="1.0398406374501992" data-type="png" data-w="753" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycosFUibbcaV5hcK2ofCXZJj8tVpyRVmq0kJZjAHMyREEwgHvDRiceUfJQ/640?wx_fmt=png" data-s="300,640" data-cropsely2="569" data-cropsely1="0" data-cropselx2="578" data-cropselx1="0" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycosFUibbcaV5hcK2ofCXZJj8tVpyRVmq0kJZjAHMyREEwgHvDRiceUfJQ/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycosFUibbcaV5hcK2ofCXZJj8tVpyRVmq0kJZjAHMyREEwgHvDRiceUfJQ/640?wx_fmt=png"></section>
+<section style="text-align: center;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;"><span style="color: rgb(136, 136, 136);"><strong><span style="font-family: 仿宋;font-size: 14px;">图2: 模型拟合的结果。</span></strong><strong><span style="color: rgb(136, 136, 136);font-family: 仿宋;font-size: 14px;">蓝线是模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。</span></strong></span></section>
+<section style="text-align: justify;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;"><span style="text-align: justify;text-indent: 32px;font-size: 16px;font-family: 仿宋;">根据估计的参数值，得到了湖北省16个城市早期（第一阶段）的控制再生数（见原文表3），从表中可知武汉市早期的控制再生数为3.66，其他城市的控制再生数均小于武汉。这里估计武汉的再生数小于文献</span><span style="text-align: justify;text-indent: 32px;font-family: 仿宋;font-size: 14px;">[3]</span><span style="text-align: justify;text-indent: 32px;font-size: 16px;font-family: 仿宋;">中的估计值，一方面由于有一部分病例已经流入全国的其他城市，另一方面核酸检测试剂盒并没有检出很多病例</span><span style="text-align: justify;text-indent: 32px;font-family: 仿宋;font-size: 14px;">[5]</span><span style="text-align: justify;text-indent: 32px;font-size: 16px;font-family: 仿宋;">。</span><span style="text-align: justify;text-indent: 32px;font-size: 16px;font-family: 仿宋;color: black;">早期控制再生数居前五位的城市（武汉除外）是荆门、十堰、随州、襄阳、宜昌。为了研究不断增强的防控措施对新发感染的影响，论文中还估计了第二、三阶段的控制再生数。结果表明多数城市的控制再生数明显下降，特别是目前各个城市的控制再生数均小于1，表明目前新发感染非常低，疫情在各地得到有效控制。</span></section>
+<section style="text-align: justify;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;"><span style="text-indent: 32px;font-size: 16px;font-family: 仿宋;">为了研究复工对湖北省境内各个城市疫情的影响，基于湖北省境内各个城市去年同期的流动网络结构和流动量模拟复杂网络模型，分别考虑了不同的复工时间以及控制强度的影响。模拟时只考虑各城市人口迁入武汉，不考虑迁出，假设迁入武汉总人口等于年前迁出武汉总人口。图3给出了3月2日的复工对各个城市疫情的影响， 可以看出3月2日的复工在较长的时间内除了个别城市如荆州、孝感、黄石病例数略有上浮外，不会引起其他各个城市疫情的二次暴发。</span></section>
+<section style="text-align: center;line-height: 1.75em;margin-bottom: 20px;"><img class="rich_pages js_insertlocalimg" style="width: 578px;height: 554px;" data-ratio="0.9581339712918661" data-type="png" data-w="836" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycfPx0Xphkzc4Oku1Ft4OTB5RJJRiaOL5YicO9f5LCSbZpv2WqExJAiaIYg/640?wx_fmt=png" data-s="300,640" data-cropsely2="529" data-cropsely1="0" data-cropselx2="578" data-cropselx1="0" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycfPx0Xphkzc4Oku1Ft4OTB5RJJRiaOL5YicO9f5LCSbZpv2WqExJAiaIYg/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcBx7ecF2qibqdufaTucbyUycfPx0Xphkzc4Oku1Ft4OTB5RJJRiaOL5YicO9f5LCSbZpv2WqExJAiaIYg/640?wx_fmt=png"></section>
+<section style="text-align: center;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"><strong><span style="font-family: 仿宋;font-size: 14px;color: rgb(136, 136, 136);">图3: 复工对各个城市疫情的影响。</span></strong><strong><span style="font-family: 仿宋;font-size: 14px;color: rgb(136, 136, 136);">蓝线表示没有复工的模拟结果，黑线表示在3月2日复工的模拟结果，红星号是各个城市的累计数据，紫色星号是全国累计数据。</span></strong></section>
+<section style="line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"><span style="font-size:16px;font-family:仿宋;">由于武汉周边疫情严重城市自1月26日开始才相继加强措施并报告完整的疫情数据，因此为了评估不断加强的防控措施的有效性，分阶段给出了16个城市的控制再生数。结论显示第一个阶段所有地区控制再生数均大于1，这意味着传播风险高；第二个阶段有9个城市小于1，控制初步见效；第三个阶段的控制再生数均小于1，则新发感染率全面降低。然后分别在时间节点2月17日，2月24日和3月2日变化网络节点中的关键参数（接触数c和隔离率q 变为23日封城之前的估计值），并依据百度迁徙给出的春节返程流入武汉的趋势增加流入率，评估复工导致二次暴发的风险。主要结论显示：湖北地区的复工不能早于3月2日，否则疫情可能二次暴发。若3月2日复工并有较强的防控措施，湖北各个城市的疫情在较长时间内将不会二次暴发。</span></section>
+<hr style="border-width: 1px 0px 0px;border-style: solid;border-color: rgba(0, 0, 0, 0.1);transform: scale(1, 0.5);transform-origin: 0px 0px 0px;">
+<section style="line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"><span style="font-size:16px;font-family:仿宋;"></span></section>
+<section style="text-align: justify;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"><span style="font-family: 仿宋;font-size: 16px;">相关论文近日在线发表于《中国科学：数学》，</span><span style="font-size: 16px;text-indent: 0em;font-family: 仿宋;">点击下方链接或“阅读原文”可免费阅读全文：</span></section>
+<section style="text-align: center;line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"><a href="http://engine.scichina.com/publisher/scp/journal/SSM/doi/10.1360/SSM-2020-0037?slug=fulltext" target="_blank" data-linktype="2" tab="outerlink" textvalue="王霞，唐三一，陈勇，冯晓梅，肖燕妮，徐宗本. 新型冠状病毒肺炎疫情下武汉及周边地区何时复工？数据驱动的网络模型分析. DOI:10.1360/SSM-2020-0037,2020." rel="noopener noreferrer"><span style="text-decoration: underline;color: rgb(40, 105, 218);font-size: 14px;"><strong><span style="font-size: 14px;text-decoration: underline;color: rgb(40, 105, 218);font-family: 仿宋;">王霞，唐三一，陈勇，冯晓梅，肖燕妮，徐宗本. 新型冠状病毒肺炎疫情下武汉及周边地区何时复工？</span></strong></span><span style="text-decoration: underline;color: rgb(40, 105, 218);font-size: 14px;"><strong><span style="font-size: 14px;text-decoration: underline;color: rgb(40, 105, 218);font-family: 仿宋;"></span></strong></span><span style="text-decoration: underline;color: rgb(40, 105, 218);font-size: 14px;"><strong><span style="font-size: 14px;text-decoration: underline;color: rgb(40, 105, 218);font-family: 仿宋;">数据驱动的网络模型分析. DOI:10.1360/SSM-2020-0037,2020.</span></strong></span><span style="text-decoration: underline;color: rgb(40, 105, 218);font-size: 14px;"><strong><span style="font-size: 14px;text-decoration: underline;color: rgb(40, 105, 218);font-family: 仿宋;"></span></strong></span></a></section>
+<section style="box-sizing: border-box;font-size: 16px;">
+<section style="text-align: left;box-sizing: border-box;margin-bottom: 10px;">
+<section style="display: inline-block;width: 100%;height: 320px;vertical-align: top;overflow-y: auto;background-color: rgb(255, 255, 255);box-sizing: border-box;-webkit-overflow-scrolling: touch;">
+<section style="overflow-x: hidden;box-sizing: border-box;">
+<section style="margin: 20px 0%;box-sizing: border-box;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 95%;vertical-align: top;padding: 10px;box-sizing: border-box;">
+<section style="transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-o-transform: rotate(0deg);box-sizing: border-box;" powered-by="xiumi.us">
+<section style="font-size: 14px;color: rgb(102, 102, 102);line-height: 1.8;box-sizing: border-box;">
+<p style="text-align: left;box-sizing: border-box;"><span style="background-color: rgb(136, 136, 136);color: rgb(255, 255, 255);">参考文献</span><span style="color: rgb(136, 136, 136);">：</span></p>
+<section style="margin-bottom: 10px;">1. 湖北省卫生健康委员会. 2020 年 2 月 12 日湖北省新冠肺炎疫情情况. Http://wjw.hubei. gov.cn/fbjd/dtyw/202002/ t20200213 2025581.shtml, 2020</section>
+<section style="margin-bottom: 10px;">2. 中华人民共和国国家卫生健康委员会. 疫情通报. Http://www.nhc.gov.cn/xcs/xxgzbd /gzbd index.shtml, 2020</section>
+<section style="margin-bottom: 10px;">3. Tang B, Wang X, Li Q, et al. Estimation of the transmission risk of the 2019-nCoV and its implication for public health interventions. J Comput Math, 2020, 9: 462</section>
+<section style="margin-bottom: 10px;">4. Tang B, Bragazzi N L, Li Q, et al. An updated estimation of the risk of transmission of the novel coronavirus (2019-nCoV). Infect Dis Model, 2020, 5: 248–255.</section>
+<section style="margin-bottom: 10px;">5. 湖北省卫生健康委员会. 武汉:单日样本检测能力从200份提升至2000份. Http://wjw.hubei.gov.cn/bmdt/ztzl/fkxxgzbdgrfyyq/fkdt/202001/t20200129_2016053.shtml, 2020</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section style="line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"></section>
+<section style="box-sizing: border-box;font-size: 16px;">
+<section style="margin-top: 10px;margin-bottom: 10px;text-align: left;box-sizing: border-box;" powered-by="xiumi.us">
+<section style="text-align: center;padding-right: 1em;padding-left: 1em;display: inline-block;box-sizing: border-box;"><span title style="display: inline-block;padding: 0.3em 0.5em;border-radius: 0.5em;font-size: 14px;color: rgb(255, 255, 255);background-color: rgb(160, 160, 160);box-sizing: border-box;" opera-tn-ra-cell="_$.pages:0.layers:0.comps:0.title1">
+<p style="box-sizing: border-box;">团队介绍</p>
+<p></p></span> </section>
+<section style="border-width: 1px;border-style: solid;border-color: rgb(192, 200, 209);margin-top: -1em;padding: 20px 10px 10px;background-color: rgb(255, 255, 255);text-align: center;box-sizing: border-box;">
+<section style="text-align: justify;box-sizing: border-box;" powered-by="xiumi.us">
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"><span style="font-size: 14px;color: rgb(136, 136, 136);">研究团队主要由西安交通大学生物数学团队和陕西师范大学生物数学团队组成，在中国科学院<strong>徐宗本</strong>院士的顶层设计和亲自带领下，致力于数据和问题驱动的传染病动力学、有害生物控制、肿瘤的综合治疗建模与分析。特别的，在突发性传染病发展趋势的预测、国家重点关注的重大传染病等方面做出了深刻的成果。与中国疾病预防控制中心性艾中心联合完成了艾滋病传播规律和发病机理的国家十五攻关项目、国家“十一五”、“十二五”科技重大专项艾滋病领域的研究。正在参与“十三五”科技重大专项艾滋病领域的研究。与北京同仁医院和中国军事医学科学院合作完成了医院感染动力学的研究。受国家自然科学基金委的资助，研究团队正在进行重点项目“多尺度生物系统动力学及典型数据分析”的研究，受天元基金的资助，曾于2014年、2015年连续两年承办全国 “生物数学研究生暑期学校”，培养一批交叉学科人才。 </span></section>
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"></section>
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"><span style="font-size: 14px;background-color: rgb(136, 136, 136);color: rgb(255, 255, 255);">团队主要成员</span><span style="font-size: 14px;">： </span></section>
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"><span style="color: rgb(136, 136, 136);"><strong><span style="font-size: 14px;">唐三一</span></strong><span style="font-size: 14px;">，陕西师范大学数学与信息科学学院教授、院长</span></span></section>
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"><span style="color: rgb(136, 136, 136);"><strong><span style="font-size: 14px;">肖燕妮</span></strong><span style="font-size: 14px;">，西安交通大学数学与统计学院教授、副院长，数学与生命科学交叉中心主任</span></span></section>
+<section style="line-height: 1.75em;white-space: normal;box-sizing: border-box;"><span style="color: rgb(136, 136, 136);"><strong><span style="font-size: 14px;">王霞</span></strong><span style="font-size: 14px;">，陕西师范大学数学与信息科学学院副教授</span></span><br style="box-sizing: border-box;"><span style="font-size: 14px;color: rgb(136, 136, 136);"> <strong>陈勇</strong>，中国人民解放军疾病预防控制中心副研究员</span><br style="box-sizing: border-box;"><span style="font-size: 14px;color: rgb(136, 136, 136);"> <strong>冯晓梅</strong>，运城学院数学与信息技术学院副教授</span></section>
+</section>
+</section>
+</section>
+</section>
+<section style="line-height: 1.75em;text-indent: 0em;margin-top: 8px;margin-bottom: 20px;vertical-align: middle;"></section>
+<p style="text-align: center;"><img class="rich_pages" style data-ratio="0.7790893760539629" data-type="png" data-w="593" data-src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAicXGlU0XibSjUHA5bbnicJQhYqloZfka7QCXhnV2PKoh6PoSn5GKTOsV3ZDibeq0MrQbCotCVFhyXVg/640?wx_fmt=png" data-s="300,640" src="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAicXGlU0XibSjUHA5bbnicJQhYqloZfka7QCXhnV2PKoh6PoSn5GKTOsV3ZDibeq0MrQbCotCVFhyXVg/640?wx_fmt=png" data-croporisrc="https://uzshare.com/_p?https://mmbiz.qpic.cn/mmbiz_png/45D7iaIAaibcAicXGlU0XibSjUHA5bbnicJQhYqloZfka7QCXhnV2PKoh6PoSn5GKTOsV3ZDibeq0MrQbCotCVFhyXVg/640?wx_fmt=png"></p>
+
+			</div>
+</article>
+
+<div id="comments" class="fbox comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/511/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://stime.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="511" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+
+		</main>
+	</div>
+
+
+<aside id="secondary" class="featured-sidebar widget-area">
+	<section id="search-7" class="fbox swidgets-wrap widget widget_search"><form role="search" target="_blank" method="get" class="search-form" action="https://google.com/search">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="q">
+					<input type="hidden" name="sitesearch" value="stime.cc" style="display: block;">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section>		<section id="recent-posts-4" class="fbox swidgets-wrap widget widget_recent_entries">		<div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Recent Posts</h4></div>		<ul>
+											<li>
+					<a href="https://stime.cc/article/554/">看世界系列 | 地球最后的净土</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/553/">实用教学 | 浩劫求生</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/552/">看世界系列 | 解密巴黎</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/551/">看世界系列 | 亚洲高档酒店知多少？</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/550/">看世界系列 | 北欧半岛游记</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/549/">看世界系列 | 探索密西西比</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/548/">看世界系列 | 奇幻海底世界</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/547/">看世界系列 | 神秘刚果河</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/546/">看世界系列 | 超级大国如何日常运转</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+											<li>
+					<a href="https://stime.cc/article/545/">看世界系列 | 在世界尽头相遇</a>
+											<span class="post-date">2020/2/22</span>
+									</li>
+					</ul>
+		</section><section id="archives-4" class="fbox swidgets-wrap widget widget_archive"><div class="sidebar-headline-wrapper"><div class="sidebarlines-wrapper"><div class="widget-title-lines"></div></div><h4 class="widget-title">Archives</h4></div>		<ul>
+				<li><a href="https://stime.cc/article/date/2020/02/">February 2020</a> (127)</li>
+	<li><a href="https://stime.cc/article/date/2020/01/">January 2020</a> (262)</li>
+		</ul>
+			</section></aside>
+</div>
+</div>
+
+<footer id="colophon" class="site-footer clearfix">
+
+	<div class="content-wrap">
+		
+			
+			
+		</div>
+
+		<div class="site-info">
+			Copyright ©2020 | S时代		</div>
+	</footer></div>
+
+
+
+
+
+
+<div id="smobile-menu" class="mobile-only"></div>
+<div id="mobile-menu-overlay"></div>
+
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/navigation.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="https://stime.cc/wp-content/themes/bloggist/js/script.js"></script>
+</body>
+</html>
